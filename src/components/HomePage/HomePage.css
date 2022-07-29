@@ -1,0 +1,111 @@
+*{
+    font-family: Poppins, sans-serif;
+    margin: 0;
+}
+
+
+.NavbarMain{
+    background-color: #CB2C31;
+    height: 80px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    /* position: fixed; */
+}
+.NavbarLogo{
+    width: 300px;
+    /* background-color: aqua;  */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.NavBarContent{
+    height: 100%;
+    width: 50%;
+    /* display: none; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    margin-right: -100px;
+    
+}
+.MenuIcon{
+    display: none;
+    position: absolute;
+    margin-right: 50px;
+    right: 0;
+    color: white;
+    font-size: 20px;
+    background-color: aqua;
+
+}
+FaList{
+    color: blue;
+}
+.NavBarContent p{
+    color: white;
+    font-size: 17px;
+}
+.LogoContent{
+    color: white;
+}  
+              
+.NavbarLogo img{
+    height: 45px;
+    width: auto;
+    
+}
+@media (max-width:800px) {
+    .NavbarMain{
+        height: 80px;
+        width: auto;
+    }
+    .LogoContent h1{
+        font-size: 135%;
+    }
+    .LogoContent p{
+        padding-left: 3px; 
+        font-size: 70%;
+    }
+
+}
+@media  (max-width:950px ) {
+    .NavBarContent p{
+        font-size: 110%;
+    }
+}
+@media (max-width:819px){
+    .NavBarContent{
+        display: none;
+    }
+}
+@media (max-width:550px){
+    
+    .MenuIcon{
+        margin-right: 20px;
+    }
+}
+@media (max-width:350px) {
+    .NavbarLogo img{
+        width: 90%;
+    }
+    .NavbarLogo{
+        margin-left: 5px;
+    }
+    
+    FaList{
+        width: 5%;
+        height: 10%;
+        
+    }
+
+    
+    
+}
