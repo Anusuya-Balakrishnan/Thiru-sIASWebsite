@@ -1,5 +1,5 @@
 import React from "react";
-import upscimage from "./images/upsc.jpg";
+import upscimage from "./images/UPSC2.avif";
 export default function LandingPage() {
   return (
     <section id="LandingPage">
