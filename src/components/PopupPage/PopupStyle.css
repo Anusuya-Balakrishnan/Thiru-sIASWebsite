@@ -1,0 +1,22 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+.PopupPageParent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+.PopupPageMain{
+    height: 450px;
+    width: 350px;
+    border-radius: 20px;
+    border: 1px solid #CB2C31;
+    background-color: white; 
+}
+.Heading{
+    margin:10px ;
+}

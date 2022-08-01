@@ -1,28 +1,84 @@
 import React from "react";
 import logoimage from "./images/Logo.svg";
-import { FaList } from "react-icons/fa";
+import { ImLocation, ImLinkedin2 } from "react-icons/im";
+import { MdLocationPin, MdEmail } from "react-icons/md";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { GrFacebookOption } from "react-icons/gr";
+import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai";
 import FooterStyle from "./FooterStyle.css";
 
 export default function FooterHtml() {
   return (
     <section id="FooterPage">
-      <div className="FooterParent">
-        <div className="FooterContent">
-          <img src={logoimage} />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
-            amet, lobortis habitant dolor consequat. Adipiscing a in sociis
-            enim, posuere ac.
-          </p>
+      <div className="FooterPageParent">
+        <div className="FooterParent">
+          <div className="FooterContent">
+            <img src={logoimage} />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+              amet, lobortis habitant dolor consequat. Adipiscing a in sociis
+              enim, posuere ac.
+            </p>
+          </div>
+          <div className="FooterList">
+            <p>Contact</p>
+            <p>Courses</p>
+            <p>FAQ</p>
+            <p>About us</p>
+          </div>
+          <div className="FooterAddress">
+            <div className="AddressDiv">
+              <span className="EachIcon">
+                <MdLocationPin />
+              </span>
+              <p>
+                No. 2, First floor, Karuvadikuppam Main Road, near Ginger hotel,
+                near French corner bakery, Muthialpet, Puducherry, 605003.
+              </p>
+            </div>
+            <div className="PhoneNumber">
+              <span className="EachIcon">
+                <BsFillTelephoneFill />
+              </span>
+              <p> +91 863 767 0992 </p>
+            </div>
+            <div className="email">
+              <span className="EachIcon">
+                <MdEmail />
+              </span>
+              <p> thiru.best111@gmail.com </p>
+            </div>
+          </div>
         </div>
-        <div className="FooterList">
-          <p>Contact</p>
-          <p>Courses</p>
-          <p>FAQ</p>
-          <p>About us</p>
+        <div className="IconList">
+          <div className="EachIcon">
+            <GrFacebookOption />
+          </div>
+
+          <div className="EachIcon">
+            <AiOutlineTwitter />
+          </div>
+
+          <div className="EachIcon">
+            <AiFillInstagram />
+          </div>
+
+          <div className="EachIcon">
+            <ImLinkedin2 />
+          </div>
         </div>
-        <div className="FooterAddress"></div>
       </div>
     </section>
   );
+}
+
+{
+  /* <ImLocation />
+            <BsFillTelephoneFill />
+            <MdLocationPin />
+            <MdEmail />
+            <GrFacebookOption />
+            <AiOutlineTwitter />
+            <AiFillInstagram />
+            <ImLinkedin2 /> */
 }
