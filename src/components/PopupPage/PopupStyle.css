@@ -13,10 +13,102 @@
 .PopupPageMain{
     height: 450px;
     width: 350px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid #CB2C31;
     background-color: white; 
+    padding: 10px;
 }
 .Heading{
     margin:10px ;
+}
+.HeadingImage{
+    text-align: center;
+}
+.HeadingImage img{
+    width: 200px;
+    height: 50px;
+   
+}
+.FormElement{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 40px 20px;
+    border-width:0 0 2px;
+    border-style: solid;
+    border-color: #27227A;
+    padding-bottom: 5px;
+}
+.SelectList{
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.CourseMenu{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* height: 25px; */
+    width: 88%;
+    margin: 0;
+    
+}
+.CourseTitle{
+    width: 250px;
+    font-size: 12px;
+    color: #27227A;
+    margin-left: 20px;
+}
+.InputType{
+    outline: 0;
+    border-width: 0;
+    width: 90%;
+    margin-left: 20px;
+    color: #27227A;
+    
+    
+}
+::placeholder {
+    color: #27227A;
+    font-size: small;
+}
+:-ms-input-placeholder{
+    color: #27227A;
+    font-size: small;
+}
+::-ms-input-placeholder { 
+    color: #27227A;
+    font-size: small;
+}
+.Icon{
+    color: #27227A;
+    height: 15px;
+    width: 15px;
+}
+.Options{
+    
+    z-index: 1;
+    position: absolute;
+   margin: 10px;
+   height: 150px;
+   overflow: hidden;
+   scroll-behavior: smooth;
+}
+.option{
+    width: auto;
+    /* height: 10px; */
+    font-size: 12px;
+    color: #27227A;
+    padding: 15px 20px;
+    /* margin: 10px; */
+    /* align-items: center; */
+background-color: #CB2C31;
 }
