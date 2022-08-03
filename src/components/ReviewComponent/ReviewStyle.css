@@ -1,0 +1,58 @@
+*{
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.ReviewParent{
+    width: 380px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #CB2C31;
+    padding: 10px 5px;
+
+}
+.ReviewTitle{
+    width: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.PersonImage{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #CB2C31;
+}
+.PersonImage img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+}
+.time, .Name{
+    font-size: 10px;
+    margin: 5px 10px;
+}
+.Name span{
+    font-weight: 600;
+    font-size: 12px;
+}
+.PersonName{
+    display: flex;
+    /* padding: 10px; */
+    justify-content: center;
+    width: 170px;
+    flex-direction: column;
+}
+.ReviewStar{
+    padding: 20px 5px;
+    width: 90px;
+}
+.ReviewBody{
+    padding: 20px;
+    font-size: 13px;
+}
+.ReviewBody p{
+    text-align: justify;
+}

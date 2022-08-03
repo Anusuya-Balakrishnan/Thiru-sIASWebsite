@@ -7,7 +7,7 @@ import { BsChevronDown } from "react-icons/bs";
 import Logo from "./images/Logo.svg";
 import course from "./images/course.svg";
 import query from "./images/query.svg";
-
+let menuClick = true;
 let courseList = [
   "Preliminary Exam",
   "Mains Exam",
@@ -75,7 +75,11 @@ export default function PopupPage() {
               </div>
               {/* <div className="Options">
                 {courseList.map((course) => {
-                  return <div className="option">{course}</div>;
+                  return (
+                    <div className="option" key={course.id}>
+                      {course}
+                    </div>
+                  );
                 })}
               </div> */}
             </div>

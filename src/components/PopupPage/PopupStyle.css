@@ -8,7 +8,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
 }
 .PopupPageMain{
     height: 450px;
@@ -94,21 +93,27 @@
     width: 15px;
 }
 .Options{
-    
+    width: 88%;
     z-index: 1;
     position: absolute;
-   margin: 10px;
-   height: 150px;
-   overflow: hidden;
+   margin: 22px;
+   height: 140px;
+   overflow-y: scroll;
    scroll-behavior: smooth;
+   background-color: #27227A;
+   opacity: 0.9;
+   scrollbar-width:thin;
+   scrollbar-color:white;
 }
 .option{
     width: auto;
-    /* height: 10px; */
     font-size: 12px;
-    color: #27227A;
+    color: white;
     padding: 15px 20px;
-    /* margin: 10px; */
-    /* align-items: center; */
-background-color: #CB2C31;
+    transition: 1s;
+    
+}
+.option:hover{
+   cursor: pointer;
+   background-color: #07026a;
 }
