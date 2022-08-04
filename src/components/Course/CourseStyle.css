@@ -2,24 +2,46 @@
     margin: 0;
     padding: 0;
 }
-.CourseParent{
-    height: 450px;
-    width: 300px;
-    border-radius: 10px;
-    border: 1px solid #CB2C31;
+/* temporary */
+#CourseHtml{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+    padding: 20px;
 }
-.CourseImage , .CourseImage img {
-    height: 180px;
-    width: 300px;
+.CourseParent{
+    
+    height: 450px;
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ .CourseParent img {
+    height: 50%;
+    width: 350px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top:0
+    
 }
 .CourseTitle{
     font-size: 17px;
     width: auto;
     text-align: center;
-    padding: 10px;
+    padding: 20px 10px;
     margin: 0;
+    font-weight: bold;
    
 }
 .CourseDetails{
@@ -27,18 +49,78 @@
     color: #27227A;
     width: auto;
     font-size: 15px;
-    margin: 20px;
-    background-color: #D9D9D9;
+    margin: 30px;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    bottom: 80px;
-    padding: 10px 0;
+    /* padding: 8px 0; */
+    bottom: -50px;
 }
 .CourseContent{
     padding: 10px 30px;
     text-align: justify;
     font-size: 12px;
+}
+.courseDuration{
+    display: flex;
+    width: 260px;
+    height: auto;
+    justify-content: center;
+    margin: 30px 5px;
+    flex-wrap: wrap;
+}
+.duration{
+    display: flex;
+    margin: 5px;
+    font-size: 20px;
+
+    /* background-color: #CB2C31; */
+}
+
+.duration p{
+   margin-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+@media (max-width:400px){
+    #CourseHtml{
+        padding: 10%;
+    }
+    .CourseParent{
+        width: 100%;
+        margin: 20px; 
+        height: auto;
+    }
+    .CourseParent img {
+        height: 50%;
+        width: 100%;  
+    }
+    .CourseTitle{
+        font-size: 90%;
+        padding: 0;
+    }
+    .CourseContent{
+        font-size: 60%;
+        padding: 10px 0;
+        /* margin: 0 10px; */
+    }
+    .CourseDetails{
+        font-size: 90%;
+        width: 80%;
+        padding: 10px;
+        margin: 10px;
+    }
+    .courseDuration{
+        width: auto;
+        margin: 0;
+    }
+    .duration ,.duration p{
+        font-size: 80%;
+    }
+    .duration {
+        margin: 5px;
+    }
 }
