@@ -1,0 +1,53 @@
+
+
+*{
+    font-family: Poppins, sans-serif;
+    margin: 0;
+}
+.LandingPageParent{
+    position: relative;
+    max-width: 1920px; 
+    min-height: 1080px; 
+    height: auto;
+}
+.UpscContent{
+    max-width:1920px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.099);
+    padding: 100px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.UpscHeading{
+    /* padding: 20px; */
+    /* height: 300px; */
+    width: 300px;
+    /* background-color: aquamarine; */
+    margin-right: 100px;
+    text-align: left;
+}
+.ButtonDiv{
+    display: flex;
+    justify-content: center;
+}
+.UpscHeading p, .UpscHeading h1{
+    text-align: justify;
+    padding: 20px;
+}
+.UpscHeading h1{
+    text-align: center;
+}
+.UpscReview{
+    margin-left: 100px;
+}
+/* .UpscImage img{
+    width: 100vw;
+    height: 100vh;
+} */
+@media (max-width:950px){
+    .UpscHeading,.UpscReview{
+        margin: 10px;
+    }
+}

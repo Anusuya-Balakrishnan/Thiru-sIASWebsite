@@ -5,9 +5,11 @@
 
 
 .NavbarMain{
+    position: relative;
     background-color: #CB2C31;
-    height: 80px;
-    width: auto;
+    height: 70px;
+    /* width: 100%; */
+    max-width: 1920px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,7 +18,6 @@
 }
 .NavbarLogo{
     width: 300px;
-    /* background-color: aqua;  */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,16 +26,23 @@
 }
 
 .NavBarContent{
-    height: 100%;
-    width: 50%;
+    position: absolute;
+    /* height: 100%; */
+    /* width: 50%; */
     /* display: none; */
-    
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap; 
-    margin-right: -100px;
+    margin-right: 50px;
+    right: 0;
     
+}
+.NavBarContent p{
+    margin: 10px 20px;
+    font-size: 50%;
+    cursor: pointer;
+
 }
 .MenuIcon{
     display: none;
@@ -43,12 +51,10 @@
     right: 0;
     color: white;
     font-size: 20px;
-    background-color: aqua;
+    /* background-color: aqua; */
 
 }
-FaList{
-    color: blue;
-}
+
 .NavBarContent p{
     color: white;
     font-size: 17px;
@@ -61,6 +67,28 @@ FaList{
     height: 45px;
     width: auto;
     
+}
+.MenuListParent{
+    position: absolute;
+    top:70px;
+    right: 0;
+    display: none;
+    transition: 2s;
+}
+.MenuList{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #CB2C31;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.MenuList p{
+    margin: 15px;
+    color: white;
+    /* display: none; */
+    font-size: 80%;
+    transition: 2s;
 }
 @media (max-width:800px) {
     .NavbarMain{
@@ -78,32 +106,35 @@ FaList{
 }
 @media  (max-width:950px ) {
     .NavBarContent p{
-        font-size: 110%;
+        font-size: 100%;
     }
 }
-@media (max-width:819px){
+@media (max-width:890px){
     .NavBarContent{
         display: none;
     }
-}
-@media (max-width:550px){
-    
     .MenuIcon{
+        display: block;
         margin-right: 20px;
     }
 }
+/* @media (max-width:550px){ */
+    
+    
 @media (max-width:350px) {
     .NavbarLogo img{
-        width: 90%;
+        width: 80%;
     }
     .NavbarLogo{
         margin-left: 5px;
     }
     
-    FaList{
-        width: 5%;
-        height: 10%;
-        
+    .MenuIcon{
+        font-size: 96%; 
+    }
+    .MenuList p{
+        font-size: 65%;
+        margin: 8px;
     }
 
     

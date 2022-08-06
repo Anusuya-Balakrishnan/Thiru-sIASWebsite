@@ -28,19 +28,26 @@ export default function ReviewComponent() {
         <div className="ReviewBody">
           <p>
             Good Academy for UPSC and for other Competetive exams too.
-            Individual concern is given for each and every aspirant. <br />
+            Individual concern is given for each and every aspirant.
+            <p />
             <br />
-            Classes are taken from basic levels and we can experience a
-            difference in learning(i.e. learning by understanding, analysing,
-            applying)when compared to schools where we were made to memorize
-            things. <br />
-            <br />
-            Sir motivates and lays path for a colourful future. He encourages
-            students to have a healthy discussion on various topics, current
-            affairs which provides opportunity to explore our knowledge.
-            <br />
-            <br /> Best Institute for cracking the exams. <br />
-            Thank you Sir.
+            <p>
+              Classes are taken from basic levels and we can experience a
+              difference in learning(i.e. learning by understanding, analysing,
+              applying)when compared to schools where we were made to memorize
+              things.
+              <p />
+              <br />
+              <p>
+                Sir motivates and lays path for a colourful future. He
+                encourages students to have a healthy discussion on various
+                topics, current affairs which provides opportunity to explore
+                our knowledge.
+              </p>
+              <br />
+              <p>Best Institute for cracking the exams.</p> <br />
+              Thank you Sir.
+            </p>
           </p>
         </div>
       </div>

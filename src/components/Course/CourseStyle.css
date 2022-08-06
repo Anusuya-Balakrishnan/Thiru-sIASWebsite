@@ -12,8 +12,8 @@
     padding: 20px;
 }
 .CourseParent{
-    
-    height: 450px;
+    height: 550px;
+    /* height: 450px; */
     width: 350px;
     border-radius: 10px;
     position: relative;
@@ -22,6 +22,8 @@
     align-items: center;
     flex-direction: column;
     margin: 20px;
+    /* border: 2px solid; */
+    /* background-color: #27227A; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
  .CourseParent img {
@@ -35,32 +37,40 @@
     top:0
     
 }
+.CoursePart2{
+    /* background-color: #27227A; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 30%;
+}
 .CourseTitle{
     font-size: 17px;
     width: auto;
     text-align: center;
     padding: 20px 10px;
-    margin: 0;
+    margin: 0px;
     font-weight: bold;
    
 }
+
 .CourseDetails{
-    position: relative;
     color: #27227A;
     width: auto;
     font-size: 15px;
-    margin: 30px;
-    background-color: #ffffff;
+    margin: 10px 30px;
+    background-color: #e0dede;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
     /* padding: 8px 0; */
-    bottom: -50px;
+    
 }
 .CourseContent{
-    padding: 10px 30px;
+    padding: 0 30px;
     text-align: justify;
     font-size: 12px;
 }
@@ -85,6 +95,10 @@
     font-size: 15px;
     font-weight: bold;
 }
+.ButtonDiv{
+    display: flex;
+    justify-content: center;
+}
 @media (max-width:400px){
     #CourseHtml{
         padding: 10%;
@@ -104,18 +118,19 @@
     }
     .CourseContent{
         font-size: 60%;
-        padding: 10px 0;
+        padding: 10px;
         /* margin: 0 10px; */
     }
     .CourseDetails{
         font-size: 90%;
-        width: 80%;
+        width: 70%;
         padding: 10px;
         margin: 10px;
+        height: auto;
     }
     .courseDuration{
         width: auto;
-        margin: 0;
+        margin: 10px;
     }
     .duration ,.duration p{
         font-size: 80%;

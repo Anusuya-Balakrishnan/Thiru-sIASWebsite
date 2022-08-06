@@ -9,25 +9,29 @@ export default function Course() {
     <section id="CourseHtml">
       <div className="CourseParent">
         <img src={image} alt="courseImage" />
-        <div className="CourseDetails">
-          <p className="CourseTitle">Preliminary Exam Course</p>
-          <p className="CourseContent">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum
-            rhoncus in eget lectus quis consectetur facilisis. Egestas posuere
-            nunc donec ultricies egestas vitae id in.
-          </p>
-          <div className="courseDuration">
-            <div className="duration">
-              <IoTime />
-              <p>8 Months</p>
-            </div>
-            <div className="duration">
-              <MdEventNote />
-              <p>80 Tests</p>
+        <div className="CoursePart2">
+          <div className="CourseDetails">
+            <p className="CourseTitle">Preliminary Exam Course</p>
+            <p className="CourseContent">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum
+              rhoncus in eget lectus quis consectetur facilisis. Egestas posuere
+              nunc donec ultricies egestas vitae id in.
+            </p>
+            <div className="courseDuration">
+              <div className="duration">
+                <IoTime />
+                <p>8 Months</p>
+              </div>
+              <div className="duration">
+                <MdEventNote />
+                <p>80 Tests</p>
+              </div>
             </div>
           </div>
+          <div className="ButtonDiv">
+            <Button name="For More" />
+          </div>
         </div>
-        <Button />
       </div>
     </section>
   );
