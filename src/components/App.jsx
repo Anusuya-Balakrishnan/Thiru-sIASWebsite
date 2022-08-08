@@ -5,16 +5,18 @@ import FooterHtml from "./FooterPage/FooterHtml";
 import PopupPage from "./PopupPage/PopupHtml.jsx";
 import ReviewComponent from "./ReviewComponent/ReviewComponent.jsx";
 import Course from "./Course/CourseHtml.jsx";
-import AutoHtml from "./AutoSlide/AutoHtml.jsx";
+import JourneyHtml from "./Journey/JourneyHtml.jsx";
+import CourseSlideHtml from "./CourseSlide/CourseSlideHtml.jsx";
 export default function App() {
   return (
     <section id="App">
-      <AutoHtml />
       {/* <PopupPage /> */}
-      {/* <HomePage />
+      <HomePage />
       <LandingPage />
-      <Course /> */}
-      {/* <FooterHtml /> */}
+      <JourneyHtml />
+      {/* <Course /> */}
+      <CourseSlideHtml />
+      <FooterHtml />
       {/* <ReviewComponent /> */}
     </section>
   );

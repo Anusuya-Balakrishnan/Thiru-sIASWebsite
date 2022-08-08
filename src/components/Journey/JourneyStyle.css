@@ -1,0 +1,44 @@
+*{
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.JourneyParent{
+    margin: 10px 0;
+}
+.JourneyPart1{
+    margin: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.JourneyContent1 h1{
+    margin: 30px;
+    text-align: center;
+    color: #27227A;
+
+
+}
+.JourneyContent1 p{
+    margin: 20px 60px;
+    text-align: justify;
+}
+.JourneyPart2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.JourneyContent2{
+    width: 300px;
+    margin: 50px;
+}
+.JourneyContent2 h1{
+    color: #27227A;
+    padding: 20px;
+    text-align: center;
+}
+.JourneyContent2 p{
+    text-align: justify;
+}

@@ -1,21 +1,21 @@
 import React from "react";
 import ReviewStyle from "./ReviewStyle.css";
-import person1 from "./images/person1.jpg";
+
 import { AiTwotoneStar } from "react-icons/ai";
 
-export default function ReviewComponent() {
+export default function ReviewComponent(props) {
   return (
     <section id="ReviewComponent">
       <div className="ReviewParent">
         <div className="ReviewTitle">
           <div className="PersonImage">
-            <img src={person1} alt="person image" />
+            <img src={props.image} alt="person image" />
           </div>
           <div className="PersonName">
             <p className="Name">
-              <span>Kavitha C</span> (Google Review)
+              <span>{props.name}</span> (Google Review)
             </p>
-            <p className="time">5 month ago</p>
+            <p className="time">{props.duration}</p>
           </div>
           <div className="ReviewStar">
             <AiTwotoneStar color="#E8AB08" />
@@ -27,25 +27,16 @@ export default function ReviewComponent() {
         </div>
         <div className="ReviewBody">
           <p>
-            Good Academy for UPSC and for other Competetive exams too.
-            Individual concern is given for each and every aspirant.
+            {props.para1}
             <p />
             <br />
             <p>
-              Classes are taken from basic levels and we can experience a
-              difference in learning(i.e. learning by understanding, analysing,
-              applying)when compared to schools where we were made to memorize
-              things.
+              {props.para2}
               <p />
               <br />
-              <p>
-                Sir motivates and lays path for a colourful future. He
-                encourages students to have a healthy discussion on various
-                topics, current affairs which provides opportunity to explore
-                our knowledge.
-              </p>
+              <p>{props.para3}</p>
               <br />
-              <p>Best Institute for cracking the exams.</p> <br />
+              <p>{props.para4}</p> <br />
               Thank you Sir.
             </p>
           </p>

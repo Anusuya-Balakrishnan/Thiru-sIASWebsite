@@ -56,3 +56,9 @@
 .ReviewBody p{
     text-align: justify;
 }
+@media (max-width:450px){
+    .UpscHeading{
+        font-size: 90%;
+    }
+    
+}

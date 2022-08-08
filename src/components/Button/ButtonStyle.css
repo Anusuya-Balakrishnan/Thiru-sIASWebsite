@@ -3,21 +3,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    margin: 5%;
+    width: 170px;
     height: 50px;
+    margin: 20px;
     /* padding: 0 20px; */
     background-color: #CB2C31;
     color:white;
     border-radius: 10px;
     transition: 0.5s;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .ButtonMain p{
     margin-right: 10px;
 }
 .ButtonMain:hover{
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: white;
     /* border: 1px solid #CB2C31; */
     /* padding: 0 18px; */

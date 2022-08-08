@@ -1,5 +1,4 @@
 
-
 *{
     font-family: Poppins, sans-serif;
     margin: 0;
@@ -7,7 +6,7 @@
 .LandingPageParent{
     position: relative;
     max-width: 1920px; 
-    min-height: 1080px; 
+    height: auto; 
     height: auto;
 }
 .UpscContent{
@@ -26,18 +25,25 @@
     width: 300px;
     /* background-color: aquamarine; */
     margin-right: 100px;
-    text-align: left;
+    /* text-align: left; */
 }
-.ButtonDiv{
+/* .ButtonDiv{
+    width: auto;
+    background-color: aqua;
     display: flex;
-    justify-content: center;
-}
+    justify-content: left;
+    padding: 20px;
+    
+} */
 .UpscHeading p, .UpscHeading h1{
     text-align: justify;
     padding: 20px;
+    color: white;
+    font-weight: 600;
 }
 .UpscHeading h1{
-    text-align: center;
+    text-align: left;
+    font-weight: 800;
 }
 .UpscReview{
     margin-left: 100px;
@@ -49,5 +55,8 @@
 @media (max-width:950px){
     .UpscHeading,.UpscReview{
         margin: 10px;
+    }
+    .UpscReview{
+        width: auto;
     }
 }

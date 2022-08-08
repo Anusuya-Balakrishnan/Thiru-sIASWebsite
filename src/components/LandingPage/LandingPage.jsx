@@ -3,7 +3,8 @@ import upscimage from "./images/UPSC2.avif";
 import LandingStyle from "./LandingStyle.css";
 import ReviewComponent from "../ReviewComponent/ReviewComponent.jsx";
 import Button from "../Button/ButtonHtml.jsx";
-
+import AutoHtml from "../AutoSlide/AutoHtml";
+// import person1 from "./images/person1.jpg";
 export default function LandingPage() {
   return (
     <section id="LandingPage">
@@ -17,11 +18,12 @@ export default function LandingPage() {
               amet, lobortis habitant dolor consequat. Adipiscing a in sociis
               enim, posuere ac.
             </p>
-            <div className="ButtonDiv">
-              <Button name="Enroll" />
-            </div>
+            <Button name="Enroll" />
+            {/* <p className="ButtonDiv"></p> */}
           </div>
-          <div className="UpscReview"></div>
+          <div className="UpscReview">
+            <AutoHtml />
+          </div>
         </div>
       </div>
     </section>

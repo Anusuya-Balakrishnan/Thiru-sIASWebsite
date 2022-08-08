@@ -1,8 +1,9 @@
 import React from "react";
 import Homepage from "./HomePage.css";
 import logoimage from "./images/Logo.svg";
-import { FaList } from "react-icons/fa";
+import { BiDotsVerticalRounded } from "react-icons/bi";
 import { FaThreeDot } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function HomePage() {
   return (
@@ -19,8 +20,9 @@ export default function HomePage() {
           <p>Contact</p>
         </div>
         <div className="MenuIcon" onClick={displayMenu}>
-          <FaList />
+          <BiDotsVerticalRounded />
         </div>
+
         <div className="MenuListParent">
           <div className="MenuList">
             <p>Home</p>
@@ -28,7 +30,9 @@ export default function HomePage() {
             <p>Courses</p>
             <p>Achievement</p>
             <p>Contact</p>
-            <p onClick={displayMenu}>*</p>
+            <div className="closeIcon" onClick={closeMenu}>
+              <AiOutlineClose />
+            </div>
           </div>
         </div>
       </div>
@@ -47,4 +51,9 @@ function displayMenu() {
   }
   // console.log("value", value, "choice", choice);
   document.getElementsByClassName("MenuListParent")[0].style.display = value;
+}
+
+function closeMenu() {
+  // console.log("close menu");
+  document.getElementsByClassName("MenuListParent")[0].style.display = "none";
 }
