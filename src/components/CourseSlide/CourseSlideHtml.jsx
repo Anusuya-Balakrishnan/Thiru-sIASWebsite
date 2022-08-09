@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CourseSlideStyle from "./CourseSlideStyle.css";
 import CourseHtml from "../Course/CourseHtml";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
+import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 
 export default function CourseSlideHtml() {
   const [widthValue, setWidth] = useState(0);
@@ -9,39 +10,33 @@ export default function CourseSlideHtml() {
     let x = document.querySelector(".slide").clientWidth;
     let maxWidth = document.querySelector(".SlideContainers").clientWidth;
     // console.log(maxWidth);
-    if (widthValue < maxWidth - 2(x)) {
+    if (widthValue < maxWidth - x) {
       setWidth(widthValue + x);
-      console.log(widthValue);
+    } else {
+      // document.querySelector(".CourseLeftClick").style.display = "none";
+      setWidth(0);
     }
-    //  else {
-    //   // document.querySelector(".CourseLeftClick").style.display = "none";
-    //   setWidth(0);
-    // }
     document.querySelector(".SlideContainers").style.left = -widthValue + "px";
   }
   function RightMove() {
     let x = document.querySelector(".slide").clientWidth;
     let maxWidth = document.querySelector(".SlideContainers").clientWidth;
-
-    if (widthValue != 0) {
-      setWidth(widthValue + x);
-      console.log(widthValue);
+    let leftvalue = document.querySelector(".SlideContainers").style.left;
+    if (leftvalue != 0) {
+      setWidth(leftvalue + x);
     } else {
-      setWidth(0);
+      // document.querySelector(".CourseLeftClick").style.display = "none";
+      // setWidth(0);
     }
-    // else {
-    //   // document.querySelector(".CourseRightClick").style.display = "none";
-    //   setWidth(maxWidth);
-    // }
-    document.querySelector(".SlideContainers").style.right = -widthValue + "px";
-    console.log("right value " + widthValue);
+    document.querySelector(".SlideContainers").style.left = widthValue + "px";
+    console.log(widthValue + "leftvalue");
   }
 
   return (
     <section id="CourseSlidePage">
       <div className="CourseSlide">
         <div className="CourseLeftClick" onClick={leftMove}>
-          <FaLessThan />
+          <CgChevronLeft />
         </div>
         <div className="CourseSlideMain">
           <div className="SlideContainers">
@@ -66,7 +61,7 @@ export default function CourseSlideHtml() {
           </div>
         </div>
         <div className="CourseRightClick" onClick={RightMove}>
-          <FaGreaterThan />
+          <CgChevronRight />
         </div>
       </div>
     </section>

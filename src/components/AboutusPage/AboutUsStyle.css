@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.AboutContent1{
+margin: 50px 100px;
+
+}
+.AboutHeading{
+    color: #27227A;
+    font-size: 30px;
+}
+.AboutParagraph{
+    margin: 20px 0;
+    line-height: 2;
+    font-size: 14px;
+}
+.FounderDetailsParent{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.FounderDetails{
+    
+    margin: 30px 0;
+    width: 700px;
+    height: 350px;
+    background-color:#380000;
+}
+.FounderPhoto{
+    position: relative;
+}
+.FounderPhoto img{
+    position: absolute;
+    height: 350px;
+    width: 280px;
+    z-index: 0;
+}
+.FounderFrame{
+    z-index: 5;
+    height: 350px;
+    width: 280px;
+    /* position: absolute; */
+    border: 1px solid rgba(187, 20, 20, 0.363);
+    /* background-color: #26227a2f; */
+    background-color: linear-gradient(to bottom, rgba(255, 5, 5, 0.363) , rgrgb(0, 0, 0));
+}

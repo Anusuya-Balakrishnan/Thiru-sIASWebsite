@@ -37,6 +37,7 @@ export default function ReviewComponent(props) {
               <p>{props.para3}</p>
               <br />
               <p>{props.para4}</p> <br />
+              <p>{props.para5}</p>
               Thank you Sir.
             </p>
           </p>

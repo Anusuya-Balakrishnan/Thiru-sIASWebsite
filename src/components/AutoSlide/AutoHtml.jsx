@@ -107,7 +107,7 @@ export default function AutoHtml() {
 let count = 0;
 let timeout = setInterval(() => {
   document.getElementsByClassName("SlideContainer")[0].style.left =
-    -(394 * count) + "px";
+    -(400 * count) + "px";
   if (count < 4) {
     count++;
   } else {

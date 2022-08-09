@@ -10,18 +10,28 @@
     background-color: #CB2C31;
     color:white;
     border-radius: 10px;
-    transition: 0.5s;
+    transition: 0.3s;
     /* font-weight: bold; */
 }
 .ButtonMain p{
     margin-right: 10px;
 }
+.ButtonIcon{
+    transition: 1s width;
+    font-weight: bolder;
+
+}
 .ButtonMain:hover{
     /* font-weight: bold; */
     background-color: white;
-    /* border: 1px solid #CB2C31; */
+    /* width: 166px;
+    height: 46px; */
+    outline: 1px solid #CB2C31;
     /* padding: 0 18px; */
     color:#CB2C31;
-    box-shadow: 1px 1px 5px 0 #CB2C31,1px 1px 5px 0 #CB2C31;
+    /* box-shadow: 1px 1px 5px 0 #CB2C31,1px 1px 5px 0 #CB2C31; */
     cursor: pointer;
 }
+/* .ButtonIcon:hover{
+    width: 50px;
+} */
