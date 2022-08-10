@@ -5,7 +5,7 @@ import SecondPageHtml from "./SecondPage/SecondPageHtml";
 export default function App() {
   return (
     <section id="App">
-      <FirstPageHtml />
+      {/* <FirstPageHtml /> */}
       <SecondPageHtml />
     </section>
   );

@@ -1,6 +1,8 @@
 .FooterPageParent
 {
     background-color: #380000;
+    margin-top: 20px;
+    color: white;
 }
 
 .FooterParent{
@@ -16,17 +18,18 @@
     padding: 20px;
 }
 .FooterContent{
+    
     margin: 0 80px;
-    width: 300px;
+    width: 400px;
     height: 200px;
-    background-color: #380000;
+    /* background-color: #380000; */
 }
 .FooterContent img{
-    width: 300px;
+    width: 400px;
     height: 50px;
 }
 .FooterContent p{
-    color: white;
+    
     padding: 30px 10px;
     text-align: justify;
     font-size: 15px;
@@ -37,7 +40,7 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
+    /* position: relative; */
     /* bottom:40px; */
     /* height: 300px; */
     width:10%;
@@ -46,17 +49,17 @@
 .FooterList p{
     width: auto;
     margin: 15px;
-    color: white;
+    
     text-align: center;
     font-size:large;
 }
 .FooterAddress{
-    position: relative;
+    /* position: relative; */
     width: 450px;
     padding: 0 30px;
     height: auto;
     /* margin:0 80px; */
-    color: white;
+    
     /* bottom: 40px; */
 
 }
@@ -78,7 +81,7 @@
     padding: 50px;
     display: flex;
     justify-content: center;
-    color: white;
+
 }
 .EachIcon{
     font-size: 15px;

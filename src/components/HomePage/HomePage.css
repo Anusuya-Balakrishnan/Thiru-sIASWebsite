@@ -4,12 +4,20 @@
 }
 
 
-
+#Navbar{
+    position: fixed;
+    /* position: sticky; */
+    top:0px;
+    left: 0px;
+    max-width: 1920px;
+    height: 70px;
+    
+}
 .NavbarMain{
     position: relative;
     background-color: #CB2C31;
     height: 70px;
-    /* width: 100%; */
+    width: 100vw;
     max-width: 1920px;
     display: flex;
     align-items: center;
@@ -110,7 +118,7 @@
 @media (max-width:800px) {
     .NavbarMain{
         height: 70px;
-        width: auto;
+        width: 100vw;
     }
     .LogoContent h1{
         font-size: 135%;

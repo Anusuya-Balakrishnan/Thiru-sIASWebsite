@@ -1,10 +1,11 @@
 import React from "react";
 import Homepage from "./HomePage.css";
 import logoimage from "./images/Logo.svg";
+// import { Link } from "react-router-dom";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { FaThreeDot } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
-
+import SecondPageHtml from "../SecondPage/SecondPageHtml";
 export default function HomePage() {
   return (
     <section id="Navbar">
@@ -14,7 +15,9 @@ export default function HomePage() {
         </div>
         <div className="NavBarContent">
           <p>Home</p>
+          {/* <Link to="/SecondPageHtml"> */}
           <p>Aboutus</p>
+
           <p>Courses</p>
           <p>Achievement</p>
           <p>Contact</p>

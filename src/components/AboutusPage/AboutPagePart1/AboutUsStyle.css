@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.AboutUsMain{
+    margin-top: 100px;
+}
+.AboutContent1{
+margin: 50px 100px;
+
+}
+.AboutHeading{
+    color: #27227A;
+    font-size: 30px;
+}
+.AboutParagraph{
+    margin: 20px 0;
+    line-height: 2;
+    font-size: 14px;
+    text-align: justify;
+}
+.FounderDetailsParent{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+}
+.FounderDetails{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    margin: 30px 0;
+    width: 800px;
+    /* height: 350px; */
+    
+}
+ .FounderPhoto{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+/* .Photo{
+    position: absolute;  
+} */ 
+.Photo img{
+    /* position: absolute; */
+    height: 350px;
+    width: 280px;
+    /* z-index: 0; */
+    /* position: absolute; */
+}
+.FounderFrame{
+    /* z-index: 5; */
+    height: 350px;
+    width: 280px;
+    /* position: relative; */
+    /* border: 1px solid rgba(187, 20, 20, 0.363); */
+    /* background-color: #26227a2f; */
+    /* background: linear-gradient(to bottom,rgba(240, 0, 0, 0.003) ,rgba(0, 0, 0, 0.147)); */
+    background:rgba(0, 0, 0, 0.847);
+    /* background:rgba(0, 0, 0, 0.003); */
+
+}
+.FounderContent{
+    /* display: flex;  */
+    /* position: relative; */
+     /* flex-direction: column; */
+    /* height: 350px; */
+    width: 400px;
+    padding: 30px;
+    color: rgb(224, 224, 224);
+    background-color:#380000;
+}
+.FounderName{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.degree{
+    font-size: 12px;
+}
+.FounderPara{
+    text-align: justify;
+    line-height: 2;
+    font-size: 13px;
+    margin: 20px 0;
+}
+.AboutIcon{
+    display: flex;
+    margin-top: 30px;
+}
+.EachAboutIcon{
+    margin: 0 15px;
+    font-size: 20px;
+    /* text-align: center; */
+}
+
+@media(max-width:850px) {
+
+    .FounderDetails{
+        flex-direction: column;
+    }
+    .FounderContent{
+        height: auto;
+       width: auto;
+       margin: 0 150px;
+    }
+    .FounderName, .FounderPara , .FounderTitle , .AboutIcon{
+        display: flex;
+        justify-content: center;
+    }
+    .Photo img{
+        width: 100%;
+        height: auto;
+    }
+    
+}

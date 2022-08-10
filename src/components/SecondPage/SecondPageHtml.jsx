@@ -1,5 +1,5 @@
 import React from "react";
-import AboutUsHtml from "../AboutusPage/AboutUsHtml";
+import AboutUsHtml from "../AboutusPage/AboutPagePart1/AboutUsHtml";
 import HomePage from "../HomePage/HomePage";
 import FooterHtml from "../FooterPage/FooterHtml";
 export default function SecondPageHtml() {
