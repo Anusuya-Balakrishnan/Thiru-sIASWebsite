@@ -9,9 +9,22 @@ import image5 from "./images/5.jpeg";
 import ReviewComponent from "../ReviewComponent/ReviewComponent";
 
 export default function AutoHtml() {
+  function autoLoad() {
+    let count = 0;
+    setInterval(() => {
+      document.querySelector(".SlideContainer").clientLeft =
+        -(400 * count) + "px";
+      if (count < 4) {
+        count++;
+      } else {
+        count = 0;
+      }
+    }, 5000);
+  }
+
   return (
     <section id="AutoHtml">
-      <div className="SlideFrame">
+      <div className="SlideFrame" onLoad={autoLoad}>
         <div className="SlideContainer">
           <div className="SlideImage">
             <ReviewComponent
@@ -104,13 +117,3 @@ export default function AutoHtml() {
     </section>
   );
 }
-let count = 0;
-let timeout = setInterval(() => {
-  document.getElementsByClassName("SlideContainer")[0].style.left =
-    -(400 * count) + "px";
-  if (count < 4) {
-    count++;
-  } else {
-    count = 0;
-  }
-}, 5000);

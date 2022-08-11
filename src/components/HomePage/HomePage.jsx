@@ -5,6 +5,7 @@ import logoimage from "./images/Logo.svg";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { FaThreeDot } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import FirstPageHtml from "../FirstPage/FirstPageHtml";
 import SecondPageHtml from "../SecondPage/SecondPageHtml";
 export default function HomePage() {
   return (
@@ -15,9 +16,7 @@ export default function HomePage() {
         </div>
         <div className="NavBarContent">
           <p>Home</p>
-          {/* <Link to="/SecondPageHtml"> */}
-          <p>Aboutus</p>
-
+          <p>About us</p>
           <p>Courses</p>
           <p>Achievement</p>
           <p>Contact</p>

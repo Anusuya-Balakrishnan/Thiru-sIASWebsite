@@ -1,0 +1,55 @@
+.GroupDiscussionParent{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.GroupDiscussionTitle{
+    display: flex;
+    justify-content: center;
+    color:  #27227A;
+ font-size: 25px;
+ margin: 35px 0;
+}
+.GroupSlide , .GroupSlide img{
+ width:350px;
+ height: 500px;
+ border-radius: 20px;
+}
+.GroupSlide{
+    margin: 30px;
+}
+.GroupSlideContainer{
+    display: flex;
+    justify-content: center;
+}
+.GroupSlideFrameParent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 660px;
+}
+.GroupSlideFrame{
+overflow: hidden;
+width: 830px;
+height: auto;
+/* background-color: #5b5890; */
+/* transition: 5s; */
+}     
+.GroupContainer{
+    position: relative;
+    display: flex;
+    /* background-color: #565571; */
+    width: auto;
+    height: auto;
+    transition: 2s;
+    
+}
+.GroupSlideLeft, .GroupSlideRight{
+    margin: 30px;
+    font-size: 40px;
+    color: #CB2C31;
+    cursor: pointer;
+
+}

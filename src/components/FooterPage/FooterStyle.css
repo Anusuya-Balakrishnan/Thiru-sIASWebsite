@@ -15,11 +15,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px;
+    padding-top: 20px;
+    /* padding: 20px; */
 }
 .FooterContent{
     
-    margin: 0 80px;
+    margin: 0 60px;
     width: 400px;
     height: 200px;
     /* background-color: #380000; */
@@ -44,7 +45,7 @@
     /* bottom:40px; */
     /* height: 300px; */
     width:10%;
-    margin:0 120px ;
+    margin:0 100px;
 }
 .FooterList p{
     width: auto;
@@ -78,13 +79,13 @@
     margin: 30px 20px;
 }
 .IconList{
-    padding: 50px;
+    padding: 20px;
     display: flex;
     justify-content: center;
 
 }
 .EachIcon{
-    font-size: 15px;
+    font-size: 20px;
     padding: 30px;
     /* margin: 20px 0px; */
 }

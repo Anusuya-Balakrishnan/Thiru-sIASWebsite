@@ -1,0 +1,50 @@
+
+.AchieverParent{
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+}
+.AchieverTitle{
+ color:  #27227A;
+ font-size: 25px;
+ margin: 30px 0 30px  150px;
+}
+.AchieverDetails{
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.AchieverImage, .AchieverImage img{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+.AchieverImage{
+    margin: 30px 50px;
+    padding-top:40px ;
+}
+.AchieverContent{
+    padding: 30px;
+    width: 550px;
+}
+.AchieverName{
+    color: #27227A;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 30px 0;
+}
+.AchieverRank{
+    color: #27227A; 
+    margin: 30px 0;
+    font-size: 18px;
+}
+.AchieverDescription{
+    font-size: 18px;
+    margin: 20px 0;
+}
+.AchieverCurrentDetails{
+    line-height: 2;
+    text-align: justify;
+
+}

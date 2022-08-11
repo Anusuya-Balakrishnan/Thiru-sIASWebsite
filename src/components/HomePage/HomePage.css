@@ -5,6 +5,7 @@
 
 
 #Navbar{
+    z-index: 10;
     position: fixed;
     /* position: sticky; */
     top:0px;
@@ -23,6 +24,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+
     /* position: fixed; */
 }
 .NavbarLogo{
