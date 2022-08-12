@@ -1,11 +1,13 @@
 import React from "react";
 import AchievementStylePart1 from "./AchievementStylePart1.css";
 import AchieverHtml from "../../AboutusPage/AboutPagePart2/AchieverHtml";
+import bharaniImage from "./image/bharaniImage.jpg";
+
 export default function AchievementPagePart1() {
   return (
     <section id="AchievementPagePart1">
       <div className="AchievementPageParent">
-        <div className="AchieverTitle">UPSC Achiever</div>
+        <div className="AchieverTitle">UPSC Exam Achiever</div>
         <div className="AchieverDetails">
           <div className="AchieverContent">
             <div className="AchieverName">Bharani.M</div>
@@ -20,7 +22,9 @@ export default function AchievementPagePart1() {
               vulputate turpis donec feugiat erat eu tempor volutpat.
             </div>
           </div>
-          <div className="AchieverImage"></div>
+          <div className="AchieverImage">
+            <img src={bharaniImage} />
+          </div>
         </div>
       </div>
     </section>

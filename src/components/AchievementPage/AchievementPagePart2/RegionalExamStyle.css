@@ -1,0 +1,34 @@
+/* RegionalExamAchiever Style starts */
+.RegionalExamAchiever{
+    margin: 0;
+    padding: 0;
+    margin:0 70px;
+}
+.ExamAchieverName{
+  font-size: 25px;
+  margin: 20px 30px;
+  color: #27227A;
+}
+.RExamRank{
+    margin: 20px 30px;
+    font-size: 16px;
+    color: #27227A;
+}
+.RExamDetails{
+    margin: 20px 30px;
+    text-align: justify;
+    line-height: 2;
+}
+/*  RegionalExamAchiever Style  ends*/
+
+
+/* RegionalExamHtml page starts */
+.RegionalExamPageComponent{
+    margin: 50px;
+}
+.RegionalTitle{
+    margin: 30px;
+    font-size: 25px;
+  color: #27227A;
+
+}

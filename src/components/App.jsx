@@ -6,9 +6,9 @@ import AchievementHtmlPage from "./AchievementPage/AchievementHtmlPage";
 export default function App() {
   return (
     <section id="App">
+      <FirstPageHtml />
+      <SecondPageHtml />
       <AchievementHtmlPage />
-      {/* <FirstPageHtml /> */}
-      {/* <SecondPageHtml /> */}
     </section>
   );
 }

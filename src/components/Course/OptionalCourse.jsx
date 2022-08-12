@@ -1,10 +1,10 @@
 import React from "react";
 import CourseStyle from "./CourseStyle.css";
 import image from "./image/image.jpeg";
-import { IoTime } from "react-icons/io5";
-import { MdEventNote } from "react-icons/md";
+import { AiFillStar } from "react-icons/ai";
+
 import Button from "../Button/ButtonHtml";
-export default function CourseHtml(props) {
+export default function OptionalCourse(props) {
   return (
     <section id="CourseHtml">
       <div className="CourseParent">
@@ -13,14 +13,14 @@ export default function CourseHtml(props) {
           <div className="CourseDetails">
             <p className="CourseTitle">{props.courseTitle}</p>
             <p className="CourseContent">{props.courseContent}</p>
-            <div className="courseDuration">
+            <div className="courseDuration optionalDuration">
               <div className="duration">
-                <IoTime />
-                <p>{props.month} Months</p>
+                <AiFillStar />
+                <p>{props.optional1}</p>
               </div>
               <div className="duration">
-                <MdEventNote />
-                <p>{props.test} Tests</p>
+                <AiFillStar />
+                <p>{props.optional2}</p>
               </div>
             </div>
           </div>

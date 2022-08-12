@@ -1,0 +1,75 @@
+/*  */
+.SeminarMainParent{
+    display: flex;
+    justify-content: center;
+}
+
+.SeminarParent{
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #CB2C31;
+    border-radius: 10px;
+    /* flex-wrap: wrap; */
+    width: auto;
+    /* width: 700px; */
+}
+.SeminarImage , .SeminarImage img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.SeminarImage{
+    margin: 30px;
+}
+.SeminarContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+
+}
+.SeminarTitle{
+    color: #27227A;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.SeminarDetail{
+    font-size: 15px;
+    margin: 20px 0;
+    line-height: 2;
+    text-align: justify;
+}
+.SeminarDate{
+    font-size: 13px;
+    color: #27227A;
+    line-height: 2;
+}
+/*  */
+.SeminarContainerParent{
+    width: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.SeminarSlideContainer{
+    position: relative;
+    width: 810px;
+    height: auto;
+    display: flex;
+    /* background-color: #27227A; */
+    overflow: hidden;
+}
+
+.SeminarSlideParent{
+    position:absolute;
+    display: flex;
+    left: 0;
+    width: auto;
+    height: auto;
+    transition: 5s;
+}

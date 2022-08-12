@@ -30,7 +30,9 @@ export default function LandingPage() {
 
               <Button name="Enroll" />
             </div>
-            <div className="UpscReview">{/* <AutoHtml /> */}</div>
+            <div className="UpscReview">
+              <AutoHtml />
+            </div>
           </div>
         </div>
       </div>
