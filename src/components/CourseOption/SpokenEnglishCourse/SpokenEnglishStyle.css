@@ -1,0 +1,17 @@
+.SpokenEnglishPageParent{
+    margin-top: 100px;
+
+}
+.SPCourses{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.SPTitle{
+    margin: 50px 100px 0;
+    font-size: 25px;
+    color: #27227A;
+}
+.SPEachCourse{
+    margin: 50px;
+}

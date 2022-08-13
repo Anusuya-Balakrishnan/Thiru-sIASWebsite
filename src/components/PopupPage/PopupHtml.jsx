@@ -7,23 +7,34 @@ import { BsChevronDown } from "react-icons/bs";
 import Logo from "./images/Logo.svg";
 import course from "./images/course.svg";
 import query from "./images/query.svg";
+import Button from "../Button/ButtonHtml";
 let menuClick = true;
 let courseList = [
   "Preliminary Exam",
   "Mains Exam",
   "Preliminary cums Mains Exam",
   "Preliminary Exam(Crash Course)",
-  // "CSAT",
-  // "Socialogy(Optional)",
-  // "Political Science(Optional)",
-  // "TNPSC Group 1",
-  // "TNPSC Group 2",
-  // "RRB/SSC",
-  // "UDC/LDC",
-  // "Spoken English",
+  "CSAT",
+  "Socialogy(Optional)",
+  "Political Science(Optional)",
+  "TNPSC Group 1",
+  "TNPSC Group 2",
+  "RRB/SSC",
+  "UDC/LDC",
+  "Spoken English",
 ];
 
 export default function PopupPage() {
+  let show = false;
+  function showCourses() {
+    if (!show) {
+      document.querySelector(".Options").style.display = "block";
+      show = true;
+    } else {
+      document.querySelector(".Options").style.display = "none";
+      show = false;
+    }
+  }
   return (
     <section id="PopupPage">
       <div className="PopupPageParent">
@@ -67,13 +78,13 @@ export default function PopupPage() {
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               />
             </div>
-            <div className="SelectList">
+            <div className="SelectList" onClick={showCourses}>
               <div className="CourseMenu FormElement">
                 <img src={course} className="Icon" />
-                <div className="CourseTitle">Select Courses</div>
+                <div className="popupCourseTitle">Select Courses</div>
                 <BsChevronDown color="#27227A" />
               </div>
-              {/* <div className="Options">
+              <div className="Options">
                 {courseList.map((course) => {
                   return (
                     <div className="option" key={course.id}>
@@ -81,7 +92,7 @@ export default function PopupPage() {
                     </div>
                   );
                 })}
-              </div> */}
+              </div>
             </div>
 
             <div className="FormElement">
@@ -92,6 +103,9 @@ export default function PopupPage() {
                 name="Query"
                 placeholder="Query"
               />
+            </div>
+            <div className="PopupButton">
+              <Button name="Submit" />
             </div>
           </div>
         </div>

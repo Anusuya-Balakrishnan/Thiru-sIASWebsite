@@ -1,0 +1,16 @@
+.RegionalCourseParent{
+    margin-top: 100px;
+}
+.RegionalCourse{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.RegionalEachCourse{
+    margin: 50px;
+}
+.RegionalCourseTitle{
+    margin: 50px 100px 0;
+    font-size: 25px;
+    color: #27227A;
+}

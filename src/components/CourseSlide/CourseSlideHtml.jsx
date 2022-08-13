@@ -224,18 +224,6 @@ export default function CourseSlideHtml() {
                 </div>
               );
             })}
-
-            {/* <div className="slide">
-              <CourseHtml
-                courseImage={omr1}
-                courseTitle="Preliminary Exam Course"
-                courseContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum
-              rhoncus in eget lectus quis consectetur facilisis. Egestas posuere
-              nunc donec ultricies egestas vitae id in."
-                month="8"
-                test="80"
-              />
-            </div> */}
           </div>
         </div>
         <div className="CourseRightClick" onClick={RightMove}>
@@ -245,7 +233,19 @@ export default function CourseSlideHtml() {
     </section>
   );
 }
-
+{
+  /* <div className="slide">
+              <CourseHtml
+                courseImage={omr1}
+                courseTitle="Preliminary Exam Course"
+                courseContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum
+              rhoncus in eget lectus quis consectetur facilisis. Egestas posuere
+              nunc donec ultricies egestas vitae id in."
+                month="8"
+                test="80"
+              />
+            </div> */
+}
 {
   /* <div className="slide"><CourseHtml /></div>
             <div className="slide"><CourseHtml /></div>

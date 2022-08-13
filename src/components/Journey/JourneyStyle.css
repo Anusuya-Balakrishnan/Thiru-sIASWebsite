@@ -5,12 +5,15 @@
 }
 .JourneyParent{
     margin: 10px 0;
+    /* background-color: #808080; */
 }
 .JourneyPart1{
-    margin: 50px 0;
+    /* margin: 50px 0; */
+    padding: 0;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    /* background-color: #808080; */
 }
 .JContent1{
     /* height: 400px; */
@@ -55,12 +58,14 @@
 .JourneyImage img{
  height: 400px;
  width: 400px;
+ object-fit: cover;
 }
 .JourneyPart2{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color:rgb(226, 227, 229) ;
 }
 .JourneyContent2{
     width: 300px;

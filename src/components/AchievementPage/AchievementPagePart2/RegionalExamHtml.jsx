@@ -6,7 +6,7 @@ export default function RegionalExamHtml() {
   return (
     <section id="RegionalExamPage">
       <div className="RegionalExamPageComponent">
-        <div className="RegionalTitle">Regional Exam Achievers:</div>
+        <div className="RegionalExamTitle">Regional Exam Achievers:</div>
         <div className="RegionalExamComponents">
           <RegionalExamAchiever
             name="Mr.Shiva"

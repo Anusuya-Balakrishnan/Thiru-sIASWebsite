@@ -10,7 +10,7 @@
     justify-content: center;
 }
 .PopupPageMain{
-    height: 450px;
+    /* height: 450px; */
     width: 350px;
     border-radius: 10px;
     border: 1px solid #CB2C31;
@@ -60,11 +60,17 @@
     margin: 0;
     
 }
-.CourseTitle{
-    width: 250px;
+.popupCourseTitle{
+    width: 200px;
     font-size: 12px;
     color: #27227A;
-    margin-left: 20px;
+    
+    /* margin-left: 10px; */
+    text-align: left;
+    padding: 0;
+    padding-right: 30px;
+    padding-left: 20px;
+    cursor: pointer;
 }
 .InputType{
     outline: 0;
@@ -93,11 +99,13 @@
     width: 15px;
 }
 .Options{
+    display: none;
     width: 88%;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
    margin: 22px;
-   height: 140px;
+   /* height: auto; */
+   height: 180px;
    overflow-y: scroll;
    scroll-behavior: smooth;
    background-color: #27227A;
@@ -116,4 +124,9 @@
 .option:hover{
    cursor: pointer;
    background-color: #07026a;
+}
+.PopupButton{
+    width: auto;
+    display: flex;
+    justify-content: center;
 }

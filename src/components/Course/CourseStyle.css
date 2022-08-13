@@ -138,6 +138,7 @@
     .CourseParent img {
         height: 50%;
         width: 100%;  
+        object-fit: cover;
     }
     .CourseTitle{
         font-size: 90%;

@@ -24,9 +24,11 @@
 
 /* RegionalExamHtml page starts */
 .RegionalExamPageComponent{
-    margin: 50px;
+    margin: 20px 0;
+    padding: 30px 0;
+    background-color: #dddddd;
 }
-.RegionalTitle{
+.RegionalExamTitle{
     margin: 30px;
     font-size: 25px;
   color: #27227A;

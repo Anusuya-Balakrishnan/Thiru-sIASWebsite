@@ -1,0 +1,20 @@
+
+.UpscMainParent{
+ margin-top: 100px;
+}
+
+.UpscCourseParent{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.UpscTitle{
+    margin: 50px 100px 0;
+    font-size: 25px;
+    color: #27227A;
+}
+.UpscEachCourse{
+    margin: 50px;
+}
