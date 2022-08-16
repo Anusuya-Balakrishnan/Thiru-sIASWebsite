@@ -9,7 +9,8 @@
 .AchieverTitle{
  color:  #27227A;
  font-size: 25px;
- margin: 30px 0 30px  150px;
+ margin: 0;
+ margin-left: 150px;
 }
 .AchieverDetails{
     margin: 0;
@@ -34,7 +35,7 @@
     color: #27227A;
     font-size: 25px;
     font-weight: 500;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 .AchieverRank{
     color: #27227A; 

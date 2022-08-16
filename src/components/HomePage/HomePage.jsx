@@ -6,7 +6,8 @@ import { BiDotsVerticalRounded, BiChevronDown } from "react-icons/bi";
 import { FaThreeDot } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-
+import whatapp from "./images/whatapp.svg";
+import query from "./images/Vector.svg";
 export default function HomePage() {
   let show = false;
   function showMenu() {
@@ -18,12 +19,17 @@ export default function HomePage() {
       show = false;
     }
   }
+
+  const newLocal = "navCourseListParent";
+  // function hideMenu() {
+  //   document.querySelector(".navCourseListParent").style.display = "none";
+  // }
   return (
     <section id="Navbar">
-      <Link to="/" className="NavbarMain">
-        <div className="NavbarLogo">
+      <div className="NavbarMain">
+        <Link to={"/"} className="NavbarLogo">
           <img src={logoimage} alt="logo" />
-        </div>
+        </Link>
         <div className="NavBarContent">
           <Link to={"/"} className="navOption">
             Home
@@ -31,14 +37,20 @@ export default function HomePage() {
           <Link to={"/about"} className="navOption">
             About us
           </Link>
-          <div className="navOption" onClick={showMenu}>
+
+          <div
+            className="navOption"
+            onMouseOver={showMenu}
+            // onMouseOut={hideMenu}
+          >
             <p>Courses</p>
             <BiChevronDown />
           </div>
+
           <Link to="/achievement" className="navOption">
             Achievement
           </Link>
-          <Link to="" className="navOption">
+          <Link to="/contactus" className="navOption">
             Contact
           </Link>
         </div>
@@ -46,7 +58,7 @@ export default function HomePage() {
           <BiDotsVerticalRounded />
         </div>
 
-        <div className="navCourseListParent">
+        <div className={newLocal}>
           <div className="navCourseList">
             <Link to="/course/upsc" className="EachNavCourse">
               UPSC
@@ -72,7 +84,15 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </Link>
+        <div className="WhatsappIcon">
+          <div className="whatsapp">
+            <img src={whatapp} />
+          </div>
+          <div className="queryIcon">
+            <img src={query} />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

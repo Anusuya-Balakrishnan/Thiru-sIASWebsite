@@ -4,6 +4,7 @@
     padding: 0;
 }
 .LandingPageParent{
+    margin-top: 70px;
     position: relative;
     max-width: 1920px; 
     height: auto; 

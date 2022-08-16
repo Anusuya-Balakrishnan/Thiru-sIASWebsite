@@ -10,6 +10,8 @@ import RegionalExamPage from "./CourseOption/RegionalExam/RegionalExam";
 import SpokenEnglishPage from "./CourseOption/SpokenEnglishCourse/SpokenEnglish";
 import PageNotFound from "./404/PageNotFound";
 import HomePage from "./HomePage/HomePage";
+// import ContactPage from "./ContactPage/ContactPageHtml";
+import ContactPageHtml from "./ContactPage/ContactPageMain";
 export default function App() {
   return (
     <>
@@ -22,16 +24,19 @@ export default function App() {
           <Route path="/course/upsc" element={<UPSC />} />
           <Route path="/course/regionalExam" element={<RegionalExamPage />} />
           <Route path="/course/spokenEnglish" element={<SpokenEnglishPage />} />
+          <Route path="/contactus" element={<ContactPageHtml />} />
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-
-        {/* <FirstPageHtml />
+      </BrowserRouter>
+      {/* <ContactPage /> */}
+    </>
+  );
+}
+{
+  /* <FirstPageHtml />
         <SecondPageHtml />
         <AchievementHtmlPage />
         <CourseOption />
-        <PopupPage /> */}
-      </BrowserRouter>
-    </>
-  );
+        <PopupPage /> */
 }

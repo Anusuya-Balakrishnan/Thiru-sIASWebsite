@@ -2,6 +2,7 @@ import React from "react";
 import JourneyStyle from "./JourneyStyle.css";
 import { FaUserGraduate } from "react-icons/fa";
 import { RiTeamFill } from "react-icons/ri";
+// import { GrWorkshop } from "react-icons/g";
 import image1 from "./image/image1.jpeg";
 
 export default function JourneyHtml() {

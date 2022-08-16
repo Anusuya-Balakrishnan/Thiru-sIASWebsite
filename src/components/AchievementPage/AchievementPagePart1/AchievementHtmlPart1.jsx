@@ -7,8 +7,8 @@ export default function AchievementPagePart1() {
   return (
     <section id="AchievementPagePart1">
       <div className="AchievementPageParent">
-        <div className="AchieverTitle">UPSC Exam Achiever</div>
-        <div className="AchieverDetails">
+        <div className="UPSCAchieverTitle">UPSC Exam Achiever:</div>
+        <div className="UPSCAchieverDetails">
           <div className="AchieverContent">
             <div className="AchieverName">Bharani.M</div>
             <div className="AchieverRank">UPSC AIR-326 (2019 Batch)</div>

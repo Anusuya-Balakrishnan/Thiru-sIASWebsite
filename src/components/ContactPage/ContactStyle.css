@@ -1,0 +1,44 @@
+.ContactPageParent{
+    margin-top: 80px;
+    display: flex; 
+    /* justify-content: center; */
+    width: auto;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+.ContactTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 120px;
+    width: 100%;
+    background-color: #cb2c31d4;
+    color: white;
+    font-size: 30px;
+}
+.ContactPageContent{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: center;  */
+}
+.ContactPageMap{
+    margin: 30px;
+    margin-right: 50px;
+}
+.ContactPageMap ,iframe {   
+    width: 700px;
+    height: 500px; 
+    border: 0;
+    border-radius: 10px;
+}
+iframe{
+    width: 100%;
+}
+.ContactForm{
+    margin-left: 50px;
+}

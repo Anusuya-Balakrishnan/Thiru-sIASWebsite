@@ -22,11 +22,11 @@ export default function CourseSlideHtml() {
   function leftMove() {
     let x = document.querySelector(".slide").clientWidth;
     let maxWidth = document.querySelector(".SlideContainers").clientWidth;
-    // console.log(maxWidth);
-    if (widthValue < maxWidth - x) {
-      setWidth(widthValue + x);
+    console.log("maxWidth" + maxWidth);
+    console.log("widthValue" + widthValue);
+    if (Math.abs(widthValue) < maxWidth - x) {
+      setWidth(widthValue - x);
     } else {
-      // document.querySelector(".CourseLeftClick").style.display = "none";
       setWidth(0);
     }
     document.querySelector(".SlideContainers").style.left = -widthValue + "px";
@@ -34,15 +34,14 @@ export default function CourseSlideHtml() {
   function RightMove() {
     let x = document.querySelector(".slide").clientWidth;
     let maxWidth = document.querySelector(".SlideContainers").clientWidth;
-    let leftvalue = document.querySelector(".SlideContainers").style.left;
-    if (leftvalue != 0) {
-      setWidth(leftvalue + x);
+    let maxValue = maxWidth - x;
+    console.log("maxWidth" + maxWidth);
+    console.log("widthValue" + widthValue);
+    if (Math.abs(widthValue) + x * 1 > maxValue) {
+      setWidth(0);
     } else {
-      // document.querySelector(".CourseLeftClick").style.display = "none";
-      // setWidth(0);
+      setWidth(widthValue - x);
     }
-    document.querySelector(".SlideContainers").style.left = widthValue + "px";
-    console.log(widthValue + "leftvalue");
   }
   let optionalCourse = [
     {
@@ -185,7 +184,7 @@ export default function CourseSlideHtml() {
           <CgChevronLeft />
         </div>
         <div className="CourseSlideMain">
-          <div className="SlideContainers">
+          <div className="SlideContainers" style={{ left: widthValue + "px" }}>
             {courseContent.map((Eachcourse) => {
               return (
                 <div key={Eachcourse.id} className="slide">
