@@ -114,7 +114,7 @@
     display: none;
     position: absolute;
     margin-right: 50px;
-    right: 0;
+    right: 10px;
     color: white;
     font-size: 20px;
     /* background-color: aqua; */
@@ -200,7 +200,7 @@
     }
 
 }
-@media  (max-width:950px ) {
+@media (max-width:950px ) {
     .NavBarContent p{
         font-size: 100%;
     }
