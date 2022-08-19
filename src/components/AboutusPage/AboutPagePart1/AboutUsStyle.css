@@ -48,15 +48,15 @@ margin: 50px 100px;
 } */ 
 .Photo img{
     /* position: absolute; */
-    height: 350px;
-    width: 280px;
+    max-height: 350px;
+    max-width: 280px;
     /* z-index: 0; */
     /* position: absolute; */
 }
 .FounderFrame{
     /* z-index: 5; */
-    height: 350px;
-    width: 280px;
+    max-height: 350px;
+    max-width: 280px;
     /* position: relative; */
     /* border: 1px solid rgba(187, 20, 20, 0.363); */
     /* background-color: #26227a2f; */
@@ -106,15 +106,31 @@ margin: 50px 100px;
     .FounderContent{
         height: auto;
        width: auto;
-       margin: 0 150px;
+       margin: 0 20px;
     }
     .FounderName, .FounderPara , .FounderTitle , .AboutIcon{
         display: flex;
         justify-content: center;
     }
+    .FounderDetails{
+        display: flex;
+    justify-content: center;
+    }
     .Photo img{
         width: 100%;
         height: auto;
     }
-    
+    .AboutHeading{
+        display: flex;
+        justify-content: center;
+        font-size: 150% ;
+    }
+    .AboutParagraph{
+        margin: 20px 0;
+        font-size: 90% ;
+        line-height: 1.8;
+    }
+    .AboutContent1{
+        margin: 0 30px;
+    }
 }

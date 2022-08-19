@@ -21,16 +21,16 @@ export default function FooterHtml() {
               amet, lobortis habitant dolor consequat. Adipiscing a in sociis
               enim, posuere ac.
             </p>
-            <div className="FooterSubscribe">
+            {/* <div className="FooterSubscribe">
               <div className="SubscribeBox">Enter your Email</div>
               <Button name="Subscribe" />
-            </div>
+            </div> */}
           </div>
           <div className="FooterList">
-            <p>Contact</p>
-            <p>Courses</p>
-            <p>FAQ</p>
             <p>About us</p>
+            <p>Courses</p>
+            <p>Contact</p>
+            <p>Faq</p>
           </div>
           <div className="FooterAddress">
             <div className="AddressDiv">

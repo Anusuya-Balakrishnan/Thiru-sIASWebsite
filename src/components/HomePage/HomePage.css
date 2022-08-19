@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    box-shadow:2px 2px 10px 5px #cb2c316c;
+    /* box-shadow:2px 2px 10px 5px #cb2c316c; */
 
     /* position: fixed; */
 }

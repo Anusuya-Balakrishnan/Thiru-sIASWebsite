@@ -4,7 +4,7 @@
     padding: 0;
 }
 .ReviewParent{
-    width: 420px;
+    max-width: 420px;
     height: auto;
     /* border-radius: 10px; */
     /* border: 2px solid #CB2C31; */
@@ -19,14 +19,17 @@
     align-items: center;
 }
 .PersonImage{
-    width: 50px;
-    height: 50px;
+    max-width: 50px;
+    /* height: 50px; */
+    max-height: 50px;
     border-radius: 50%;
     background-color: #CB2C31;
 }
 .PersonImage img{
-    width: 50px;
-    height: 50px;
+    /* width: 50px; */
+    max-width: 50px;
+    /* height: 50px; */
+    max-height: 50px;
     border-radius: 50%;
 
 }
