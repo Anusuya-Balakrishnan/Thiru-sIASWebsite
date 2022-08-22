@@ -26,9 +26,9 @@
     animation-iteration-count: infinite;
     animation-direction: alternate; */
 }
-/* .SlideImage img{
+/* .SlideImage{
     width: 380px;
-    height: 400px;
+    height: 450px;
 } */
 /* @keyframes slide{
     0%{

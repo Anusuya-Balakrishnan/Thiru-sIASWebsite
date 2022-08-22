@@ -6,7 +6,8 @@
 .ReviewParent{
     max-width: 420px;
     height: auto;
-    /* border-radius: 10px; */
+    background-color: white;
+    border-radius: 10px;
     /* border: 2px solid #CB2C31; */
     padding: 10px 5px;
 
@@ -15,37 +16,34 @@
     width: auto;
     padding: 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
-.PersonImage{
+.PersonImage ,.PersonImage img{
     max-width: 50px;
     /* height: 50px; */
     max-height: 50px;
     border-radius: 50%;
-    background-color: #CB2C31;
+    
 }
-.PersonImage img{
-    /* width: 50px; */
-    max-width: 50px;
-    /* height: 50px; */
-    max-height: 50px;
-    border-radius: 50%;
+.PersonImage{
+    background-color: #CB2C31;
+    margin: 0 10px;
 
 }
 .time, .Name{
-    font-size: 10px;
-    margin: 5px 10px;
+    font-size: 12px;
+    margin: 5px 0;
 }
 .Name span{
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
 }
 .PersonName{
     display: flex;
-    /* padding: 10px; */
+    margin: 0 30px;
     justify-content: center;
-    width: 170px;
+    max-width: 170px;
     flex-direction: column;
 }
 .ReviewStar{
@@ -57,12 +55,36 @@
     font-size: 13px;
 }
 .ReviewBody p{
-    text-align: justify;
-    line-height: 1.5;
+    text-align: left;
+    line-height: 1.6;
 }
-@media (max-width:450px){
-    .UpscHeading{
+
+@media (max-width:420px) {
+    .PersonName{
+        width: auto;
+    }
+    .Name span{
+        font-size: 120%;
+    }
+    .PersonName{
+        margin: 0 10px;
+    }
+    .ReviewStar{
+        width: auto;
+        font-size: 80%;
+        padding: 5px;
+    }
+    .ReviewBody{
+        padding: 10px;
+    }
+    .ReviewBody p{
         font-size: 90%;
     }
-    
+    .time, .Name{
+        font-size: 70%;
+    }
+    .Name span{
+        font-size: 110%;
+        word-spacing: 2px;
+    }
 }

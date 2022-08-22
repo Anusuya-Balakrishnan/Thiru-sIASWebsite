@@ -3,10 +3,10 @@
     margin: 0;
     padding: 0;
 }
-.JourneyParent{
-    margin: 10px 0;
+/* .JourneyParent{ */
+    /* padding: 10px 0; */
     /* background-color: #808080; */
-}
+/* } */
 .JourneyPart1{
     /* margin: 50px 0; */
     padding: 0;
@@ -18,7 +18,7 @@
 }
 .JContent1{
     /* height: 400px; */
-    width: 500px; 
+    max-width: 500px; 
     margin: 30px;
 }
 .JContent1 h1{
@@ -30,11 +30,11 @@
 
 }
 .JContent1 p{
-    text-align: right; 
+    text-align: justify; 
     padding: 20px 0;
     padding-right: 20px;
-    line-height: 2;
-    font-size: 13px;
+    line-height: 1.8;
+    font-size: 14px;
 }
 /* .JourneyContent1 h1{
     display: flex;
@@ -45,7 +45,6 @@
     color: #27227A;
     font-size: 25px;
 
-
 }
 .JourneyContent1 p{
     margin: 20px 150px;
@@ -54,7 +53,7 @@
     line-height: 2;
 } */
 .JourneyImage{
-    margin: 30px;
+    margin: 20px;
 }
 .JourneyImage img{
  height: 400px;
@@ -70,7 +69,7 @@
     background-color:rgb(226, 227, 229) ;
 }
 .JourneyContent2{
-    width: 300px;
+    max-width: 300px;
     margin: 50px;
 }
 .StudentIcon , .GroupIcon{
@@ -94,3 +93,37 @@
     line-height: 2;
     font-size: 13px;
 }
+ @media (max-width:1017px){
+
+    .JourneyImage img{
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .JContent1{
+        margin: 20px 10px;
+    }
+    .JContent1 h1{
+        text-align: center;
+    }
+    .JContent1 p{
+        padding: 20px 10px;
+    }
+ }
+ @media (max-width:500px){
+    .JContent1 h1{
+        padding: 20px;
+        font-size: 150%;
+        
+    }
+    .JContent1 p{
+        font-size: 90%;
+        line-height: 1.6;
+    }
+    .JourneyImage, .JourneyImage img{
+        width: 90%;
+        height: 90%;
+    }
+    .JourneyContent2{
+        margin: 15px  30px;
+    }
+ }

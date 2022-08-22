@@ -4,7 +4,7 @@ import LandingStyle from "./LandingStyle.css";
 import ReviewComponent from "../ReviewComponent/ReviewComponent.jsx";
 import Button from "../Button/ButtonHtml.jsx";
 import AutoHtml from "../AutoSlide/AutoHtml";
-// import person1 from "./images/person1.jpg";
+import person1 from "./images/4.jpeg";
 import parliament from "./images/parliament.jpg";
 export default function LandingPage() {
   return (
@@ -30,9 +30,9 @@ export default function LandingPage() {
 
               <Button name="Enroll" />
             </div>
-            <div className="UpscReview">
+            {/* <div className="UpscReview">
               <AutoHtml />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

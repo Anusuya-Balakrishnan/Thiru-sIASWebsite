@@ -141,7 +141,8 @@
     
 }
 .MenuList{
-    width: 150px;
+    /* width: 150px; */
+    width: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -149,19 +150,40 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.MenuList p{
+.navOptionSideBar,.NSideBarCourseList{
     margin: 17px;
     color: white;
     /* display: none; */
+    padding: 10px;
     font-size: 80%;
     transition: 2s;
     text-align: left;
     font-weight: 700;
+    text-decoration: none;  
 }
-.MenuList div{
+.NSideBarCourseList{
+    margin: 0;
+    padding: 10px;
+}
+.navOptionSideBar:hover{
+    background-color: #380000;
+}
+.courseMenu{
+    cursor: pointer;
+}
+.NSideBarCourseListParent{
+    display: none;
+    transition: 0.5s;
+}
+.NSideBarCourseList{
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.closeIcon{
     cursor: pointer;
     /* font-size: larger; */
-    font-weight: bold;
+    font-weight: bolder;
     color: white;
     text-align: center;
     margin: 10px;
@@ -177,13 +199,13 @@
 }
 .whatsapp , .queryIcon{
     background-color: transparent;
-    width: 45px;
-    height: 45px;
+    max-width: 45px;
+    max-height: 45px;
     margin: 10px;
 }
 .whatsapp img , .queryIcon img{
-    width: 45px;
-    height: 45px;
+    max-width: 45px;
+    max-height: 45px;
 }
 
 @media (max-width:800px) {
@@ -204,8 +226,6 @@
     .NavBarContent p{
         font-size: 100%;
     }
-}
-@media (max-width:890px){
     .NavBarContent{
         display: none;
     }
@@ -214,25 +234,35 @@
         margin-right: 20px;
     }
 }
-/* @media (max-width:550px){ */
-    
-    
-@media (max-width:350px) {
-    .NavbarLogo img{
-        width: 80%;
+@media (max-width:550px){
+    .WhatsappIcon{
+        margin: 10px;
     }
+}
+    
+    
+@media (max-width:400px) {
     .NavbarLogo{
+        width: 70%;
         margin-left: 5px;
     }
-    
+    .NavbarLogo img{
+        width: 100%;
+    }
+
     .MenuIcon{
-        font-size: 96%; 
+        font-size: 150%;
+        margin-right: 10px;
     }
     .MenuList p{
         font-size: 65%;
         margin: 8px;
+        
     }
-
+    .MenuList p Link{
+        text-decoration: none;
+        color: white;
+    }
     
     
 }

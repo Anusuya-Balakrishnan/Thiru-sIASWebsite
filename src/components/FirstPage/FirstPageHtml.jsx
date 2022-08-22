@@ -10,7 +10,7 @@ export default function FirstPageHtml() {
     <section id="FirstPage">
       <div className="FistPage">
         <HomePage />
-        {/* <LandingPage /> */}
+        <LandingPage />
         <JourneyHtml />
         {/* <CourseSlideHtml /> */}
         <FooterHtml />

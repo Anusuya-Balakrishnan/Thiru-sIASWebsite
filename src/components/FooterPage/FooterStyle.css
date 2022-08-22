@@ -27,8 +27,8 @@
 }
 .FooterContent img{
     max-width: 400px;
-    min-width: 250px;
-    height: 50px;
+    /* min-width: 250px; */
+    max-height: 50px;
 }
 .FooterContent p{
     
@@ -96,7 +96,7 @@
     /* width: 600px; */
     
     /* width: 350px; */
-    max-width: 350px;
+    width: 350px;
     flex-direction: row;
     margin:20px;
     margin-right: 0;
@@ -124,10 +124,12 @@
         text-align: center;
         margin: 0 20px;
         
+        
     }
     
     .FooterContent p{
         font-size: 80%;
+        line-height: normal;
     }
     .FooterParent{
         flex-direction: column;
@@ -142,6 +144,8 @@
     }
     .AddressDiv p, .PhoneNumber p, .email p  {
         font-size: 80%;
+        width: auto;
+        margin: 0 5px;
     }
 }
 
@@ -151,12 +155,24 @@
     }
     .FooterAddress{
         font-size: 90%;
-        padding:0;
+        padding:0 5px;
     }
     .AddressDiv p, .PhoneNumber p, .email p{
         margin: 8px;
     }
     .EachIcon{
         padding: 8px;
+    }
+}
+@media (max-width:375px) {
+    .FooterContent{
+        width: 200%;
+        height: 50%;
+    }
+    .FooterContent img{
+        width: 100%;
+    }
+    .FooterContent{
+        width: 80%; 
     }
 }

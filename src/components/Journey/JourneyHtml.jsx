@@ -63,7 +63,7 @@ export default function JourneyHtml() {
             <div className="GroupIcon">
               <RiTeamFill />
             </div>
-            <h1>Free Seminars</h1>
+            <h1>Webinars</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
               lacinia cras nec felis egestas odio facilisis dolor elit. Morbi ut

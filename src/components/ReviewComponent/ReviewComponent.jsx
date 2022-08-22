@@ -26,21 +26,14 @@ export default function ReviewComponent(props) {
           </div>
         </div>
         <div className="ReviewBody">
-          <p>
-            {props.para1}
-            <p />
-            <br />
-            <p>
-              {props.para2}
-              <p />
-              <br />
-              <p>{props.para3}</p>
-              <br />
-              <p>{props.para4}</p> <br />
-              <p>{props.para5}</p>
-              Thank you Sir.
-            </p>
-          </p>
+          <p>{props.para1}</p>
+          <br />
+          <p>{props.para2}</p>
+          <br />
+          <p>{props.para3}</p>
+          <br />
+          <p>{props.para4}</p> <br />
+          <p>{props.para5}</p>
         </div>
       </div>
     </section>

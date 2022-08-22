@@ -19,7 +19,17 @@ export default function HomePage() {
       show = false;
     }
   }
-
+  let courseList = false;
+  function displaySideCourse() {
+    if (!courseList) {
+      document.querySelector(". Parent").style.display = "block";
+      courseList = true;
+    } else {
+      document.querySelector(".NSideBarCourseListParent").style.display =
+        "none";
+      courseList = false;
+    }
+  }
   const newLocal = "navCourseListParent";
   // function hideMenu() {
   //   document.querySelector(".navCourseListParent").style.display = "none";
@@ -74,11 +84,37 @@ export default function HomePage() {
 
         <div className="MenuListParent">
           <div className="MenuList">
-            <p>Home</p>
-            <p>Aboutus</p>
-            <p>Courses</p>
-            <p>Achievement</p>
-            <p>Contact</p>
+            <Link to={"/"} className="navOptionSideBar">
+              Home
+            </Link>
+            <Link to={"/about"} className="navOptionSideBar">
+              Aboutus
+            </Link>
+            <div
+              className="navOptionSideBar courseMenu "
+              onClick={displaySideCourse}
+            >
+              Courses
+            </div>
+            <div className="NSideBarCourseListParent">
+              <div className="NSideBarCourseList">
+                <Link to="/course/upsc" className="EachNavCourse">
+                  UPSC
+                </Link>
+                <Link to="/course/regionalExam" className="EachNavCourse">
+                  Regional Exam
+                </Link>
+                <Link to="/course/spokenEnglish" className="EachNavCourse">
+                  Spoken English
+                </Link>
+              </div>
+            </div>
+            <Link to={"/achievement"} className="navOptionSideBar">
+              Achievement
+            </Link>
+            <Link to={"/contact"} className="navOptionSideBar">
+              Contact
+            </Link>
             <div className="closeIcon" onClick={closeMenu}>
               <AiOutlineClose />
             </div>
