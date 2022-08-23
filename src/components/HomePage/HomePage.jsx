@@ -22,7 +22,8 @@ export default function HomePage() {
   let courseList = false;
   function displaySideCourse() {
     if (!courseList) {
-      document.querySelector(". Parent").style.display = "block";
+      document.querySelector(".NSideBarCourseListParent").style.display =
+        "block";
       courseList = true;
     } else {
       document.querySelector(".NSideBarCourseListParent").style.display =
@@ -112,7 +113,7 @@ export default function HomePage() {
             <Link to={"/achievement"} className="navOptionSideBar">
               Achievement
             </Link>
-            <Link to={"/contact"} className="navOptionSideBar">
+            <Link to={"/contactus"} className="navOptionSideBar">
               Contact
             </Link>
             <div className="closeIcon" onClick={closeMenu}>

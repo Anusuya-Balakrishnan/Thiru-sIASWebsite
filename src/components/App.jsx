@@ -12,10 +12,10 @@ import PageNotFound from "./404/PageNotFound";
 import HomePage from "./HomePage/HomePage";
 // import ContactPage from "./ContactPage/ContactPageHtml";
 import ContactPageHtml from "./ContactPage/ContactPageMain";
+import FooterHtml from "./FooterPage/FooterHtml";
 export default function App() {
   return (
     <>
-      {/* <HomePage /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FirstPageHtml />} />
@@ -29,7 +29,6 @@ export default function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-      {/* <ContactPage /> */}
     </>
   );
 }

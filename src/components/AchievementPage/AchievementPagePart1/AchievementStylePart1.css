@@ -1,16 +1,92 @@
 .AchievementPageParent{
     margin: 0;
-    margin-top: 90px;
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 .UPSCAchieverTitle{
-    margin: 30px 60px;
+    margin: 20px 60px 0 90px;
     /* margin: 30px; */
     font-size: 25px;
   color: #27227A;
-    padding-left: 30px;
+    /* padding-left: 30px; */
 }
 .UPSCAchieverDetails{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0;
+}
+.AchievementPageAchieverImage{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* width: 350px;
+    height: 300px; */
+    /* border-radius: 20px; */
+    margin: 20px 30px;
+}
+.AchievementPageAchieverContent{
+    padding: 0px 30px;
+    width: 550px;
+}
+.AchievementPageAchieverImage img{
+    object-fit: cover;
+    border-radius: 20px;
+    width: 350px;
+    height: 300px;
+}
+.AchievementPageAchieverCurrentDetails{
+    line-height: 2;
+    text-align: justify;
+}
+@media (max-width:1030px){
+    .UPSCAchieverTitle{
+        text-align: center;
+        margin: 30px 0;
+    }
+    .AchieverName, .AchieverRank , .AchieverDescription{
+        text-align: center;
+    }
+    .AchievementPageAchieverCurrentDetails, .AchievementPageAchieverContent{
+        width: auto;
+    }
+    .UPSCAchieverDetails{
+        flex-direction: column-reverse;
+    }
+    .AchievementPageAchieverImage{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width:450px) {
+    .AchievementPageAchieverImage{
+        margin: 10px 5px;
+    }
+    .AchievementPageAchieverImage img{
+        height: 50%;
+        width: 90%;
+    }
+    .UPSCAchieverTitle{
+        margin: 10px 0;
+        font-size: 130%;
+        padding: 0;
+    }
+    .AchieverName{
+        font-size: 130%;
+    }
+    .AchieverRank{
+        font-size: 110%;
+        margin: 15px 0;
+    }
+     .AchieverDescription {
+        font-size: 100%;
+        margin: 10px 0;
+    }
+    .AchievementPageAchieverContent{
+        padding: 10px ;
+    }
+    .AchievementPageAchieverCurrentDetails{
+        line-height: 1.5;
+        font-size: 95%;
+    }
 }

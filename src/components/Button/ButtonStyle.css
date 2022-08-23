@@ -35,3 +35,13 @@
 /* .ButtonIcon:hover{
     width: 50px;
 } */
+@media (max-width:500px){
+    .ButtonMain{
+        width: 90%;
+        height: -2%;
+    }
+    .ButtonMain p{
+       padding: 0; 
+       margin: 0;
+    }
+}

@@ -12,7 +12,7 @@ export default function FirstPageHtml() {
         <HomePage />
         <LandingPage />
         <JourneyHtml />
-        {/* <CourseSlideHtml /> */}
+        <CourseSlideHtml />
         <FooterHtml />
       </div>
     </section>

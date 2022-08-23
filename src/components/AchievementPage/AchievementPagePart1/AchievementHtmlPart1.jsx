@@ -9,11 +9,11 @@ export default function AchievementPagePart1() {
       <div className="AchievementPageParent">
         <div className="UPSCAchieverTitle">UPSC Exam Achiever:</div>
         <div className="UPSCAchieverDetails">
-          <div className="AchieverContent">
+          <div className="AchievementPageAchieverContent">
             <div className="AchieverName">Bharani.M</div>
             <div className="AchieverRank">UPSC AIR-326 (2019 Batch)</div>
             <div className="AchieverDescription">Deputy Director in Delhi</div>
-            <div className="AchieverCurrentDetails">
+            <div className="AchievementPageAchieverCurrentDetails">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
               egestas in tincidunt sed feugiat sagittis, pretium vel. Facilisi
               ullamcorper facilisi bibendum justo, aliquam ornare quis. Aliquet
@@ -22,7 +22,7 @@ export default function AchievementPagePart1() {
               vulputate turpis donec feugiat erat eu tempor volutpat.
             </div>
           </div>
-          <div className="AchieverImage">
+          <div className="AchievementPageAchieverImage">
             <img src={bharaniImage} />
           </div>
         </div>

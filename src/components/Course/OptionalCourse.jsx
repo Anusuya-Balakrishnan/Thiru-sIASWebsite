@@ -24,9 +24,9 @@ export default function OptionalCourse(props) {
               </div>
             </div>
           </div>
-          <div className="ButtonDiv">
+          {/* <div className="ButtonDiv">
             <Button name="For More" />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

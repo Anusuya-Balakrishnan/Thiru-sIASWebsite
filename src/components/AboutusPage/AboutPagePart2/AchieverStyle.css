@@ -23,6 +23,9 @@
     height: 300px;
     border-radius: 20px;
 }
+.AchieverImage img{
+    object-fit: cover;
+}
 .AchieverImage{
     margin: 30px 50px;
     padding-top:40px ;
@@ -43,6 +46,7 @@
     font-size: 18px;
 }
 .AchieverDescription{
+    
     font-size: 18px;
     margin: 20px 0;
 }
