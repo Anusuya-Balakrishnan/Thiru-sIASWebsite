@@ -19,6 +19,7 @@
 .UpscImage img{
     width: 100%;
     height: 100%; 
+    object-fit: cover;
 }
 .UpscContent{
     z-index: 5;
@@ -60,6 +61,10 @@
     /* border-radius: 10px; */
 
 }
+.LandingButton{
+    margin: 20px 15px;
+}
+
 @media (max-width:1170px){
     .UpscContent{
         padding: 30px 10px;
@@ -73,6 +78,10 @@
   .UpscReview{
     margin: 0;
   }
+  .LandingButton{
+    display: flex;
+    justify-content: center;
+}
 }
 
 @media (max-width:950px){

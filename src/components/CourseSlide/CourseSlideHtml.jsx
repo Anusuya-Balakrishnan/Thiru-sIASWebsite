@@ -18,31 +18,27 @@ import groupDiscussion from "./image/groupDiscussion.jpg";
 import intermediate from "./image/intermediate.png";
 import beginner from "./image/beginner.jpg";
 export default function CourseSlideHtml() {
-  const [widthValue, setWidth] = useState(0);
-  function leftMove() {
-    let x = document.querySelector(".slide").clientWidth;
-    let maxWidth = document.querySelector(".SlideContainers").clientWidth;
-    console.log("maxWidth" + maxWidth);
-    console.log("widthValue" + widthValue);
-    if (Math.abs(widthValue) < maxWidth - x) {
-      setWidth(widthValue - x);
-    } else {
-      setWidth(0);
-    }
-    document.querySelector(".SlideContainers").style.left = -widthValue + "px";
-  }
-  function RightMove() {
-    let x = document.querySelector(".slide").clientWidth;
-    let maxWidth = document.querySelector(".SlideContainers").clientWidth;
-    let maxValue = maxWidth - x;
-    console.log("maxWidth" + maxWidth);
-    console.log("widthValue" + widthValue);
-    if (Math.abs(widthValue) + x * 1 > maxValue) {
-      setWidth(0);
-    } else {
-      setWidth(widthValue - x);
-    }
-  }
+  // const [widthValue, setWidth] = useState(0);
+  // function leftMove() {
+  //   let x = document.querySelector(".slide").clientWidth;
+  //   let maxWidth = document.querySelector(".SlideContainers").clientWidth;
+  //   if (Math.abs(widthValue) < maxWidth - x) {
+  //     setWidth(widthValue - x);
+  //   } else {
+  //     setWidth(0);
+  //   }
+  //   document.querySelector(".SlideContainers").style.left = -widthValue + "px";
+  // }
+  // function RightMove() {
+  //   let x = document.querySelector(".slide").clientWidth;
+  //   let maxWidth = document.querySelector(".SlideContainers").clientWidth;
+  //   let maxValue = maxWidth - x;
+  //   if (Math.abs(widthValue) + x * 1 > maxValue) {
+  //     setWidth(0);
+  //   } else {
+  //     setWidth(widthValue - x);
+  //   }
+  // }
   let optionalCourse = [
     {
       image: optional,
@@ -180,11 +176,11 @@ export default function CourseSlideHtml() {
   return (
     <section id="CourseSlidePage">
       <div className="CourseSlide">
-        <div className="CourseLeftClick" onClick={leftMove}>
+        <div className="CourseLeftClick">
           <CgChevronLeft />
         </div>
         <div className="CourseSlideMain">
-          <div className="SlideContainers" style={{ left: widthValue + "px" }}>
+          <div className="SlideContainers">
             {courseContent.map((Eachcourse) => {
               return (
                 <div key={Eachcourse.id} className="slide">
@@ -225,7 +221,7 @@ export default function CourseSlideHtml() {
             })}
           </div>
         </div>
-        <div className="CourseRightClick" onClick={RightMove}>
+        <div className="CourseRightClick">
           <CgChevronRight />
         </div>
       </div>

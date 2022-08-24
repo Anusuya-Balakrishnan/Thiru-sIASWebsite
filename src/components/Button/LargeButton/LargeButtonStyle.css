@@ -1,0 +1,25 @@
+.LargeButtonParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #CB2C31;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.LargeButtonParent:hover {
+    background-color: white;
+    outline: 1px solid #CB2C31;
+    color: #CB2C31;
+    cursor: pointer;
+}
+
+@media (max-width:450px) {
+    .LargeButtonParent {
+        height: 45px;
+        font-size: 90%;
+    }
+}

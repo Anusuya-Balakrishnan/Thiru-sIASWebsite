@@ -2,6 +2,7 @@ import React from "react";
 import CourseStyle from "./CourseStyle.css";
 import image from "./image/image.jpeg";
 import { AiFillStar } from "react-icons/ai";
+import LargeButton from "../Button/LargeButton/LargeButton";
 
 import Button from "../Button/ButtonHtml";
 export default function OptionalCourse(props) {
@@ -24,9 +25,9 @@ export default function OptionalCourse(props) {
               </div>
             </div>
           </div>
-          {/* <div className="ButtonDiv">
-            <Button name="For More" />
-          </div> */}
+          <div className="ButtonComponent">
+            <LargeButton value="For More" />
+          </div>
         </div>
       </div>
     </section>

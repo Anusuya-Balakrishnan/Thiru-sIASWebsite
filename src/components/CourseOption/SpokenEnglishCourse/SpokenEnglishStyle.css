@@ -15,3 +15,17 @@
 .SPEachCourse{
     margin: 50px;
 }
+@media (max-width:1000px){
+    .SPTitle{
+        width: 100%;
+        text-align: center;
+        margin-left:0;
+        font-size: 150%;
+    }
+
+}
+@media (max-width:400px){
+    .SPTitle{
+        font-size: 130%;
+    } 
+}

@@ -32,9 +32,7 @@ export default function HomePage() {
     }
   }
   const newLocal = "navCourseListParent";
-  // function hideMenu() {
-  //   document.querySelector(".navCourseListParent").style.display = "none";
-  // }
+
   return (
     <section id="Navbar">
       <div className="NavbarMain">

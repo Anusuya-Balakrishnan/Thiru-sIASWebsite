@@ -1,0 +1,25 @@
+.SmallButtonParent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color: #CB2C31;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.SmallButtonParent:hover{
+    background-color: white;
+    outline: 1px solid #CB2C31;
+    color:#CB2C31;
+    cursor: pointer;
+}
+
+@media (max-width:450px){
+    .SmallButtonParent{
+    width: 120px;
+    height: 45px;
+    font-size: 90%;
+}
+}

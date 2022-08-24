@@ -8,6 +8,7 @@ import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai";
 import { MdLocalPhone } from "react-icons/md";
 import FooterStyle from "./FooterStyle.css";
 import Button from "../Button/ButtonHtml";
+import SmallButton from "../Button/SmallButton/SmallButton";
 
 export default function FooterHtml() {
   return (
@@ -21,10 +22,12 @@ export default function FooterHtml() {
               amet, lobortis habitant dolor consequat. Adipiscing a in sociis
               enim, posuere ac.
             </p>
-            {/* <div className="FooterSubscribe">
-              <div className="SubscribeBox">Enter your Email</div>
-              <Button name="Subscribe" />
-            </div> */}
+            <div className="FooterSubscribe">
+              <div className="SubscribeBox">Enter your email</div>
+              <div className="FooterButton">
+                <SmallButton value="Subscribe" />
+              </div>
+            </div>
           </div>
           <div className="FooterList">
             <p>About us</p>

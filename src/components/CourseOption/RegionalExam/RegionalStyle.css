@@ -14,3 +14,18 @@
     font-size: 25px;
     color: #27227A;
 }
+
+@media (max-width:1000px){
+    .RegionalCourseTitle{
+        width: 100%;
+        text-align: center;
+        margin-left:0;
+        font-size: 150%;
+    }
+
+}
+@media (max-width:400px){
+    .RegionalCourseTitle{
+        font-size: 130%;
+    } 
+}

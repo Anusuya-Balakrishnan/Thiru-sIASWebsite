@@ -50,6 +50,7 @@ margin: 50px 100px;
     /* position: absolute; */
     max-height: 350px;
     max-width: 280px;
+    object-fit: cover;
     /* z-index: 0; */
     /* position: absolute; */
 }
@@ -101,16 +102,36 @@ margin: 50px 100px;
 @media(max-width:850px) {
 
     .FounderDetails{
+        width: auto;
+        height: auto;
+        /* max-width: 90vw;
+        max-height: 100vh; */
+        /* align-items: center;
+        justify-content: center; */
         flex-direction: column;
     }
     .FounderContent{
         height: auto;
        width: auto;
-       margin: 0 20px;
+       margin: 0;
+       /* margin: 0 20px; */
     }
     .FounderName, .FounderPara , .FounderTitle , .AboutIcon{
         display: flex;
         justify-content: center;
+    }
+    .FounderName{
+        width: 100%;
+        font-size: 110%;
+    }
+    .degree{
+        font-size: 50%;
+        line-height: 3;
+        margin: 0 5px;
+        
+    }
+    .FounderTitle{
+        font-size: 100%;
     }
     .FounderDetails{
         display: flex;
@@ -132,5 +153,28 @@ margin: 50px 100px;
     }
     .AboutContent1{
         margin: 0 30px;
+    }
+}
+@media (max-width:500px){
+    .FounderDetails{
+        max-width: auto;
+        max-height: auto;
+       
+    }
+    .FounderContent{
+        margin: 0 ;
+    }
+}
+@media (max-width:400px){
+    
+    .FounderFrame, .Photo{
+        width: 70vw;
+        height: auto;
+        margin: 0;
+    }
+    .Photo img{
+        width: 100%;
+        /* height: auto; */
+        height: 100%;
     }
 }

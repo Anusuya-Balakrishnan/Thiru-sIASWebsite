@@ -5,6 +5,7 @@ import ReviewComponent from "../ReviewComponent/ReviewComponent.jsx";
 import Button from "../Button/ButtonHtml.jsx";
 import AutoHtml from "../AutoSlide/AutoHtml";
 import person1 from "./images/4.jpeg";
+import SmallButton from "../Button/SmallButton/SmallButton";
 import parliament from "./images/parliament.jpg";
 export default function LandingPage() {
   return (
@@ -27,12 +28,13 @@ export default function LandingPage() {
                 habitant dolor consequat. Adipiscing a in sociis enim, posuere
                 ac.
               </p>
-
-              <Button name="Enroll" />
+              <div className="LandingButton">
+                <SmallButton value="Enroll" />
+              </div>
             </div>
-            {/* <div className="UpscReview">
+            <div className="UpscReview">
               <AutoHtml />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import image from "./image/image.jpeg";
 import { IoTime } from "react-icons/io5";
 import { MdEventNote } from "react-icons/md";
 import Button from "../Button/ButtonHtml";
+import LargeButton from "../Button/LargeButton/LargeButton";
 export default function CourseHtml(props) {
   return (
     <section id="CourseHtml">
@@ -24,8 +25,8 @@ export default function CourseHtml(props) {
               </div>
             </div>
           </div>
-          <div className="ButtonDiv">
-            <Button name="For More" />
+          <div className="ButtonComponent">
+            <LargeButton value="For More" />
           </div>
         </div>
       </div>

@@ -45,6 +45,7 @@
     /* background-color: #27227A; */
     position: absolute;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     top: 30%;
@@ -123,9 +124,12 @@
     font-size: 15px;
     font-weight: bold;
 }
-.ButtonDiv{
-    display: flex;
-    justify-content: center;
+.ButtonComponent{
+    width: 80%;
+    height: 50px;
+    /* display: flex;
+    justify-content: center; */
+    margin:20px 10px;
 }
 @media (max-width:400px){
     /* #CourseHtml{
@@ -161,6 +165,7 @@
         /* margin: 0 10px; */
     }
     .CoursePart2{
+        
         font-size: 90%;
         width: 80%;
         padding: 10px;
@@ -183,9 +188,12 @@
     .duration p{
         font-size: 100%;
     }
-}
-@media (max-width:400px){
     .CourseParent{
         height: 530px;
+    }
+    .ButtonComponent{
+        height: 30px;
+        margin: 15px 5px;
+        width: 70%;
     }
 }

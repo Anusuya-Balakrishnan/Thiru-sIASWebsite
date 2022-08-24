@@ -25,8 +25,6 @@ export default function App() {
           <Route path="/course/regionalExam" element={<RegionalExamPage />} />
           <Route path="/course/spokenEnglish" element={<SpokenEnglishPage />} />
           <Route path="/contactus" element={<ContactPageHtml />} />
-
-          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </>

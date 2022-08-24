@@ -54,3 +54,31 @@ height: auto;
     cursor: pointer;
 
 }
+@media (max-width:1015px){
+    .GroupSlideFrame{
+        width:410px;
+    }
+    .GroupDiscussionTitle{
+        display: none;
+    }
+}
+@media (max-width:600px){
+    .GroupSlideLeft, .GroupSlideRight{
+        display: none;
+    }
+}
+@media (max-width:450px){
+    .GroupSlideContainer{
+        width:auto;
+    }
+    .GroupSlide {
+        width:83vw;
+        height: 50vh;
+        padding: 10px 20px;
+        margin: 0;
+    }
+    .GroupSlide img{
+        width:100%;
+        height: 100%;
+    }
+}

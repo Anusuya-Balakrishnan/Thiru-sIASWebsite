@@ -3,6 +3,7 @@ import CourseStyle from "./CourseStyle.css";
 import image from "./image/image.jpeg";
 import { AiFillStar } from "react-icons/ai";
 import { IoTime } from "react-icons/io5";
+import LargeButton from "../Button/LargeButton/LargeButton";
 
 import Button from "../Button/ButtonHtml";
 export default function SpokenEnglishCourse(props) {
@@ -21,8 +22,8 @@ export default function SpokenEnglishCourse(props) {
               </div>
             </div>
           </div>
-          <div className="ButtonDiv">
-            <Button name="For More" />
+          <div className="ButtonComponent">
+            <LargeButton value="For More" />
           </div>
         </div>
       </div>
