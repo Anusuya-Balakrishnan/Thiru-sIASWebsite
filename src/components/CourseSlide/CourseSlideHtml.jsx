@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CourseSlideStyle from "./CourseSlideStyle.css";
 import CourseHtml from "../Course/CourseHtml.jsx";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
@@ -18,27 +18,6 @@ import groupDiscussion from "./image/groupDiscussion.jpg";
 import intermediate from "./image/intermediate.png";
 import beginner from "./image/beginner.jpg";
 export default function CourseSlideHtml() {
-  // const [widthValue, setWidth] = useState(0);
-  // function leftMove() {
-  //   let x = document.querySelector(".slide").clientWidth;
-  //   let maxWidth = document.querySelector(".SlideContainers").clientWidth;
-  //   if (Math.abs(widthValue) < maxWidth - x) {
-  //     setWidth(widthValue - x);
-  //   } else {
-  //     setWidth(0);
-  //   }
-  //   document.querySelector(".SlideContainers").style.left = -widthValue + "px";
-  // }
-  // function RightMove() {
-  //   let x = document.querySelector(".slide").clientWidth;
-  //   let maxWidth = document.querySelector(".SlideContainers").clientWidth;
-  //   let maxValue = maxWidth - x;
-  //   if (Math.abs(widthValue) + x * 1 > maxValue) {
-  //     setWidth(0);
-  //   } else {
-  //     setWidth(widthValue - x);
-  //   }
-  // }
   let optionalCourse = [
     {
       image: optional,
@@ -173,14 +152,48 @@ export default function CourseSlideHtml() {
       test: "25",
     },
   ];
+
+  const [leftValue, setLeftValue] = useState(null);
+
+  // left click function
+  function leftClick() {
+    let EachslideWidth = document.querySelector(".slide").clientWidth;
+    let totalWidth = document.querySelector(
+      ".CourseSlideContainers"
+    ).clientWidth;
+    let totalWidthValue = totalWidth - EachslideWidth;
+    if (Math.abs(leftValue) < totalWidthValue) {
+      setLeftValue(leftValue - EachslideWidth);
+    } else {
+      setLeftValue(0);
+    }
+  }
+
+  // right Click function
+  function rightClick() {
+    let EachslideWidth = document.querySelector(".slide").clientWidth;
+    let totalWidth = document.querySelector(
+      ".CourseSlideContainers"
+    ).clientWidth;
+    let totalWidthValue = totalWidth - EachslideWidth;
+
+    if (leftValue < 0 && leftValue >= -totalWidthValue) {
+      setLeftValue(leftValue + EachslideWidth);
+    } else {
+      setLeftValue(-totalWidthValue);
+    }
+  }
   return (
     <section id="CourseSlidePage">
       <div className="CourseSlide">
-        <div className="CourseLeftClick">
+        <div className="CourseLeftClick" onClick={leftClick}>
           <CgChevronLeft />
         </div>
         <div className="CourseSlideMain">
-          <div className="SlideContainers">
+          <div
+            className="CourseSlideContainers"
+            style={{ left: leftValue + "px" }}
+          >
             {courseContent.map((Eachcourse) => {
               return (
                 <div key={Eachcourse.id} className="slide">
@@ -221,30 +234,10 @@ export default function CourseSlideHtml() {
             })}
           </div>
         </div>
-        <div className="CourseRightClick">
+        <div className="CourseRightClick" onClick={rightClick}>
           <CgChevronRight />
         </div>
       </div>
     </section>
   );
-}
-{
-  /* <div className="slide">
-              <CourseHtml
-                courseImage={omr1}
-                courseTitle="Preliminary Exam Course"
-                courseContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum
-              rhoncus in eget lectus quis consectetur facilisis. Egestas posuere
-              nunc donec ultricies egestas vitae id in."
-                month="8"
-                test="80"
-              />
-            </div> */
-}
-{
-  /* <div className="slide"><CourseHtml /></div>
-            <div className="slide"><CourseHtml /></div>
-            <div className="slide"><CourseHtml /></div>
-            <div className="slide"><CourseHtml /></div>
-            <div className="slide"><CourseHtml /></div> */
 }

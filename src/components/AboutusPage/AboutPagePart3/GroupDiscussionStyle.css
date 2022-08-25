@@ -1,15 +1,17 @@
-.GroupDiscussionParent{
+.GroupDiscussionEachParent{
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
 }
+
 .GroupDiscussionTitle{
+    width: 100%;
     display: flex;
     justify-content: center;
     color:  #27227A;
- font-size: 25px;
- margin: 35px 0;
+    font-size: 25px;
+    margin: 20px 0;
 }
 .GroupSlide , .GroupSlide img{
  width:350px;
@@ -23,37 +25,57 @@
 .GroupSlideContainer{
     display: flex;
     justify-content: center;
+
 }
-.GroupSlideFrameParent{
+
+.GroupDiscussionParent{
+    /* padding: 20px; */
+    width: 100%;
+    height: 730px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: 660px;
+    /* flex-direction: column; */
 }
-.GroupSlideFrame{
-overflow: hidden;
-width: 830px;
-height: auto;
-/* background-color: #5b5890; */
-/* transition: 5s; */
-}     
-.GroupContainer{
-    position: relative;
-    display: flex;
-    /* background-color: #565571; */
-    width: auto;
-    height: auto;
-    transition: 2s;
-    
-}
+
 .GroupSlideLeft, .GroupSlideRight{
-    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 30px; */
     font-size: 40px;
     color: #CB2C31;
     cursor: pointer;
 
 }
+.GroupSlideFrameParent{
+    width: 900px;
+    height: 650px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.GroupSlideFrame{
+overflow: hidden;
+width: 830px;
+height: 650px;
+position: absolute;
+margin: 20px;
+/* background-color: #5b5890; */
+/* transition: 5s; */
+}     
+.GroupContainer{
+    position: absolute;
+    display: flex;
+    /* background-color: #565571; */
+    width: auto;
+    height: auto;
+    left:0px;
+    transition: 0.5s;
+    
+}
+
 @media (max-width:1015px){
     .GroupSlideFrame{
         width:410px;

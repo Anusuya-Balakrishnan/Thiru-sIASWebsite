@@ -9,6 +9,9 @@
     border-radius: 10px;
     cursor: pointer;
 }
+.SmallButtonParent p{
+    margin: 5px;
+}
 .SmallButtonParent:hover{
     background-color: white;
     outline: 1px solid #CB2C31;

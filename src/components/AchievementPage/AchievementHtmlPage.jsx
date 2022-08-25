@@ -10,7 +10,7 @@ export default function AchievementHtmlPage() {
       <HomePage />
       <AchievementPagePart1 />
       <RegionalExamHtml />
-      <SeminarSlide />
+      {/* <SeminarSlide /> */}
       <FooterHtml />
     </section>
   );

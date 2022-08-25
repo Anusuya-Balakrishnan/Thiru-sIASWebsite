@@ -9,6 +9,9 @@
     border-radius: 10px;
     cursor: pointer;
 }
+.LargeButtonParent p{
+    margin: 5px;
+}
 
 .LargeButtonParent:hover {
     background-color: white;

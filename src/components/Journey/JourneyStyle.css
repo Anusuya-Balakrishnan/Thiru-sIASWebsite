@@ -54,10 +54,13 @@
 } */
 .JourneyImage{
     margin: 20px;
+    margin-top: 50px;
+    height: 400px;
+    width: 400px;
 }
 .JourneyImage img{
- height: 400px;
- width: 400px;
+    height: 400px;
+    width: 400px;
  object-fit: cover;
  border-radius: 10px;
 }
@@ -119,9 +122,14 @@
         font-size: 90%;
         line-height: 1.6;
     }
-    .JourneyImage, .JourneyImage img{
+    .JourneyImage {
         width: 90%;
         height: 90%;
+        margin: 10px;
+    }
+    .JourneyImage img{
+        width: 100%;
+        height: 100%;
     }
     .JourneyContent2{
         margin: 15px  30px;

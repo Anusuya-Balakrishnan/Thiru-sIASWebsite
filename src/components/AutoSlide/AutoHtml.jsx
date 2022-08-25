@@ -85,7 +85,8 @@ export default function AutoHtml() {
       } else {
         count = 0;
       }
-      SlideContainer.current.style.left = -(SlideWidth * count) + "px";
+      document.getElementsByClassName("SlideContainer")[0].style.left =
+        -(SlideWidth * count) + "px";
     }, 5000);
   });
 

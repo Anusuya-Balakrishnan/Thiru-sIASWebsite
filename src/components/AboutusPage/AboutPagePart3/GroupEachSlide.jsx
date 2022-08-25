@@ -2,7 +2,7 @@ import React from "react";
 import { GroupDiscussionStyle } from "./GroupDiscussionStyle.css";
 export default function GroupEachSlide(props) {
   return (
-    <div className="GroupDiscussionParent">
+    <div className="GroupDiscussionEachParent">
       <div className="GroupDiscussionTitle">{props.title}</div>
       <div className="GroupSlideContainer">
         <div className="GroupSlide">
