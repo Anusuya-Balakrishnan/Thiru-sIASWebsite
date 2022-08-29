@@ -5,9 +5,7 @@ import RegionalHtml from "./RegionalHtml";
 export default function RegionalExamPage() {
   return (
     <section id="RegionalExamPage">
-      <HomePage />
       <RegionalHtml />
-      <FooterHtml />
     </section>
   );
 }

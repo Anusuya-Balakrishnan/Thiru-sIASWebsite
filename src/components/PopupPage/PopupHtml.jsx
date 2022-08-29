@@ -7,7 +7,8 @@ import { BsChevronDown } from "react-icons/bs";
 import Logo from "./images/Logo.svg";
 import course from "./images/course.svg";
 import query from "./images/query.svg";
-import Button from "../Button/ButtonHtml";
+
+import LargeButton from "../Button/LargeButton/LargeButton";
 let menuClick = true;
 let courseList = [
   "Preliminary Exam",
@@ -104,9 +105,7 @@ export default function PopupPage() {
                 placeholder="Query"
               />
             </div>
-            <div className="PopupButton">
-              <Button name="Submit" />
-            </div>
+            <LargeButton value="Submit" />
           </div>
         </div>
       </div>

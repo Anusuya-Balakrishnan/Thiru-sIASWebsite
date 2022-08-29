@@ -11,13 +11,10 @@ import query from "./images/Vector.svg";
 export default function HomePage() {
   let show = false;
   function showMenu() {
-    if (!show) {
-      document.querySelector(".navCourseListParent").style.display = "block";
-      show = true;
-    } else {
-      document.querySelector(".navCourseListParent").style.display = "none";
-      show = false;
-    }
+    document.querySelector(".navCourseListParent").style.display = "block";
+  }
+  function hideMenu() {
+    document.querySelector(".navCourseListParent").style.display = "none";
   }
   let courseList = false;
   function displaySideCourse() {
@@ -50,7 +47,7 @@ export default function HomePage() {
           <div
             className="navOption"
             onMouseOver={showMenu}
-            // onMouseOut={hideMenu}
+            onMouseOut={hideMenu}
           >
             <p>Courses</p>
             <BiChevronDown />

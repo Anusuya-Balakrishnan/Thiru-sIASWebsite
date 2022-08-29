@@ -5,9 +5,7 @@ import SpokenEnglishHtml from "./SpokenEnglishHtml";
 export default function SpokenEnglishPage() {
   return (
     <section id="SpokenEnglishPage">
-      <HomePage />
       <SpokenEnglishHtml />
-      <FooterHtml />
     </section>
   );
 }

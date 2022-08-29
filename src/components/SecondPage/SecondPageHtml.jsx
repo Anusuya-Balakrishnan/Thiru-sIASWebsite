@@ -7,11 +7,9 @@ import GroupDiscussionHtml from "../AboutusPage/AboutPagePart3/GroupDiscussionHt
 export default function SecondPageHtml() {
   return (
     <section id="SecondPageHtml">
-      <HomePage />
       <AboutUsHtml />
       <AchieverHtml />
       <GroupDiscussionHtml />
-      <FooterHtml />
     </section>
   );
 }

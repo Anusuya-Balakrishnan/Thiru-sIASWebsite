@@ -9,11 +9,9 @@ export default function FirstPageHtml() {
   return (
     <section id="FirstPage">
       <div className="FistPage">
-        <HomePage />
         <LandingPage />
         <JourneyHtml />
         <CourseSlideHtml />
-        <FooterHtml />
       </div>
     </section>
   );

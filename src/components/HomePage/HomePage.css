@@ -63,6 +63,7 @@
 }
 .navOption p{
     margin: 0 5px;
+    transition: 0.5s;
 }
 .navBarCourseMenu{
     display: flex;

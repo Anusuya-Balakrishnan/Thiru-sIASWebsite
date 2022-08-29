@@ -76,7 +76,9 @@ export default function AutoHtml() {
   ];
   let count = 0;
   let ReviewSlideImage = useRef(0);
-  let SlideContainer = useRef(0);
+  let SlideContainerRef = useRef(0);
+  let slideWidthValue;
+
   useEffect(() => {
     let SlideWidth = ReviewSlideImage.current.clientWidth;
     setInterval(() => {
@@ -85,15 +87,15 @@ export default function AutoHtml() {
       } else {
         count = 0;
       }
-      document.getElementsByClassName("SlideContainer")[0].style.left =
-        -(SlideWidth * count) + "px";
+      slideWidthValue = -(SlideWidth * count) + "px";
+      SlideContainerRef.current.style.left = slideWidthValue;
     }, 5000);
   });
 
   return (
     <section id="AutoHtml">
       <div className="SlideFrame">
-        <div className="SlideContainer" ref={SlideContainer}>
+        <div className="SlideContainer" ref={SlideContainerRef}>
           {reviewContent.map((eachReiview, index) => {
             return (
               <div
@@ -110,7 +112,7 @@ export default function AutoHtml() {
                   para3={eachReiview.para3}
                   para4={eachReiview.para4}
                   para5={eachReiview.para5}
-                />
+                />{" "}
               </div>
             );
           })}

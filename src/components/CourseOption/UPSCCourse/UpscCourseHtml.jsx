@@ -7,7 +7,9 @@ import preliminaryMains from "./image/preliminaryMains.jpg";
 import preCrash from "./image/preCrash.jpeg";
 import aptitude from "./image/aptitude.png";
 import optional from "./image/political-sociology-logo.jpg";
+import number from "./image/numberImage.jpg";
 import OptionalCourse from "../../Course/OptionalCourse";
+import sociology from "./image/sociology.png";
 export default function UpscCourseHtml() {
   let courseContent = [
     {
@@ -51,7 +53,7 @@ export default function UpscCourseHtml() {
       test: "40",
     },
     {
-      image: aptitude,
+      image: number,
       title: "CSAT",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
@@ -63,7 +65,7 @@ export default function UpscCourseHtml() {
   ];
   let optionalCourse = [
     {
-      image: optional,
+      image: sociology,
       title: "Optional",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +

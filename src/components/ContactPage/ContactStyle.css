@@ -21,24 +21,87 @@
     font-size: 30px;
 }
 .ContactPageContent{
-    margin: 20px 0;
+    margin: 0;
     display: flex;
     align-items: center;
-    /* justify-content: center;  */
+    justify-content: center; 
 }
-.ContactPageMap{
-    margin: 30px;
-    margin-right: 50px;
-}
-.ContactPageMap ,iframe {   
+.ContactPageMap  {   
     width: 700px;
     height: 500px; 
     border: 0;
     border-radius: 10px;
+    margin: 30px;
+    margin-right: 50px;
 }
 iframe{
     width: 100%;
+    height: 100%;
+    border: 0;
+    
+    border-radius: 10px;
 }
 .ContactForm{
+    width: auto;
+    height: auto;
+    margin: 10px ;
     margin-left: 50px;
+}
+
+@media (max-width:1190px){
+    .ContactPageMap{
+        width: 50%;
+        height: 90%;
+        margin: 0 10px;
+    }
+    .ContactPageContent{
+        margin: 0;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 85vh;
+    }
+    /* .ContactForm{
+        position: absolute;
+        right: 35px;
+    } */
+}
+@media (max-width:920px){
+ 
+    .ContactForm{
+        margin: 10px;
+    }
+}
+@media (max-width:840px){
+    .ContactPageContent{
+        height: 100vh;
+        margin: 20px 0;
+    }
+    .ContactPageMap{
+        width: 50%;
+        height: 30%;
+    }
+}
+@media (max-width:750px){
+    .ContactPageMap{
+        width: 70%;
+    }
+}
+@media (max-width:800px){
+    .ContactPageParent{
+        margin-top: 70px;
+    }
+}
+@media (max-width:400px){
+    .ContactPageContent{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        flex-wrap: wrap;
+        
+    }
+    .ContactPageMap{
+        width: 90%;
+        margin: 10px;
+    }
 }

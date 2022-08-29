@@ -5,9 +5,7 @@ import UpscCourseHtml from "./UpscCourseHtml";
 export default function UPSC() {
   return (
     <section id="UPSCPage">
-      <HomePage />
       <UpscCourseHtml />
-      <FooterHtml />
     </section>
   );
 }

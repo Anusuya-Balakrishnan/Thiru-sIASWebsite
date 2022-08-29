@@ -7,11 +7,9 @@ import SeminarSlide from "./SeminarSlide/SeminarSlide";
 export default function AchievementHtmlPage() {
   return (
     <section id="AchievementHtmlPage">
-      <HomePage />
       <AchievementPagePart1 />
       <RegionalExamHtml />
-      {/* <SeminarSlide /> */}
-      <FooterHtml />
+      <SeminarSlide />
     </section>
   );
 }

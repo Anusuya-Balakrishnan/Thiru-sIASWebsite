@@ -2,13 +2,11 @@
    margin: 0;
    padding: 0; 
 }
-/* .PopupPageParent{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
+.ContactPage, #PopupPage{
+    margin: 0;
+    padding: 0;
+}
+
 .PopupPageMain{
     /* height: 450px; */
     width: 350px;
@@ -108,7 +106,7 @@
    height: 180px;
    overflow-y: scroll;
    scroll-behavior: smooth;
-   background-color: #27227A;
+   background-color: #CB2C31;
    opacity: 0.9;
    scrollbar-width:thin;
    scrollbar-color:white;
@@ -123,10 +121,46 @@
 }
 .option:hover{
    cursor: pointer;
-   background-color: #07026a;
+   background-color: #cb2c3161;
 }
-.PopupButton{
-    width: auto;
-    display: flex;
-    justify-content: center;
+
+/* @media(max-width:850px){
+    .FormElement{
+        margin: 20px;
+    }
+} */
+
+@media (max-width:400px){
+    .PopupPageMain ,#PopupPage{
+        width: 70vw;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .PopupPageParent{
+        display: flex;
+        justify-content: center;
+
+
+        width: 90%;
+        margin: 0;
+        padding: 10px;
+    }
+    .Heading{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .FormElement{
+        width: 80%;
+        margin: 8% 10%;
+        
+    }
+    .InputType{
+        margin-left: 15px;
+        
+    }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { GroupDiscussionStyle } from "./GroupDiscussionStyle.css";
 import infra1 from "./image/infrastructure1.jpeg";
 import infra2 from "./image/infrastructure2.jpeg";
@@ -36,6 +36,44 @@ export default function GroupDiscussionHtml() {
     }
   }
 
+  let outer = useRef(null);
+  let inner = useRef(null);
+  let pressed = false;
+  let startx;
+  let x;
+
+  function mouseDown(e) {
+    pressed = true;
+    startx = e.nativeEvent.offsetX - inner.current.offsetLeft;
+    outer.current.style.cursor = "grabbing";
+  }
+  function mouseUp() {
+    outer.current.style.cursor = "grab";
+  }
+
+  useEffect(() => {
+    window.addEventListener("mouseup", () => {
+      pressed = false;
+      outer.current.style.cursor = "grab";
+    });
+  });
+  function mouseMove(e) {
+    if (!pressed) return;
+    e.preventDefault();
+    x = e.nativeEvent.offsetX;
+    inner.current.style.left = `${x - startx}px`;
+    checkedBorder();
+  }
+  function checkedBorder() {
+    let outerRect = outer.current.getBoundingClientRect();
+    let innerRect = inner.current.getBoundingClientRect();
+    if (parseInt(inner.current.style.left) > 0) {
+      inner.current.style.left = "0px";
+    } else if (innerRect.right < outerRect.right) {
+      inner.current.style.left = `-${innerRect.width - outerRect.width}px`;
+    }
+  }
+
   return (
     <section id="GroupDiscussionPage">
       <div className="GroupDiscussionParent">
@@ -44,8 +82,22 @@ export default function GroupDiscussionHtml() {
         </div>
 
         <div className="GroupSlideFrameParent">
-          <div className="GroupSlideFrame">
-            <div className="GroupContainer" style={{ left: widthValue + "px" }}>
+          <div
+            className="GroupSlideFrame"
+            ref={outer}
+            onMouseDown={(e) => {
+              mouseDown(e);
+            }}
+            onMouseUp={mouseUp}
+            onMouseMove={(e) => {
+              mouseMove(e);
+            }}
+          >
+            <div
+              className="GroupContainer"
+              style={{ left: widthValue + "px" }}
+              ref={inner}
+            >
               <GroupEachSlide
                 title="Group Discussion"
                 image1={infra1}

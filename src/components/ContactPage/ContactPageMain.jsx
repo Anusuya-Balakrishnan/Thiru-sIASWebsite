@@ -6,9 +6,7 @@ export default function ContactPageHtml() {
   return (
     <section id="ContactPageHtml">
       <div className="ContactPageHtmlMain">
-        <HomePage />
         <ContactPage />
-        <FooterHtml />
       </div>
     </section>
   );

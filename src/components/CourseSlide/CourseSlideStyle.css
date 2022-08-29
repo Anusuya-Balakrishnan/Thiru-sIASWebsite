@@ -1,3 +1,8 @@
+/* -webkit-user-select: none; /* Safari */
+  /* -ms-user-select: none; IE 10 and IE 11
+  user-select: none; */
+
+
 *{
     margin: 0;
     padding: 0;
@@ -45,13 +50,16 @@
 
 .CourseSlideContainers{
     width: auto;
-    /* background-color: #CB2Cw31; */
+    /* background-color: #CB2C31; */
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;  
     left: 0px;
-    transition: 0.5s;
+    transition: 0s ease-in;
+    cursor: pointer;
+    pointer-events: none;
+   
 }
 @media (max-width:1190px){
     .CourseSlideMain{
@@ -79,6 +87,6 @@
         /* margin: 10px; */
        }
        .CourseSlideContainers{
-        left:0px
+        left:0px;
        }
 }

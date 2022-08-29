@@ -13,10 +13,12 @@ import aptitude from "./image/aptitude.png";
 import tnpsc from "./image/tnpsc.jpg";
 import RRB from "./image/RRB.jpg";
 import udc from "./image/udc.jpg";
-import optional from "./image/political-sociology-logo.jpg";
+// import optional from "./image/political-sociology-logo.jpg";
 import groupDiscussion from "./image/groupDiscussion.jpg";
 import intermediate from "./image/intermediate.png";
 import beginner from "./image/beginner.jpg";
+import number from "./image/numberImage.jpg";
+import optional from "./image/optional.jpg";
 export default function CourseSlideHtml() {
   let optionalCourse = [
     {
@@ -101,7 +103,7 @@ export default function CourseSlideHtml() {
       test: "40",
     },
     {
-      image: aptitude,
+      image: number,
       title: "CSAT",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
@@ -154,6 +156,8 @@ export default function CourseSlideHtml() {
   ];
 
   const [leftValue, setLeftValue] = useState(null);
+  let CourseSlideContainersRef = useRef(null);
+  let CourseSlideMainRef = useRef(null);
 
   // left click function
   function leftClick() {
@@ -167,6 +171,7 @@ export default function CourseSlideHtml() {
     } else {
       setLeftValue(0);
     }
+    totalWidth.style.transition = "0.5s";
   }
 
   // right Click function
@@ -183,15 +188,64 @@ export default function CourseSlideHtml() {
       setLeftValue(-totalWidthValue);
     }
   }
+
+  let slider = CourseSlideMainRef;
+  let innerSlider = CourseSlideContainersRef;
+  let pressed = false;
+  let startx;
+  let x;
+
+  function mouseDown(e) {
+    pressed = true;
+    startx = e.nativeEvent.offsetX - innerSlider.current.offsetLeft;
+    CourseSlideMainRef.current.style.cursor = "grabbing";
+  }
+  function mouseUp() {
+    CourseSlideMainRef.current.style.cursor = "grab";
+  }
+  useEffect(() => {
+    window.addEventListener("mouseup", () => {
+      pressed = false;
+      CourseSlideMainRef.current.style.cursor = "grab";
+    });
+  });
+  function mouseMove(e) {
+    if (!pressed) return;
+    e.preventDefault();
+    x = e.nativeEvent.offsetX;
+    innerSlider.current.style.left = `${x - startx}px`;
+    checkedBorder();
+  }
+  function checkedBorder() {
+    let outer = slider.current.getBoundingClientRect();
+    let inner = innerSlider.current.getBoundingClientRect();
+    if (parseInt(innerSlider.current.style.left) > 0) {
+      innerSlider.current.style.left = "0px";
+    } else if (inner.right < outer.right) {
+      innerSlider.current.style.left = `-${inner.width - outer.width}px`;
+    }
+  }
+
   return (
     <section id="CourseSlidePage">
       <div className="CourseSlide">
         <div className="CourseLeftClick" onClick={leftClick}>
           <CgChevronLeft />
         </div>
-        <div className="CourseSlideMain">
+        <div
+          ref={CourseSlideMainRef}
+          className="CourseSlideMain"
+          onMouseDown={(e) => {
+            mouseDown(e);
+          }}
+          onMouseUp={mouseUp}
+          onMouseMove={(e) => {
+            mouseMove(e);
+          }}
+        >
           <div
             className="CourseSlideContainers"
+            ref={CourseSlideContainersRef}
             style={{ left: leftValue + "px" }}
           >
             {courseContent.map((Eachcourse) => {
@@ -238,6 +292,15 @@ export default function CourseSlideHtml() {
           <CgChevronRight />
         </div>
       </div>
+      {/* <button
+      // onClick={() => {
+      //   const text = document.querySelector(".CourseSlideMain");
+      //   console.log(text.getBoundingClientRect());
+      //   console.log(CourseSlideContainersRef.current.getBoundingClientRect());
+      // }}
+      >
+        click
+      </button> */}
     </section>
   );
 }
