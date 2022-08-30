@@ -1,6 +1,7 @@
 import React from "react";
 import ContactStyle from "./ContactStyle.css";
 import PopupPage from "../PopupPage/PopupHtml";
+import ContactForm from "./ContactForm";
 export default function ContactPage() {
   return (
     <section id="ContactPage">
@@ -15,9 +16,7 @@ export default function ContactPage() {
               referrerpolicy="no-referrer-when-downgrade"
             />
           </div>
-          <div className="ContactForm">
-            <PopupPage />
-          </div>
+          <div className="ContactForm">{/* <ContactForm /> */}</div>
         </div>
       </div>
     </section>

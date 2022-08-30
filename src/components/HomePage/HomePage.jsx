@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Homepage from "./HomePage.css";
 import logoimage from "./images/Logo.svg";
 // import { Link } from "react-router-dom";
 import { BiDotsVerticalRounded, BiChevronDown } from "react-icons/bi";
-import { FaThreeDot } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import whatapp from "./images/whatapp.svg";
 import query from "./images/Vector.svg";
+import queryHtml from "./queryHtml";
+import FooterSubscribe from "../FooterPage/FooterSubscribe/FooterSubscribe";
 export default function HomePage() {
+  const [isQuery, setIsQuery] = useState(false);
+  setInterval(() => {
+    setIsQuery(false);
+  }, 20000);
   let show = false;
   function showMenu() {
     document.querySelector(".navCourseListParent").style.display = "block";
@@ -120,10 +125,16 @@ export default function HomePage() {
           <div className="whatsapp">
             <img src={whatapp} />
           </div>
-          <div className="queryIcon">
+          <div
+            className="queryIcon"
+            onClick={() => {
+              setIsQuery(!isQuery);
+            }}
+          >
             <img src={query} />
           </div>
         </div>
+        <div className="QueryPageMenu">{isQuery && <FooterSubscribe />}</div>
       </div>
     </section>
   );

@@ -198,15 +198,36 @@
 }
 .whatsapp , .queryIcon{
     background-color: transparent;
-    max-width: 45px;
-    max-height: 45px;
+    /* max-width: 50px;
+    max-height: 50px; */
     margin: 10px;
 }
+.queryIcon{
+    
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.queryIcon:hover, .whatsapp:hover{
+    cursor: pointer; 
+    
+}
+
 .whatsapp img , .queryIcon img{
     max-width: 45px;
     max-height: 45px;
 }
 
+.QueryPageMenu{
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0px;
+    right: 100px;
+    margin-bottom: 20px;
+    background-color: #cb2c3175;
+    margin: 20px 40px;
+}
 @media (max-width:800px) {
     .NavbarMain{
         height: 70px;

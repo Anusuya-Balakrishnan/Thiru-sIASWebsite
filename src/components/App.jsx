@@ -13,12 +13,14 @@ import HomePage from "./HomePage/HomePage";
 // import ContactPage from "./ContactPage/ContactPageHtml";
 import ContactPageHtml from "./ContactPage/ContactPageMain";
 import FooterHtml from "./FooterPage/FooterHtml";
+import PopupPage from "./PopupPage/PopupHtml";
 export default function App() {
   return (
     <>
       <BrowserRouter>
         <main>
           <HomePage />
+          <PopupPage />
           <Routes>
             <Route path="/" element={<FirstPageHtml />} />
             <Route path="/about" element={<SecondPageHtml />} />
@@ -31,6 +33,7 @@ export default function App() {
             />
             <Route path="/contactus" element={<ContactPageHtml />} />
           </Routes>
+
           <FooterHtml />
         </main>
       </BrowserRouter>

@@ -54,9 +54,6 @@ export default function SeminarSlide() {
   useEffect(() => {
     setInterval(() => {
       let containerWidth = document.querySelector(".EachSlide").clientWidth;
-      let maxWidth = document.querySelector(
-        ".SeminarSlideContainer"
-      ).clientWidth;
       if (count < webinarDetails.length) {
         setLeftValue(containerWidth * count);
         setCount(count + 1);
