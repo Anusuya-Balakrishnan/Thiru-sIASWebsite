@@ -42,12 +42,14 @@ export default function PopupPage() {
       setshow(false);
     }
   }
-  console.log(isOpen);
   useEffect(() => {
-    setInterval(() => {
-      setIsOpen(true);
-    }, 100000);
+    if (!isOpen) {
+      setInterval(() => {
+        setIsOpen(true);
+      }, 100000);
+    }
   }, []);
+
   return (
     <section id="PopupPage">
       {isOpen && (

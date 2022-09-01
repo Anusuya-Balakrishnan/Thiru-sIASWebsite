@@ -79,18 +79,16 @@ export default function AutoHtml() {
   let SlideContainerRef = useRef(0);
   let slideWidthValue;
 
-  useEffect(() => {
-    let SlideWidth = ReviewSlideImage.current.clientWidth;
-    setInterval(() => {
-      if (count < reviewContent.length - 1) {
-        count++;
-      } else {
-        count = 0;
-      }
-      slideWidthValue = -(SlideWidth * count) + "px";
-      SlideContainerRef.current.style.left = slideWidthValue;
-    }, 5000);
-  });
+  let SlideWidth = ReviewSlideImage.current.clientWidth;
+  setInterval(() => {
+    if (count < reviewContent.length - 1) {
+      count++;
+    } else {
+      count = 0;
+    }
+    slideWidthValue = -(SlideWidth * count) + "px";
+    SlideContainerRef.current.style.left = slideWidthValue;
+  }, 5000);
 
   return (
     <section id="AutoHtml">

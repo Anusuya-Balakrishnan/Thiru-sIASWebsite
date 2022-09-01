@@ -51,20 +51,19 @@ export default function SeminarSlide() {
       time: "12/8/2022, Friday",
     },
   ];
-  useEffect(() => {
-    setInterval(() => {
-      let containerWidth = document.querySelector(".EachSlide").clientWidth;
-      if (count < webinarDetails.length) {
-        setLeftValue(containerWidth * count);
-        setCount(count + 1);
-      } else {
-        setLeftValue(0);
-        setCount(0);
-      }
-      document.querySelector(".SeminarSlideContainer").style.left =
-        -leftValue + "px";
-    }, 2000);
-  });
+
+  setInterval(() => {
+    let containerWidth = document.querySelector(".EachSlide").clientWidth;
+    if (count < webinarDetails.length) {
+      setLeftValue(containerWidth * count);
+      setCount(count + 1);
+    } else {
+      setLeftValue(0);
+      setCount(0);
+    }
+    document.querySelector(".SeminarSlideContainer").style.left =
+      -leftValue + "px";
+  }, 2000);
 
   return (
     <section id="SeminarSlidePage">

@@ -22,7 +22,7 @@ export default function FooterHtml() {
               amet, lobortis habitant dolor consequat. Adipiscing a in sociis
               enim, posuere ac.
             </p>
-            <FooterSubscribe />
+            <FooterSubscribe value="Enter your email" />
           </div>
           <div className="FooterList">
             <p>About us</p>

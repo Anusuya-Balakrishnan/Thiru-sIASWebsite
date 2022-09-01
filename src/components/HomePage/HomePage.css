@@ -53,17 +53,22 @@
     
 }
 .navOption{
+    position: relative;
     margin: 10px 20px;
     /* font-size: 100%; */
     cursor: pointer;
-    color: white;
+    color: #FCF6F5FF;
     font-size: 17px;
     text-decoration: none;
     display: flex;
+    transition: 0.1s;
 }
-.navOption p{
-    margin: 0 5px;
-    transition: 0.5s;
+
+
+
+.navOption:hover ,.EachNavCourse:hover{
+    transform: scale(1.05);
+    color: white;
 }
 .navBarCourseMenu{
     display: flex;
@@ -74,21 +79,29 @@
     height: 0;
 }
 .navCourseListParent{
-   
    position: absolute;
-   top:50px;
-   right: 260px;
-    display: none;
-    transition: 2s;
-    /* text-decoration: dashed; */
+   top:40px;
+   right: 190px;
+    transition: 0.5s;
+    height:0;
+    background-color: #CB2C31;
+    
+}
+.EachNavCourse{
+    display: block;
+    color:#FCF6F5FF;
+    width: 120px;
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    transition: 0.2s;
+
 }
 .navCourseList{
-    
-    /* margin-right: -50px; */
+
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    background-color: #CB2C31;
     padding: 10px;
 }
 .navCourseMenu{
@@ -99,27 +112,27 @@
 }
 
 
-.EachNavCourse{
-    color:white;
-    padding: 10px;
-    display: flex;
-    text-decoration: none;
 
-}
-
-.EachNavCourse:hover{
+/* .EachNavCourse:hover{
     background-color: #380000;
     text-decoration: dashed;
-}
+} */
 .MenuIcon{
     display: none;
     position: absolute;
     margin-right: 50px;
     right: 10px;
     color: white;
-    font-size: 20px;
+    font-size: 27px;
     /* background-color: aqua; */
-
+    transition: 0.2s;
+    cursor: pointer;
+    
+}
+.MenuIcon:hover{
+    color: #380000fb;
+    border-radius: 50%;
+    
 }
 
 .LogoContent{
@@ -134,14 +147,16 @@
 }
 .MenuListParent{
     position: absolute;
-    top:70px;
-    right: 20px;
+    top:50px;
+    right:-20px;
     display: none;
     z-index: 2;
+
     
 }
 .MenuList{
     /* width: 150px; */
+    padding: 0 20px;
     width: auto;
     display: flex;
     justify-content: center;
@@ -149,32 +164,29 @@
     background-color: #CB2C31;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    font-size: 20px;
+    font-weight: normal;
 }
-.navOptionSideBar,.NSideBarCourseList{
-    margin: 17px;
+.navOptionSideBar{
     color: white;
-    /* display: none; */
-    padding: 10px;
+    margin: 20px 0;
     font-size: 80%;
-    text-align: left;
-    font-weight: 700;
     text-decoration: none;  
+    transition: 0.5s;
 }
-.NSideBarCourseList{
-    margin: 0;
-    padding: 15px;
-}
-.navOptionSideBar:hover{
-    background-color: #380000;
-}
-.courseMenu{
+#courseMenu{
     cursor: pointer;
+    color: white;
+    margin: 0;
+    font-size: 80%;
+    text-decoration: none;  
+    transition: 0.5s;
 }
 .NSideBarCourseListParent{
     display: none;
-    transition: 0.5s;
 }
 .NSideBarCourseList{
+    padding: 0;
     display: flex;
     flex-direction: column;
     transition: 0.5s;
@@ -225,8 +237,7 @@
     bottom: 0px;
     right: 100px;
     margin-bottom: 20px;
-    background-color: #cb2c3175;
-    margin: 20px 40px;
+    
 }
 @media (max-width:800px) {
     .NavbarMain{

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Homepage from "./HomePage.css";
 import logoimage from "./images/Logo.svg";
 // import { Link } from "react-router-dom";
@@ -11,16 +11,39 @@ import queryHtml from "./queryHtml";
 import FooterSubscribe from "../FooterPage/FooterSubscribe/FooterSubscribe";
 export default function HomePage() {
   const [isQuery, setIsQuery] = useState(false);
-  setInterval(() => {
-    setIsQuery(false);
-  }, 20000);
-  let show = false;
+  const [showCourse, setShowCourse] = useState(false);
+
+  if (isQuery) {
+    setInterval(() => {
+      setIsQuery(false);
+    }, 20000);
+  }
   function showMenu() {
-    document.querySelector(".navCourseListParent").style.display = "block";
+    setShowCourse(!showCourse);
   }
-  function hideMenu() {
-    document.querySelector(".navCourseListParent").style.display = "none";
+  let sideMenu = false;
+  function displayMenu() {
+    if (!sideMenu) {
+      document.querySelector(".MenuListParent").style.display = "block";
+      sideMenu = true;
+    } else {
+      document.querySelector(".MenuListParent").style.display = "none";
+      sideMenu = false;
+    }
   }
+  function closeMenu() {
+    if (sideMenu) {
+      document.querySelector(".MenuListParent").style.display = "none";
+      sideMenu = false;
+    }
+  }
+
+  // window.addEventListener("click", () => {
+  //   if (showCourse) {
+  //     setShowCourse(!showCourse);
+  //   }
+
+  // });
   let courseList = false;
   function displaySideCourse() {
     if (!courseList) {
@@ -33,8 +56,6 @@ export default function HomePage() {
       courseList = false;
     }
   }
-  const newLocal = "navCourseListParent";
-
   return (
     <section id="Navbar">
       <div className="NavbarMain">
@@ -48,57 +69,20 @@ export default function HomePage() {
           <Link to={"/about"} className="navOption">
             About us
           </Link>
-
-          <div
-            className="navOption"
-            onMouseOver={showMenu}
-            onMouseOut={hideMenu}
-          >
-            <p>Courses</p>
-            <BiChevronDown />
-          </div>
-
-          <Link to="/achievement" className="navOption">
-            Achievement
-          </Link>
-          <Link to="/contactus" className="navOption">
-            Contact
-          </Link>
-        </div>
-        <div className="MenuIcon" onClick={displayMenu}>
-          <BiDotsVerticalRounded />
-        </div>
-
-        <div className={newLocal}>
-          <div className="navCourseList">
-            <Link to="/course/upsc" className="EachNavCourse">
-              UPSC
-            </Link>
-            <Link to="/course/regionalExam" className="EachNavCourse">
-              Regional Exam
-            </Link>
-            <Link to="/course/spokenEnglish" className="EachNavCourse">
-              Spoken English
-            </Link>
-          </div>
-        </div>
-
-        <div className="MenuListParent">
-          <div className="MenuList">
-            <Link to={"/"} className="navOptionSideBar">
-              Home
-            </Link>
-            <Link to={"/about"} className="navOptionSideBar">
-              Aboutus
-            </Link>
-            <div
-              className="navOptionSideBar courseMenu "
-              onClick={displaySideCourse}
-            >
-              Courses
+          <div>
+            <div className="navOption" onMouseOver={showMenu}>
+              <p>Courses</p>
+              <BiChevronDown />
             </div>
-            <div className="NSideBarCourseListParent">
-              <div className="NSideBarCourseList">
+            {/*course list  */}
+            <div
+              className="navCourseListParent"
+              style={{
+                display: showCourse ? "block" : "none",
+                height: showCourse ? "130px" : "0px",
+              }}
+            >
+              <div className="navCourseList">
                 <Link to="/course/upsc" className="EachNavCourse">
                   UPSC
                 </Link>
@@ -110,21 +94,70 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <Link to={"/achievement"} className="navOptionSideBar">
-              Achievement
-            </Link>
-            <Link to={"/contactus"} className="navOptionSideBar">
-              Contact
-            </Link>
-            <div className="closeIcon" onClick={closeMenu}>
-              <AiOutlineClose />
+          </div>
+
+          <Link to="/achievement" className="navOption">
+            Achievement
+          </Link>
+          <Link to="/contactus" className="navOption">
+            Contact
+          </Link>
+        </div>
+        <div className="MenuIcon" onClick={displayMenu}>
+          <BiDotsVerticalRounded />
+          {/* side menu list */}
+          <div className="MenuListParent">
+            <div className="MenuList">
+              <Link to={"/"} className="navOptionSideBar">
+                Home
+              </Link>
+              <Link to={"/about"} className="navOptionSideBar">
+                Aboutus
+              </Link>
+              <div
+                className="navOptionSideBar"
+                id="courseMenu"
+                onClick={displaySideCourse}
+              >
+                Courses
+                <BiChevronDown />
+                <div className="NSideBarCourseListParent">
+                  <div className="NSideBarCourseList">
+                    <Link to="/course/upsc" className="EachNavCourse">
+                      UPSC
+                    </Link>
+                    <Link to="/course/regionalExam" className="EachNavCourse">
+                      Regional Exam
+                    </Link>
+                    <Link to="/course/spokenEnglish" className="EachNavCourse">
+                      Spoken English
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <Link to={"/achievement"} className="navOptionSideBar">
+                Achievement
+              </Link>
+              <Link to={"/contactus"} className="navOptionSideBar">
+                Contact
+              </Link>
+              <div className="closeIcon" onClick={closeMenu}>
+                <AiOutlineClose />
+              </div>
             </div>
           </div>
         </div>
+
+        {/* whatsapp and query icon */}
         <div className="WhatsappIcon">
-          <div className="whatsapp">
+          <a
+            className="whatsapp"
+            href="https://wa.me/919715054792"
+            target="_blank"
+          >
             <img src={whatapp} />
-          </div>
+          </a>
           <div
             className="queryIcon"
             onClick={() => {
@@ -134,26 +167,11 @@ export default function HomePage() {
             <img src={query} />
           </div>
         </div>
-        <div className="QueryPageMenu">{isQuery && <FooterSubscribe />}</div>
+
+        <div className="QueryPageMenu">
+          {isQuery && <FooterSubscribe value="Enter your query" />}
+        </div>
       </div>
     </section>
   );
-}
-let choice = false;
-let value;
-function displayMenu() {
-  if (!choice) {
-    value = "block";
-    choice = true;
-  } else {
-    value = "none";
-    choice = false;
-  }
-  // console.log("value", value, "choice", choice);
-  document.getElementsByClassName("MenuListParent")[0].style.display = value;
-}
-
-function closeMenu() {
-  // console.log("close menu");
-  document.getElementsByClassName("MenuListParent")[0].style.display = "none";
 }
