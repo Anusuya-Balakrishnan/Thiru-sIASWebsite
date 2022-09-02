@@ -1,12 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import AutoStyle from "./AutoStyle.css";
-import image1 from "./images/1.jpeg";
-import image2 from "./images/2.jpeg";
-import image3 from "./images/3.jpeg";
-import image4 from "./images/4.jpeg";
-import image5 from "./images/5.jpeg";
-import ReviewComponent from "../ReviewComponent/ReviewComponent";
-export default function AutoHtml() {
+import React from "react";
+import SmallAutoStyle from "./SmallAutoStyle.css";
+
+export default function SmallAutoSlide() {
   let reviewContent = [
     {
       personImage: image1,
@@ -74,60 +69,10 @@ export default function AutoHtml() {
       para5: "",
     },
   ];
-  let count = 0;
-  let ReviewSlideImage = useRef(0);
-  let SlideContainerRef = useRef(0);
-  let slideWidthValue;
-  let isStop = false;
-  let interval;
-  if (!isStop) {
-    interval = setInterval(() => {
-      let SlideWidth = ReviewSlideImage.current.clientWidth;
-      if (count < reviewContent.length - 1) {
-        count++;
-      } else {
-        count = 0;
-      }
-      slideWidthValue = -(SlideWidth * count) + "px";
-      SlideContainerRef.current.style.left = slideWidthValue;
-      console.log("autoslide" + slideWidthValue);
-    }, 5000);
-  } else {
-    clearInterval(interval);
-  }
-  console.log(isStop);
-  function stopAutoSlide() {
-    if (!isStop) {
-      isStop = true;
-    } else {
-      isStop = false;
-    }
-  }
   return (
-    <section id="AutoHtml">
-      <div className="SlideFrame">
-        <div className="SlideContainer" ref={SlideContainerRef}>
-          {reviewContent.map((eachReiview, index) => {
-            return (
-              <div
-                key={index}
-                className="ReviewSlideImage"
-                ref={ReviewSlideImage}
-              >
-                <ReviewComponent
-                  image={eachReiview.personImage}
-                  name={eachReiview.personName}
-                  duration={eachReiview.reviewDuration}
-                  para1={eachReiview.para1}
-                  para2={eachReiview.para2}
-                  para3={eachReiview.para3}
-                  para4={eachReiview.para4}
-                  para5={eachReiview.para5}
-                />{" "}
-              </div>
-            );
-          })}
-        </div>
+    <section id="SmallAutoSlide">
+      <div className="SmallSlideContainer">
+        <div className=""></div>
       </div>
     </section>
   );

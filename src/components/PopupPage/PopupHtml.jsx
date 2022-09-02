@@ -103,9 +103,9 @@ export default function PopupPage() {
                   <BsChevronDown color="#27227A" />
                 </div>
                 <div className="Options">
-                  {courseList.map((course) => {
+                  {courseList.map((course, index) => {
                     return (
-                      <div className="option" key={course.id}>
+                      <div className="option" key={index}>
                         {course}
                       </div>
                     );

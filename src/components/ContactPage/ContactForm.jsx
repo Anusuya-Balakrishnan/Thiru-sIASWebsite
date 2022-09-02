@@ -1,4 +1,4 @@
-import { ReactDOM } from "react";
+import { ReactDOM, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 import { MdEmail, MdPhone } from "react-icons/md";
@@ -6,9 +6,10 @@ import { BsChevronDown } from "react-icons/bs";
 import Logo from "./images/Logo.svg";
 import course from "./images/course.svg";
 import query from "./images/query.svg";
-
+import LogoOnly from "./images/logoOnly.svg";
+import contactFormStyle from "./contactFormStyle.css";
 import LargeButton from "../Button/LargeButton/LargeButton";
-let menuClick = true;
+
 let courseList = [
   "Preliminary Exam",
   "Mains Exam",
@@ -25,87 +26,83 @@ let courseList = [
 ];
 
 export default function ContactForm() {
-  let show = false;
+  const [isshow, setshow] = useState(false);
   function showCourses() {
-    if (!show) {
+    if (!isshow) {
       document.querySelector(".Options").style.display = "block";
-      show = true;
+      setshow(true);
     } else {
       document.querySelector(".Options").style.display = "none";
-      show = false;
+      setshow(false);
     }
   }
   return (
-    <section id="PopupPage">
-      <div className="PopupPageParent">
-        <div className="PopupPageMain">
-          <div className="Heading">
-            <div className="HeadingImage">
-              <img src={Logo} alt="LogoImage" />
+    <section id="ContactForm">
+      <div className="ContactFormContainer">
+        <div className="ContactFormTitle">Contact Form</div>
+        <div className="ContactContainer">
+          <div className="FormElement">
+            <div className="Icon">
+              <BsFillPersonFill />
             </div>
-            <div className="FormElement">
-              <div className="Icon">
-                <BsFillPersonFill />
-              </div>
-              <input
-                type="text"
-                className="InputType"
-                name="Name"
-                placeholder="Name"
-              />
+            <input
+              type="text"
+              className="InputType"
+              name="Name"
+              placeholder="Name"
+            />
+          </div>
+          <div className="FormElement">
+            <div className="Icon">
+              <MdEmail />
             </div>
-            <div className="FormElement">
-              <div className="Icon">
-                <MdEmail />
-              </div>
-              <input
-                type="email"
-                className="InputType"
-                name="Email"
-                placeholder="Email"
-              />
+            <input
+              type="email"
+              className="InputType"
+              name="Email"
+              placeholder="Email"
+            />
+          </div>
+          <div className="FormElement">
+            <div className="Icon">
+              <MdPhone />
             </div>
-            <div className="FormElement">
-              <div className="Icon">
-                <MdPhone />
-              </div>
-              <input
-                type="tel"
-                className="InputType"
-                name="PhoneNumber"
-                placeholder="Phone Number"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              />
+            <input
+              type="tel"
+              className="InputType"
+              name="PhoneNumber"
+              placeholder="Phone Number"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            />
+          </div>
+          <div className="SelectList" onClick={showCourses}>
+            <div className="CourseMenu FormElement">
+              <img src={course} className="Icon" />
+              <div className="popupCourseTitle">Select Courses</div>
+              <BsChevronDown color="#27227A" />
             </div>
-            <div className="SelectList" onClick={showCourses}>
-              <div className="CourseMenu FormElement">
-                <img src={course} className="Icon" />
-                <div className="popupCourseTitle">Select Courses</div>
-                <BsChevronDown color="#27227A" />
-              </div>
-              <div className="Options">
-                {courseList.map((course) => {
-                  return (
-                    <div className="option" key={course.id}>
-                      {course}
-                    </div>
-                  );
-                })}
-              </div>
+            <div className="Options">
+              {courseList.map((course) => {
+                return (
+                  <div className="option" key={course.id}>
+                    {course}
+                  </div>
+                );
+              })}
             </div>
+          </div>
 
-            <div className="FormElement">
-              <img src={query} className="Icon" />
-              <input
-                type="text"
-                className="InputType"
-                name="Query"
-                placeholder="Query"
-              />
-            </div>
-            <LargeButton value="Submit" />
+          <div className="FormElement">
+            <img src={query} className="Icon" />
+            <input
+              type="text"
+              className="InputType"
+              name="Query"
+              placeholder="Query"
+            />
           </div>
         </div>
+        <LargeButton value="Submit" />
       </div>
     </section>
   );

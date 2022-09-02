@@ -165,7 +165,7 @@ export default function CourseSlideHtml() {
     let totalWidth = document.querySelector(
       ".CourseSlideContainers"
     ).clientWidth;
-    let totalWidthValue = totalWidth - EachslideWidth;
+    let totalWidthValue = totalWidth - EachslideWidth * 3;
     if (Math.abs(leftValue) < totalWidthValue) {
       setLeftValue(leftValue - EachslideWidth);
     } else {
@@ -180,7 +180,7 @@ export default function CourseSlideHtml() {
     let totalWidth = document.querySelector(
       ".CourseSlideContainers"
     ).clientWidth;
-    let totalWidthValue = totalWidth - EachslideWidth;
+    let totalWidthValue = totalWidth - EachslideWidth * 3;
 
     if (leftValue < 0 && leftValue >= -totalWidthValue) {
       setLeftValue(leftValue + EachslideWidth);
@@ -248,9 +248,9 @@ export default function CourseSlideHtml() {
             ref={CourseSlideContainersRef}
             style={{ left: leftValue + "px" }}
           >
-            {courseContent.map((Eachcourse) => {
+            {courseContent.map((Eachcourse, index) => {
               return (
-                <div key={Eachcourse.id} className="slide">
+                <div key={index} className="slide">
                   <CourseHtml
                     courseImage={Eachcourse.image}
                     courseTitle={Eachcourse.title}
@@ -261,9 +261,9 @@ export default function CourseSlideHtml() {
                 </div>
               );
             })}
-            {optionalCourse.map((Eachcourse) => {
+            {optionalCourse.map((Eachcourse, index) => {
               return (
-                <div key={Eachcourse.id} className="slide">
+                <div key={index} className="slide">
                   <OptionalCourse
                     courseImage={Eachcourse.image}
                     courseTitle={Eachcourse.title}
@@ -274,9 +274,9 @@ export default function CourseSlideHtml() {
                 </div>
               );
             })}
-            {englishCourse.map((Eachcourse) => {
+            {englishCourse.map((Eachcourse, index) => {
               return (
-                <div key={Eachcourse.id} className="slide">
+                <div key={index} className="slide">
                   <SpokenEnglishCourse
                     courseImage={Eachcourse.image}
                     courseTitle={Eachcourse.title}

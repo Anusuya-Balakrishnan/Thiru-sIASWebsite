@@ -7,6 +7,9 @@
     margin: 0;
     padding: 0;
 }
+::-webkit-scrollbar {
+   height: 5px;
+}
 .CourseSlide{
     /* width: 100%; */
     width: auto;
@@ -27,7 +30,10 @@
     margin: 50px;
     z-index: 2;
     overflow: hidden;
+    overflow-x: scroll;
+    
 }
+
 .CourseLeftClick , .CourseRightClick{
     display: flex;
     align-items: center;
@@ -85,6 +91,7 @@
         width: 90vw;
         margin: 0;
         /* margin: 10px; */
+        overflow-x: scroll;
        }
        .CourseSlideContainers{
         left:0px;

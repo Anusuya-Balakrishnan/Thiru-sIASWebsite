@@ -16,7 +16,9 @@ export default function ContactPage() {
               referrerpolicy="no-referrer-when-downgrade"
             />
           </div>
-          <div className="ContactForm">{/* <ContactForm /> */}</div>
+          <div className="ContactForm">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>

@@ -38,12 +38,11 @@ export default function HomePage() {
     }
   }
 
-  // window.addEventListener("click", () => {
-  //   if (showCourse) {
-  //     setShowCourse(!showCourse);
-  //   }
-
-  // });
+  window.addEventListener("click", () => {
+    if (showCourse) {
+      setShowCourse(!showCourse);
+    }
+  });
   let courseList = false;
   function displaySideCourse() {
     if (!courseList) {

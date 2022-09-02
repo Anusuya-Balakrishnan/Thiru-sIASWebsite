@@ -1,6 +1,6 @@
 import React from "react";
 import ReviewStyle from "./ReviewStyle.css";
-
+import { FcGoogle } from "react-icons/fc";
 import { AiTwotoneStar } from "react-icons/ai";
 
 export default function ReviewComponent(props) {
@@ -13,16 +13,19 @@ export default function ReviewComponent(props) {
           </div>
           <div className="PersonName">
             <p className="Name">
-              <span>{props.name}</span> (Google Review)
+              <span>{props.name}</span>
+              <div className="ReviewStar">
+                <AiTwotoneStar color="#4D89F7" />
+                <AiTwotoneStar color="#4D89F7" />
+                <AiTwotoneStar color="#4D89F7" />
+                <AiTwotoneStar color="#4D89F7" />
+                <AiTwotoneStar color="#4D89F7" />
+              </div>
             </p>
             <p className="time">{props.duration}</p>
           </div>
-          <div className="ReviewStar">
-            <AiTwotoneStar color="#E8AB08" />
-            <AiTwotoneStar color="#E8AB08" />
-            <AiTwotoneStar color="#E8AB08" />
-            <AiTwotoneStar color="#E8AB08" />
-            <AiTwotoneStar color="#E8AB08" />
+          <div className="googleIcon">
+            <FcGoogle />
           </div>
         </div>
         <div className="ReviewBody">

@@ -4,25 +4,26 @@
     padding: 0;
 }
 .ReviewParent{
-    width: 420px;
-    height: 450px;
+    width: 400px;
+    height: 430px;
     background-color: white;
     /* border-radius: 10px; */
     /* border: 2px solid #CB2C31; */
-    padding: 10px 5px;
+    padding: 10px;
 
 }
 .ReviewTitle{
+    position: relative;
     width: auto;
     padding: 10px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 .PersonImage ,.PersonImage img{
-    width: 70px;
+    width: 50px;
     /* height: 50px; */
-    height: 70px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     
@@ -36,20 +37,26 @@
     font-size: 12px;
     margin: 5px 0;
 }
+.Name{
+    display: flex;
+    
+}
 .Name span{
     font-weight: 600;
     font-size: 14px;
+    width: auto;
 }
 .PersonName{
     display: flex;
     margin: 0 10px;
     justify-content: center;
-    max-width: 170px;
+    max-width: 200px;
     flex-direction: column;
 }
 .ReviewStar{
-    padding: 20px 5px;
-    width: 90px;
+    padding: 0 5px;
+    width: 100px;
+    font-size: 15px;
 }
 .ReviewBody{
     padding: 20px;
@@ -58,6 +65,11 @@
 .ReviewBody p{
     text-align: left;
     line-height: 1.6;
+}
+.googleIcon{
+    position: absolute;
+    right: 30px;
+    font-size: 30px;
 }
 
 @media (max-width:500px){

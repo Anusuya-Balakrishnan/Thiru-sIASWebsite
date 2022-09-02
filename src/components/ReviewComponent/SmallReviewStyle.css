@@ -1,0 +1,8 @@
+.smallReviewContainer{
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    border: 2px solid #FAFAFA;
+    background-color: #FAFAFA;
+    box-shadow: 2px 2px 10px 2px #7b7b7b;
+}
