@@ -30,7 +30,7 @@
     margin: 50px;
     z-index: 2;
     overflow: hidden;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     
 }
 

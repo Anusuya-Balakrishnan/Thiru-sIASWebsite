@@ -1,0 +1,79 @@
+
+.SmallSeminarParent{
+    width: 300px;
+    height: 500px;    
+}
+.SmallSeminarFrame{
+    /* margin: 15px 5px ; */
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.SmallSeminarImage{
+    max-width: 280px;
+    height: 250px;
+    border-radius: 4px;
+    object-fit: cover;
+    
+}
+.SmallSeminarImage img{
+    max-width:280px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.SmallSeminarImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.SmallSeminarContent{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.SmallSeminarTitle{
+    color: #27227A;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.SmallSeminarDetail{
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 5px;
+}
+.SmallSeminarDate{
+    text-align: left;
+    margin: 10px 5px;
+    color: #27227A;
+    font-size: 14px;
+    line-height: 1.8;
+}
+/*  */
+
+
+.SmallSeminarSlideMain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.SmallSeminarSlideParent{
+    position: relative;
+    width: 300px;
+    height: 500px;
+    border: 2px solid #CB2C31;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.SmallSeminarContainer{
+    position: absolute;
+    left: 0;
+    width: auto;
+    display: flex;
+    transition: 0.5s;
+}

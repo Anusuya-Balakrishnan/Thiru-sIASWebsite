@@ -4,7 +4,6 @@ import FooterHtml from "../FooterPage/FooterHtml";
 import LandingPage from "../LandingPage/LandingPage";
 import JourneyHtml from "../Journey/JourneyHtml";
 import CourseSlideHtml from "../CourseSlide/CourseSlideHtml";
-import SmallReview from "../ReviewComponent/SmallReview";
 
 export default function FirstPageHtml() {
   return (
@@ -13,7 +12,6 @@ export default function FirstPageHtml() {
         <LandingPage />
         <JourneyHtml />
         <CourseSlideHtml />
-        <SmallReview />
       </div>
     </section>
   );

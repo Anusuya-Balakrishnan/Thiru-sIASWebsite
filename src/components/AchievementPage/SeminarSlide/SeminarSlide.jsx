@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import SeminarStyle from "./SeminarStyle.css";
 import SeminarHtml from "./SeminarHtml";
+import Slide from "./SmallSeminarSlide/Slide.jsx";
 import image1 from "./image/1.jpg";
 import image2 from "./image/2.jpg";
 import image3 from "./image/3.jpg";
 import image4 from "./image/4.jpg";
 import image5 from "./image/5.jpg";
+import { useRef } from "react";
 export default function SeminarSlide() {
-  let [count, setCount] = useState(0);
-  const [leftValue, setLeftValue] = useState(0);
   let webinarDetails = [
     {
       image: image1,
@@ -51,28 +51,31 @@ export default function SeminarSlide() {
       time: "12/8/2022, Friday",
     },
   ];
-
-  setInterval(() => {
-    let containerWidth = document.querySelector(".EachSlide").clientWidth;
-    if (count < webinarDetails.length) {
-      setLeftValue(containerWidth * count);
-      setCount(count + 1);
-    } else {
-      setLeftValue(0);
-      setCount(0);
-    }
-    document.querySelector(".SeminarSlideContainer").style.left =
-      -leftValue + "px";
-  }, 2000);
+  let count = 1;
+  let leftValue = 0;
+  let EachSlideRef = useRef(null);
+  let SeminarSlideContainerRef = useRef(null);
+  useEffect(() => {
+    setInterval(() => {
+      let containerWidth = EachSlideRef.current.clientWidth;
+      if (count < webinarDetails.length - 1) {
+        count += 1;
+      } else {
+        count = 0;
+      }
+      leftValue = containerWidth * count;
+      SeminarSlideContainerRef.current.style.left = -leftValue + "px";
+    }, 5000);
+  }, []);
 
   return (
     <section id="SeminarSlidePage">
       <div className="SeminarSlideParentMain">
         <div className="SeminarSlideParent">
-          <div className="SeminarSlideContainer">
+          <div className="SeminarSlideContainer" ref={SeminarSlideContainerRef}>
             {webinarDetails.map((eachDetail, index) => {
               return (
-                <div className="EachSlide" key={index}>
+                <div className="EachSlide" key={index} ref={EachSlideRef}>
                   <SeminarHtml
                     image={eachDetail.image}
                     title={eachDetail.title}

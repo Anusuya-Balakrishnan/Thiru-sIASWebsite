@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import AutoStyle from "./AutoStyle.css";
 import image1 from "./images/1.jpeg";
 import image2 from "./images/2.jpeg";
@@ -6,18 +6,24 @@ import image3 from "./images/3.jpeg";
 import image4 from "./images/4.jpeg";
 import image5 from "./images/5.jpeg";
 import ReviewComponent from "../ReviewComponent/ReviewComponent";
+import SmallReview from "../ReviewComponent/SmallReview.jsx";
+import { RiH1 } from "react-icons/ri";
+
 export default function AutoHtml() {
   let reviewContent = [
     {
       personImage: image1,
-      personName: "Kavitha C",
+      personName: "Kavitha",
       reviewDuration: "6 months ago",
       para1:
         "Good Academy for UPSC and for other Competetive exams too.Individual concern is given for each and every aspirant.",
       para2:
         "Classes are taken from basic levels and we can experience a difference in learning(i.e. learning by understanding, analysing, applying)when compared to schools where we were made to memorize things.",
       para3:
-        "Sir motivates and lays path for a colourful future. He encourages students to have a healthy discussion on various topics, current affairs which provides opportunity to explore our knowledge.",
+        "Sir motivates and lays path for a colourful future. " +
+        "He encourages students to have a healthy discussion on various topics," +
+        "current affairs which provides opportunity to explore our knowledge.",
+
       para4: "Best Institute for cracking the exams.",
       para5: "Thank you Sir.",
     },
@@ -74,13 +80,13 @@ export default function AutoHtml() {
       para5: "",
     },
   ];
+
   let count = 0;
   let ReviewSlideImage = useRef(0);
   let SlideContainerRef = useRef(0);
   let slideWidthValue;
-  let isStop = false;
   let interval;
-  if (!isStop) {
+  function timer() {
     interval = setInterval(() => {
       let SlideWidth = ReviewSlideImage.current.clientWidth;
       if (count < reviewContent.length - 1) {
@@ -90,19 +96,12 @@ export default function AutoHtml() {
       }
       slideWidthValue = -(SlideWidth * count) + "px";
       SlideContainerRef.current.style.left = slideWidthValue;
-      console.log("autoslide" + slideWidthValue);
     }, 5000);
-  } else {
-    clearInterval(interval);
   }
-  console.log(isStop);
-  function stopAutoSlide() {
-    if (!isStop) {
-      isStop = true;
-    } else {
-      isStop = false;
-    }
-  }
+  useEffect(() => {
+    timer();
+  }, []);
+
   return (
     <section id="AutoHtml">
       <div className="SlideFrame">
@@ -123,7 +122,7 @@ export default function AutoHtml() {
                   para3={eachReiview.para3}
                   para4={eachReiview.para4}
                   para5={eachReiview.para5}
-                />{" "}
+                />
               </div>
             );
           })}

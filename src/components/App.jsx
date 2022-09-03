@@ -20,7 +20,7 @@ export default function App() {
       <BrowserRouter>
         <main>
           <HomePage />
-          <PopupPage />
+          {/* <PopupPage /> */}
           <Routes>
             <Route path="/" element={<FirstPageHtml />} />
             <Route path="/about" element={<SecondPageHtml />} />

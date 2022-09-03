@@ -9,6 +9,7 @@ import whatapp from "./images/whatapp.svg";
 import query from "./images/Vector.svg";
 import queryHtml from "./queryHtml";
 import FooterSubscribe from "../FooterPage/FooterSubscribe/FooterSubscribe";
+import SideMenu from "./SideMenu";
 export default function HomePage() {
   const [isQuery, setIsQuery] = useState(false);
   const [showCourse, setShowCourse] = useState(false);
@@ -31,30 +32,13 @@ export default function HomePage() {
       sideMenu = false;
     }
   }
-  function closeMenu() {
-    if (sideMenu) {
-      document.querySelector(".MenuListParent").style.display = "none";
-      sideMenu = false;
-    }
-  }
 
   window.addEventListener("click", () => {
     if (showCourse) {
       setShowCourse(!showCourse);
     }
   });
-  let courseList = false;
-  function displaySideCourse() {
-    if (!courseList) {
-      document.querySelector(".NSideBarCourseListParent").style.display =
-        "block";
-      courseList = true;
-    } else {
-      document.querySelector(".NSideBarCourseListParent").style.display =
-        "none";
-      courseList = false;
-    }
-  }
+
   return (
     <section id="Navbar">
       <div className="NavbarMain">
@@ -105,47 +89,7 @@ export default function HomePage() {
         <div className="MenuIcon" onClick={displayMenu}>
           <BiDotsVerticalRounded />
           {/* side menu list */}
-          <div className="MenuListParent">
-            <div className="MenuList">
-              <Link to={"/"} className="navOptionSideBar">
-                Home
-              </Link>
-              <Link to={"/about"} className="navOptionSideBar">
-                Aboutus
-              </Link>
-              <div
-                className="navOptionSideBar"
-                id="courseMenu"
-                onClick={displaySideCourse}
-              >
-                Courses
-                <BiChevronDown />
-                <div className="NSideBarCourseListParent">
-                  <div className="NSideBarCourseList">
-                    <Link to="/course/upsc" className="EachNavCourse">
-                      UPSC
-                    </Link>
-                    <Link to="/course/regionalExam" className="EachNavCourse">
-                      Regional Exam
-                    </Link>
-                    <Link to="/course/spokenEnglish" className="EachNavCourse">
-                      Spoken English
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <Link to={"/achievement"} className="navOptionSideBar">
-                Achievement
-              </Link>
-              <Link to={"/contactus"} className="navOptionSideBar">
-                Contact
-              </Link>
-              <div className="closeIcon" onClick={closeMenu}>
-                <AiOutlineClose />
-              </div>
-            </div>
-          </div>
+          <SideMenu />
         </div>
 
         {/* whatsapp and query icon */}

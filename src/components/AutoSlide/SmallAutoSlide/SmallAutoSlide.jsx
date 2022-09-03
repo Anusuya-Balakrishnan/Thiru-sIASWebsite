@@ -1,6 +1,12 @@
 import React from "react";
 import SmallAutoStyle from "./SmallAutoStyle.css";
-
+import SmallReview from "../../ReviewComponent/SmallReview";
+import image1 from "../images/1.jpeg";
+import image2 from "../images/2.jpeg";
+import image3 from "../images/3.jpeg";
+import image4 from "../images/4.jpeg";
+import image5 from "../images/5.jpeg";
+import { useRef, useEffect } from "react";
 export default function SmallAutoSlide() {
   let reviewContent = [
     {
@@ -69,10 +75,52 @@ export default function SmallAutoSlide() {
       para5: "",
     },
   ];
+  let count = 0;
+  let ReviewSlideImage = useRef(0);
+  let SlideContainerRef = useRef(0);
+  let slideWidthValue;
+  let isStop = false;
+  let interval;
+  function timer() {
+    interval = setInterval(() => {
+      let SlideWidth = ReviewSlideImage.current.clientWidth;
+      if (count < reviewContent.length - 1) {
+        count++;
+      } else {
+        count = 0;
+      }
+      slideWidthValue = -(SlideWidth * count) + "px";
+      SlideContainerRef.current.style.left = slideWidthValue;
+    }, 5000);
+  }
+  useEffect(() => {
+    timer();
+  }, []);
   return (
     <section id="SmallAutoSlide">
-      <div className="SmallSlideContainer">
-        <div className=""></div>
+      <div className="SlideFrame">
+        <div className="SlideContainer" ref={SlideContainerRef}>
+          {reviewContent.map((eachReiview, index) => {
+            return (
+              <div
+                key={index}
+                className="ReviewSlideImage"
+                ref={ReviewSlideImage}
+              >
+                <SmallReview
+                  image={eachReiview.personImage}
+                  name={eachReiview.personName}
+                  duration={eachReiview.reviewDuration}
+                  para1={eachReiview.para1}
+                  para2={eachReiview.para2}
+                  para3={eachReiview.para3}
+                  para4={eachReiview.para4}
+                  para5={eachReiview.para5}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
