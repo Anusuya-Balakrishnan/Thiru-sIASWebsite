@@ -1,92 +1,107 @@
-.AchievementPageParent{
-    margin: 0;
-    margin-top: 100px;
-    margin-bottom: 20px;
+.AchievementPageParent {
+  margin: 0;
+  margin-top: 120px;
+  margin-bottom: 20px;
 }
-.UPSCAchieverTitle{
-    margin: 20px 60px 20px 90px;
-    /* margin: 30px; */
-    font-size: 25px;
-  color: #27227A;
-    /* padding-left: 30px; */
+.UPSCAchieverTitle {
+  margin: 20px 60px 20px 90px;
+  /* margin: 30px; */
+  font-size: 25px;
+  color: #27227a;
+  /* padding-left: 30px; */
 }
-.UPSCAchieverDetails{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0;
+.UPSCAchieverDetails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
 }
-.AchievementPageAchieverImage{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    /* width: 350px;
+.AchievementPageAchieverImage {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* width: 350px;
     height: 300px; */
-    /* border-radius: 20px; */
-    margin: 20px 30px;
+  /* border-radius: 20px; */
+  margin: 20px 30px;
 }
-.AchievementPageAchieverContent{
-    padding: 0px 30px;
-    width: 550px;
+.AchievementPageAchieverContent {
+  padding: 0px 30px;
+  width: 550px;
 }
-.AchievementPageAchieverImage img{
-    object-fit: cover;
-    border-radius: 20px;
-    width: 350px;
-    height: 300px;
+.AchievementPageAchieverImage img {
+  object-fit: cover;
+  border-radius: 20px;
+  width: 350px;
+  height: 300px;
 }
-.AchievementPageAchieverCurrentDetails{
-    line-height: 2;
-    text-align: justify;
+.AchievementPageAchieverCurrentDetails {
+  line-height: 2;
+  text-align: justify;
+  font-size: 18px;
 }
-@media (max-width:1030px){
-    .UPSCAchieverTitle{
-        text-align: center;
-        margin: 30px 0;
-    }
-    .AchieverName, .AchieverRank , .AchieverDescription{
-        text-align: center;
-    }
-    .AchievementPageAchieverCurrentDetails, .AchievementPageAchieverContent{
-        width: auto;
-    }
-    .UPSCAchieverDetails{
-        flex-direction: column-reverse;
-    }
-    .AchievementPageAchieverImage{
-        display: flex;
-        justify-content: center;
-    }
+.AchieverRank,
+.AchieverDescription {
+  font-size: 20px;
+  margin: 18px 0;
 }
-@media (max-width:450px) {
-    .AchievementPageAchieverImage{
-        margin: 10px 5px;
-    }
-    .AchievementPageAchieverImage img{
-        height: 50%;
-        width: 90%;
-    }
-    .UPSCAchieverTitle{
-        margin: 10px 0;
-        font-size: 130%;
-        padding: 0;
-    }
-    .AchieverName{
-        font-size: 130%;
-    }
-    .AchieverRank{
-        font-size: 110%;
-        margin: 15px 0;
-    }
-     .AchieverDescription {
-        font-size: 100%;
-        margin: 10px 0;
-    }
-    .AchievementPageAchieverContent{
-        padding: 10px ;
-    }
-    .AchievementPageAchieverCurrentDetails{
-        line-height: 1.5;
-        font-size: 95%;
-    }
+
+@media (max-width: 1030px) {
+  .UPSCAchieverTitle {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .AchieverName,
+  .AchieverRank,
+  .AchieverDescription {
+    text-align: center;
+  }
+  .AchieverRank,
+  .AchieverDescription {
+    font-size: 20px;
+  }
+  .AchievementPageAchieverCurrentDetails,
+  .AchievementPageAchieverContent {
+    width: auto;
+    padding: 0 10px;
+  }
+  .UPSCAchieverDetails {
+    flex-direction: column-reverse;
+  }
+  .AchievementPageAchieverImage {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 450px) {
+  .AchievementPageAchieverImage {
+    margin: 10px 5px;
+  }
+  .AchievementPageAchieverImage img {
+    height: 50%;
+    width: 90%;
+  }
+  .UPSCAchieverTitle {
+    margin: 10px 0;
+    font-size: 130%;
+    padding: 0;
+  }
+  .AchieverName {
+    font-size: 130%;
+  }
+  .AchieverRank {
+    font-size: 110%;
+    margin: 20px 0;
+  }
+  .AchieverDescription {
+    font-size: 100%;
+    margin: 10px 0;
+  }
+  .AchievementPageAchieverContent {
+    padding: 10px;
+  }
+  .AchievementPageAchieverCurrentDetails {
+    line-height: 1.5;
+    font-size: 95%;
+  }
 }

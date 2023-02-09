@@ -7,7 +7,7 @@ import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai";
 import { MdLocalPhone } from "react-icons/md";
 import FooterStyle from "./FooterStyle.css";
-
+import { Link } from "react-router-dom";
 import FooterSubscribe from "./FooterSubscribe/FooterSubscribe";
 
 export default function FooterHtml() {
@@ -18,17 +18,26 @@ export default function FooterHtml() {
           <div className="FooterContent">
             <img src={logoimage} />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
-              amet, lobortis habitant dolor consequat. Adipiscing a in sociis
-              enim, posuere ac.
+              To create a knowledge society with our civil services coaching and
+              make the dream possible for the weaker sections of society.
+              Political, Economical, and social knowledge have to reach the
+              unreached ones to create an inclusive society.
             </p>
             <FooterSubscribe value="Enter your email" />
           </div>
           <div className="FooterList">
-            <p>About us</p>
-            <p>Courses</p>
-            <p>Contact</p>
-            <p>Faq</p>
+            <Link to={"/about"} className="FooterList_menu">
+              About us
+            </Link>
+            <Link to={"/course/upsc"} className="FooterList_menu">
+              Courses
+            </Link>
+            <Link to={"/contactus"} className="FooterList_menu">
+              Contact
+            </Link>
+            <Link to={"/about"} className="FooterList_menu">
+              FAQ
+            </Link>
           </div>
           <div className="FooterAddress">
             <div className="AddressDiv">

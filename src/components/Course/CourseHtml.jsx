@@ -2,10 +2,13 @@ import React from "react";
 import CourseStyle from "./CourseStyle.css";
 import image from "./image/image.jpeg";
 import { IoTime } from "react-icons/io5";
+import { TbReportSearch } from "react-icons/tb";
 import { MdEventNote } from "react-icons/md";
 import Button from "../Button/ButtonHtml";
+import { Link, useNavigate } from "react-router-dom";
 import LargeButton from "../Button/LargeButton/LargeButton";
 export default function CourseHtml(props) {
+  const navigate = useNavigate();
   return (
     <section id="CourseHtml">
       <div className="CourseParent">
@@ -25,7 +28,12 @@ export default function CourseHtml(props) {
               </div>
             </div>
           </div>
-          <div className="ButtonComponent">
+          <div
+            className="ButtonComponent"
+            onClick={function () {
+              navigate(`/syllabus/${props.path}`);
+            }}
+          >
             <LargeButton value="For More" />
           </div>
         </div>

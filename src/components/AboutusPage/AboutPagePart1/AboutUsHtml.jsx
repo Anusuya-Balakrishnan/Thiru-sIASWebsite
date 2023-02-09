@@ -11,16 +11,10 @@ export default function AboutUsHtml() {
         <div className="AboutContent1">
           <div className="AboutHeading">Our Vision</div>
           <div className="AboutParagraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
-            tellus, pharetra vitae turpis scelerisque neque. Aenean etiam
-            elementum tempus velit neque ut. Eget dignissim at ultrices turpis
-            eget. Enim tellus magnis consectetur etiam elit, natoque donec.
-            Egestas nulla mattis enim interdum senectus. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit. Diam tellus, pharetra vitae
-            turpis scelerisque neque. Aenean etiam elementum tempus velit neque
-            ut. Eget dignissim at ultrices turpis eget. Enim tellus magnis
-            consectetur etiam elit, natoque donec. Egestas nulla mattis enim
-            interdum senectus.
+            To create a knowledge society with our civil services coaching and
+            make the dream possible for the weaker sections of society.
+            Political, Economical, and social knowledge have to reach the
+            unreached ones to create an inclusive society.
           </div>
         </div>
         <div className="FounderDetailsParent">
@@ -38,11 +32,16 @@ export default function AboutUsHtml() {
               </div>
               <p className="FounderTitle">Founder & Academic Head</p>
               <p className="FounderPara">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
-                tellus, pharetra vitae turpis scelerisque neque. Aenean etiam
-                elementum tempus velit neque ut. Eget dignissim at ultrices
-                turpis eget. Enim tellus magnis consectetur etiam elit, natoque
-                donec. Egestas nulla mattis enim interdum senectus
+                Mr. S.Thirumurugan our honorable Founder of Thiru's IAS Academy
+                was a former student and gold medalist of Puducherry
+                Technological University. He worked in TATA consultancy services
+                in the following years. Later he persuades his carrier as an
+                Assistant professor and Deputy Placement Officer. He realized
+                his dream of becoming a civil servant. Now with all his 10 years
+                of teaching experience and knowledge in social science, he is
+                guiding Civil service aspirants to achieve their dream. He
+                conducted civil services coaching classes at Pondicherry
+                University for three years from 2017 to 2019.
               </p>
               <div className="AboutIcon">
                 <div className="EachAboutIcon">

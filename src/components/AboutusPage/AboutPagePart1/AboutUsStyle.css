@@ -1,180 +1,187 @@
-*{
-    margin:0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.AboutUsMain{
-    margin-top: 100px;
+.AboutUsMain {
+  margin-top: 120px;
 }
-.AboutContent1{
-margin: 50px 100px;
+.AboutContent1 {
+  margin: 50px 100px;
+}
+.AboutHeading {
+  color: #27227a;
+  font-size: 30px;
+}
+.AboutParagraph {
+  margin: 20px 0;
+  text-indent: 100px;
+  line-height: 2;
+  font-size: 18px;
+  text-align: justify;
+}
+.FounderDetailsParent {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+.FounderDetails {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  margin: 30px 0;
+  width: 1020px;
+  /* height: 350px; */
+}
+.FounderPhoto {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+.Photo {
+  height: 100%;
+  /* margin-right: 10px; */
+}
+.Photo img {
+  /* position: absolute; */
+  max-height: 450px;
+  max-width: 320px;
+  /* max-width: inherit; */
+  object-fit: cover;
+  /* z-index: 0; */
+  /* position: absolute; */
+}
+.FounderFrame {
+  /* z-index: 5; */
+  width: auto;
+  /* max-height: 350px; */
+  /* max-width: 280px; */
+  /* position: relative; */
+  /* border: 1px solid rgba(187, 20, 20, 0.363); */
+  /* background-color: #26227a2f; */
+  /* background: linear-gradient(to bottom,rgba(240, 0, 0, 0.003) ,rgba(0, 0, 0, 0.147)); */
+  background: rgba(0, 0, 0, 0.847);
+  /* background:rgba(0, 0, 0, 0.003); */
+}
 
+.FounderContent {
+  /* display: flex;  */
+  /* position: relative; */
+  /* flex-direction: column; */
+  /* height: 350px; */
+  /* width: 400px; */
+  width: auto;
+  padding: 30px;
+  color: rgb(224, 224, 224);
+  background-color: #380000;
 }
-.AboutHeading{
-    color: #27227A;
-    font-size: 30px;
+.FounderName {
+  font-size: 25px;
+  margin-bottom: 20px;
 }
-.AboutParagraph{
-    margin: 20px 0;
-    line-height: 2;
-    /* font-size: 14px; */
-    text-align: justify;
+.degree {
+  font-size: 12px;
 }
-.FounderDetailsParent{
-    height: auto;
+.FounderTitle {
+  font-size: 20px;
+}
+.FounderPara {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 16px;
+  margin: 20px 0;
+}
+.AboutIcon {
+  display: flex;
+  margin-top: 30px;
+}
+.EachAboutIcon {
+  margin: 0 15px;
+  font-size: 20px;
+  /* text-align: center; */
+}
+
+@media (max-width: 850px) {
+  .FounderDetails {
     width: auto;
-    display: flex;
-    justify-content: center;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-}
-.FounderDetails{
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    margin: 30px 0;
-    width: 800px;
-    /* height: 350px; */
-    
-}
- .FounderPhoto{
-    display: flex;
-    justify-content: center;
-    width: auto;
     height: auto;
-}
-/* .Photo{
-    position: absolute;  
-} */ 
-.Photo img{
-    /* position: absolute; */
-    max-height: 350px;
-    max-width: 280px;
-    object-fit: cover;
-    /* z-index: 0; */
-    /* position: absolute; */
-}
-.FounderFrame{
-    /* z-index: 5; */
-    max-height: 350px;
-    max-width: 280px;
-    /* position: relative; */
-    /* border: 1px solid rgba(187, 20, 20, 0.363); */
-    /* background-color: #26227a2f; */
-    /* background: linear-gradient(to bottom,rgba(240, 0, 0, 0.003) ,rgba(0, 0, 0, 0.147)); */
-    background:rgba(0, 0, 0, 0.847);
-    /* background:rgba(0, 0, 0, 0.003); */
-
-}
-.FounderContent{
-    /* display: flex;  */
-    /* position: relative; */
-     /* flex-direction: column; */
-    /* height: 350px; */
-    width: 400px;
-    padding: 30px;
-    color: rgb(224, 224, 224);
-    background-color:#380000;
-}
-.FounderName{
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-.degree{
-    font-size: 12px;
-}
-.FounderPara{
-    text-align: justify;
-    line-height: 2;
-    font-size: 13px;
-    margin: 20px 0;
-}
-.AboutIcon{
-    display: flex;
-    margin-top: 30px;
-}
-.EachAboutIcon{
-    margin: 0 15px;
-    font-size: 20px;
-    /* text-align: center; */
-}
-
-@media(max-width:850px) {
-
-    .FounderDetails{
-        width: auto;
-        height: auto;
-        /* max-width: 90vw;
+    /* max-width: 90vw;
         max-height: 100vh; */
-        /* align-items: center;
+    /* align-items: center;
         justify-content: center; */
-        flex-direction: column;
-    }
-    .FounderContent{
-        height: auto;
-       width: auto;
-       margin: 0;
-       /* margin: 0 20px; */
-    }
-    .FounderName, .FounderPara , .FounderTitle , .AboutIcon{
-        display: flex;
-        justify-content: center;
-    }
-    .FounderName{
-        width: 100%;
-        font-size: 110%;
-    }
-    .degree{
-        font-size: 50%;
-        line-height: 3;
-        margin: 0 5px;
-        
-    }
-    .FounderTitle{
-        font-size: 100%;
-    }
-    .FounderDetails{
-        display: flex;
+    flex-direction: column;
+  }
+  .FounderContent {
+    height: auto;
+    width: auto;
+    margin: 0;
+    /* margin: 0 20px; */
+  }
+  .FounderName,
+  .FounderPara,
+  .FounderTitle,
+  .AboutIcon {
+    display: flex;
     justify-content: center;
-    }
-    .Photo img{
-        width: 100%;
-        height: auto;
-    }
-    .AboutHeading{
-        display: flex;
-        justify-content: center;
-        font-size: 150% ;
-    }
-    .AboutParagraph{
-        margin: 20px 0;
-        font-size: 90% ;
-        line-height: 1.8;
-    }
-    .AboutContent1{
-        margin: 0 30px;
-    }
+  }
+  .FounderName {
+    width: 100%;
+    font-size: 110%;
+  }
+  .degree {
+    font-size: 50%;
+    line-height: 3;
+    margin: 0 5px;
+  }
+  .FounderTitle {
+    font-size: 100%;
+  }
+  .FounderDetails {
+    display: flex;
+    justify-content: center;
+  }
+  .Photo img {
+    width: 100%;
+    height: auto;
+  }
+  .AboutHeading {
+    display: flex;
+    justify-content: center;
+    font-size: 150%;
+  }
+  .AboutParagraph {
+    text-indent: 0;
+    margin: 20px 0;
+    font-size: 100%;
+    line-height: 1.8;
+  }
+  .AboutContent1 {
+    margin: 0 30px;
+  }
 }
-@media (max-width:500px){
-    .FounderDetails{
-        max-width: auto;
-        max-height: auto;
-       
-    }
-    .FounderContent{
-        margin: 0 ;
-    }
+@media (max-width: 500px) {
+  .FounderDetails {
+    max-width: auto;
+    max-height: auto;
+  }
+  .FounderContent {
+    margin: 0;
+  }
 }
-@media (max-width:400px){
-    
-    .FounderFrame, .Photo{
-        width: 70vw;
-        height: auto;
-        margin: 0;
-    }
-    .Photo img{
-        width: 100%;
-        /* height: auto; */
-        height: 100%;
-    }
+@media (max-width: 400px) {
+  .FounderFrame,
+  .Photo {
+    width: 70vw;
+    height: auto;
+    margin: 0;
+  }
+  .Photo img {
+    width: 100%;
+    /* height: auto; */
+    height: 100%;
+  }
 }

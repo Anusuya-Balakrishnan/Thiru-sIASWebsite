@@ -25,7 +25,8 @@
     z-index: 5;
     max-width:1920px;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.671);
+    background-color: rgba(0, 0, 0, 0.615);
+    /* background-color: #cb2c3144; */
     padding: 100px 10px;
     display: flex;
     align-items: center;
@@ -45,9 +46,12 @@
     /* color: black; */
     /* font-weight: 600; */
     line-height: 2;
-    /* margin: 10px; */
-   
-    
+    /* margin: 10px; */  
+}
+.UpscHeading p{
+    font-size: 20px;
+    font-weight: 600;
+    word-spacing: 1.5;
 }
 .UpscHeading h1{
     font-size: 30px;

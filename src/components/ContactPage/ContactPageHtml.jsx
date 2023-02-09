@@ -6,6 +6,7 @@ export default function ContactPage() {
   return (
     <section id="ContactPage">
       <div className="ContactPageParent">
+        <h1>Contact Us !</h1>
         <div className="ContactPageContent">
           <div className="ContactPageMap">
             <iframe

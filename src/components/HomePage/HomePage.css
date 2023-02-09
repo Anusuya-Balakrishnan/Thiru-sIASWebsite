@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+
 ::-webkit-scrollbar {
     width: 5px;
   }
@@ -78,6 +79,9 @@
     transition: 0.1s;
 }
 
+.navOption p{
+    top:30px;
+}
 
 
 .navOption:hover ,.EachNavCourse:hover{
@@ -101,6 +105,9 @@
     background-color: #CB2C31;
     
 }
+ul{
+    list-style: n;
+}
 .EachNavCourse{
     display: block;
     color:#FCF6F5FF;
@@ -109,8 +116,12 @@
     text-align: left;
     text-decoration: none;
     transition: 0.2s;
+    font-size: 15px;
 
 }
+/* .EachNavCourse:nth-child(1){
+    
+} */
 .navCourseList{
 
     display: flex;
@@ -170,8 +181,9 @@
 }
 .MenuList{
     /* width: 150px; */
-    padding: 0 20px;
-    width: auto;
+    padding: 0 40px;
+    /* margin: 0 20px; */
+    width: 90px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -184,7 +196,8 @@
 .navOptionSideBar{
     position: relative;
     color: white;
-    margin: 20px 0;
+    /* margin: 20px 0; */
+    margin: 15px 0;
     font-size: 80%;
     text-decoration: none;  
     transition: 0.5s;
@@ -197,14 +210,18 @@
     text-decoration: none;  
     transition: 0.5s;
 }
-
+.NSideBarCourseListParent{
+    margin-top: 10px;
+}
 .NSideBarCourseList{
     width: 120px;
-    height: 60px;
-    padding: 5px 0;
+    height: 100px;
+    /* padding: 5px 0; */
     display: flex;
+    /* background-color: blue; */
     flex-direction: column;
     transition: 0.5s;
+   
 }
 .closeIcon{
     cursor: pointer;
@@ -212,10 +229,11 @@
     font-weight: bolder;
     color: white;
     text-align: center;
-    margin: 10px;
-    width: auto;
-    height: 20px;
-    /* background-color: aliceblue; */
+    margin: auto;
+    margin-bottom: 10px;
+    
+    padding: 5px;
+    /* background-color: aquamarine; */
 }
 .WhatsappIcon{
     position: fixed;

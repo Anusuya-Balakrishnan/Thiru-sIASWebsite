@@ -11,68 +11,63 @@ import number from "./image/numberImage.jpg";
 import OptionalCourse from "../../Course/OptionalCourse";
 import sociology from "./image/sociology.png";
 export default function UpscCourseHtml() {
-  let courseContent = [
+  let upscCourse = [
     {
       image: omr1,
       title: "Preliminary Exam Course",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "Detailed coaching for UPSC preliminary examination from the basics which includes test series",
       month: "8",
       test: "80",
+      path: "PREUPSC",
     },
     {
       image: mainEssay,
       title: "Mains Exam Course",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "Cleared preliminary level now it's time to explore mains. Need only mains topic then this course is for you.",
       month: "10",
       test: "50",
+      path: "MAINS",
     },
     {
       image: preliminaryMains,
       title: "Preliminary Cum Mains Exam Course",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "We provide coaching for both preliminary level and mains level. Classes in both online and offline mode.",
       month: "8",
       test: "80",
+      path: "PREMAINS",
     },
     {
       image: preCrash,
       title: "Preliminary Crash Course",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "A 4 month course and 2 months test series to revise your portions and boost your confidence.",
       month: "6",
       test: "40",
+      path: "PRECRASH",
     },
     {
       image: number,
       title: "CSAT",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "Clear your qualifying paper like a Pro choose our only CSAT course at the most affordable price",
       month: "4",
       test: "60",
+      path: "CSAT",
     },
   ];
-  let optionalCourse = [
+
+  let upscOptionalCourse = [
     {
       image: sociology,
       title: "Optional",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "Evergreen optional to improve your score. Why do you need to go out of town for PSIR Optional. Learn from the best from your hometown.",
       optional1: "Socialogy",
       optional2: "Politicalscience",
+      path: "OPTIONAL",
     },
   ];
   return (
@@ -80,7 +75,7 @@ export default function UpscCourseHtml() {
       <div className="UpscMainParent">
         <div className="UpscTitle">UPSC Courses:</div>
         <div className="UpscCourseParent">
-          {courseContent.map((Eachcourse) => {
+          {upscCourse.map((Eachcourse) => {
             return (
               <div key={Eachcourse.id} className="UpscEachCourse">
                 <CourseHtml
@@ -89,11 +84,12 @@ export default function UpscCourseHtml() {
                   courseContent={Eachcourse.content}
                   month={Eachcourse.month}
                   test={Eachcourse.test}
+                  path={Eachcourse.path}
                 />
               </div>
             );
           })}
-          {optionalCourse.map((Eachcourse) => {
+          {upscOptionalCourse.map((Eachcourse) => {
             return (
               <div key={Eachcourse.id} className="UpscEachCourse">
                 <OptionalCourse
@@ -102,6 +98,7 @@ export default function UpscCourseHtml() {
                   courseContent={Eachcourse.content}
                   optional1={Eachcourse.optional1}
                   optional2={Eachcourse.optional2}
+                  path={Eachcourse.path}
                 />
               </div>
             );

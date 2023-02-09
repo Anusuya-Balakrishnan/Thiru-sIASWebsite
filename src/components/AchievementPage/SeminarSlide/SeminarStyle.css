@@ -1,88 +1,86 @@
 /*  */
-.SeminarMainParent{
-    display: flex;
-    justify-content: center;
+.SeminarMainParent {
+  display: flex;
+  justify-content: center;
 }
 
-.SeminarParent{
-    margin: 30px;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    border: 2px solid #CB2C31;
-    border-radius: 10px;
-    
-    width: auto;
-    height: 400px;
-    /* width: 700px; */
+.SeminarParent {
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #cb2c31;
+  border-radius: 10px;
+
+  width: auto;
+  height: 400px;
+  /* width: 700px; */
 }
-.SeminarImage , .SeminarImage img{
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    object-fit: cover;
+.SeminarImage,
+.SeminarImage img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 /* .SeminarImage{
     margin: 30px;
 } */
-.SeminarContent{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-
+.SeminarContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
 }
-.SeminarTitle{
-    color: #27227A;
-    font-size: 20px;
-    margin: 10px 0;
+.SeminarTitle {
+  color: #27227a;
+  font-size: 20px;
+  margin: 10px 0;
 }
-.SeminarDetail{
-    font-size: 15px;
-    margin: 20px 0;
-    line-height: 2;
-    text-align: justify;
+.SeminarDetail {
+  font-size: 17px;
+  margin: 20px 0;
+  line-height: 2;
+  text-align: justify;
 }
-.SeminarDate{
-    font-size: 13px;
-    color: #27227A;
-    line-height: 2;
+.SeminarDate {
+  font-size: 13px;
+  color: #27227a;
+  line-height: 2;
 }
 /*  */
-.SeminarSlideParentMain{
-    width: 100%;
-    height: 550px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* overflow: hidden;
+.SeminarSlideParentMain {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden;
     background-color: #27227A; */
 }
 
-.SeminarSlideParent{
-    position: relative;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 764px;
-    height: 550px;
-    /* background-color: #27227A;  */
-    overflow: hidden;
-    
+.SeminarSlideParent {
+  position: relative;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 764px;
+  height: 550px;
+  /* background-color: #27227A;  */
+  overflow: hidden;
 }
-.SeminarSlideContainer{
-    position: absolute;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:auto;
-    transition:0.2s ;
-   
+.SeminarSlideContainer {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  transition: 0.2s;
 }
 
 /* .SeminarContainerParent{

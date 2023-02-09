@@ -13,23 +13,59 @@ import aptitude from "./image/aptitude.png";
 import tnpsc from "./image/tnpsc.jpg";
 import RRB from "./image/RRB.jpg";
 import udc from "./image/udc.jpg";
-// import optional from "./image/political-sociology-logo.jpg";
+import sociology from "./image/political-sociology-logo.jpg";
 import groupDiscussion from "./image/groupDiscussion.jpg";
 import intermediate from "./image/intermediate.png";
 import beginner from "./image/beginner.jpg";
 import number from "./image/numberImage.jpg";
 import optional from "./image/optional.jpg";
+
 export default function CourseSlideHtml() {
-  let optionalCourse = [
+  let regionalCourse = [
     {
-      image: optional,
-      title: "Optional",
+      image: tnpsc,
+      title: "TNPSC Group1 Course",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
-      optional1: "Socialogy",
-      optional2: "Politicalscience",
+        "An examination conducted by Tamilnadu state government for the post of deputy collector, deputy superintendent of police, assistant commissioner,etc. We provide coaching for both prelims and finals",
+      month: "8",
+      test: "50",
+      path: "TNPSCGROUP1",
+    },
+    {
+      image: tnpsc,
+      title: "TNPSC Group2 Course",
+      content:
+        "Tamilnadu state government examination for assistance registrar, deputy tahsildar, sub-registrar, etc",
+      month: "8",
+      test: "80",
+      path: "TNPSCGROUP2",
+    },
+    {
+      image: RRB,
+      title: "RRB/SSC Course",
+      content:
+        "Staff selection commission conducts the examination for various post throughout the year. We provide you coaching for both prelims and mains level ",
+      month: "8",
+      test: "40",
+      path: "RRB_SSC",
+    },
+    {
+      image: udc,
+      title: "UDC & LDC Course",
+      content:
+        "Candidates who wishes to work in our own hometown it is your opportunity to study at affordable price.",
+      month: "6",
+      test: "25",
+      path: "UDC_LDC",
+    },
+    {
+      image: sociology,
+      title: "Banking",
+      content:
+        "Evergreen optional to improve your score. Why do you need to go out of town for PSIR Optional. Learn from the best from your hometown.",
+      month: "6",
+      test: "100",
+      path: "BANKING",
     },
   ];
   let englishCourse = [
@@ -37,121 +73,93 @@ export default function CourseSlideHtml() {
       image: beginner,
       title: "Beginner Level",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        " Basic English pronunciation, simple paragraph writing, Basic English grammar, 25 audio files for listening",
       month: "40",
+      path: "ENGBEG",
     },
     {
       image: intermediate,
       title: "Intermediate Level",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "Advanced English pronunciation, Full English grammar, 35 audio files for listening including short stories",
       month: "60",
+      path: "ENGINT",
     },
     {
       image: groupDiscussion,
       title: "Advance Level",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "for placement, for stage speaking, for interview, for teaching profesionals",
       month: "80",
+      path: "ENGAND",
     },
   ];
-  let courseContent = [
+  let upscCourse = [
     {
       image: omr1,
       title: "Preliminary Exam Course",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "Detailed coaching for UPSC preliminary examination from the basics which includes test series",
       month: "8",
       test: "80",
+      path: "PREUPSC",
     },
     {
       image: mainEssay,
       title: "Mains Exam Course",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "Cleared preliminary level now it's time to explore mains. Need only mains topic then this course is for you.",
       month: "10",
       test: "50",
+      path: "MAINS",
     },
     {
       image: preliminaryMains,
       title: "Preliminary Cum Mains Exam Course",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "We provide coaching for both preliminary level and mains level. Classes in both online and offline mode.",
       month: "8",
       test: "80",
+      path: "PREMAINS",
     },
     {
       image: preCrash,
       title: "Preliminary Crash Course",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "A 4 month course and 2 months test series to revise your portions and boost your confidence.",
       month: "6",
       test: "40",
+      path: "PRECRASH",
     },
     {
       image: number,
       title: "CSAT",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "Clear your qualifying paper like a Pro choose our only CSAT course at the most affordable price",
       month: "4",
       test: "60",
+      path: "CSAT",
     },
+  ];
 
+  let upscOptionalCourse = [
     {
-      image: tnpsc,
-      title: "TNPSC Group1 Course",
+      image: sociology,
+      title: "Optional",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
-      month: "8",
-      test: "50",
+        "Evergreen optional to improve your score. Why do you need to go out of town for PSIR Optional. Learn from the best from your hometown.",
+      optional1: "Socialogy",
+      optional2: "Politicalscience",
+      path: "OPTIONAL",
     },
     {
-      image: tnpsc,
-      title: "TNPSC Group2 Course",
+      image: sociology,
+      title: "Other Courses",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
-      month: "8",
-      test: "80",
-    },
-    {
-      image: RRB,
-      title: "RRB/SSC Course",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
-      month: "8",
-      test: "40",
-    },
-    {
-      image: udc,
-      title: "UDC & LDC Course",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
-      month: "6",
-      test: "25",
+        "Evergreen optional to improve your score. Why do you need to go out of town for PSIR Optional. Learn from the best from your hometown.",
+      optional1: "CUET",
+      optional2: "CAT",
+      path: "CUETCAT",
     },
   ];
 
@@ -171,7 +179,6 @@ export default function CourseSlideHtml() {
     } else {
       setLeftValue(0);
     }
-    totalWidth.style.transition = "0.5s";
   }
 
   // right Click function
@@ -189,42 +196,42 @@ export default function CourseSlideHtml() {
     }
   }
 
-  let slider = CourseSlideMainRef;
-  let innerSlider = CourseSlideContainersRef;
-  let pressed = false;
-  let startx;
-  let x;
+  // let slider = CourseSlideMainRef;
+  // let innerSlider = CourseSlideContainersRef;
+  // let pressed = false;
+  // let startx;
+  // let x;
 
-  function mouseDown(e) {
-    pressed = true;
-    startx = e.nativeEvent.offsetX - innerSlider.current.offsetLeft;
-    CourseSlideMainRef.current.style.cursor = "grabbing";
-  }
-  function mouseUp() {
-    CourseSlideMainRef.current.style.cursor = "grab";
-  }
-  useEffect(() => {
-    window.addEventListener("mouseup", () => {
-      pressed = false;
-      CourseSlideMainRef.current.style.cursor = "grab";
-    });
-  });
-  function mouseMove(e) {
-    if (!pressed) return;
-    e.preventDefault();
-    x = e.nativeEvent.offsetX;
-    innerSlider.current.style.left = `${x - startx}px`;
-    checkedBorder();
-  }
-  function checkedBorder() {
-    let outer = slider.current.getBoundingClientRect();
-    let inner = innerSlider.current.getBoundingClientRect();
-    if (parseInt(innerSlider.current.style.left) > 0) {
-      innerSlider.current.style.left = "0px";
-    } else if (inner.right < outer.right) {
-      innerSlider.current.style.left = `-${inner.width - outer.width}px`;
-    }
-  }
+  // function mouseDown(e) {
+  //   pressed = true;
+  //   startx = e.nativeEvent.offsetX - innerSlider.current.offsetLeft;
+  //   CourseSlideMainRef.current.style.cursor = "grabbing";
+  // }
+  // function mouseUp() {
+  //   CourseSlideMainRef.current.style.cursor = "grab";
+  // }
+  // useEffect(() => {
+  //   window.addEventListener("mouseup", () => {
+  //     pressed = false;
+  //     CourseSlideMainRef.current.style.cursor = "grab";
+  //   });
+  // });
+  // function mouseMove(e) {
+  //   if (!pressed) return;
+  //   e.preventDefault();
+  //   x = e.nativeEvent.offsetX;
+  //   innerSlider.current.style.left = `${x - startx}px`;
+  //   checkedBorder();
+  // }
+  // function checkedBorder() {
+  //   let outer = slider.current.getBoundingClientRect();
+  //   let inner = innerSlider.current.getBoundingClientRect();
+  //   if (parseInt(innerSlider.current.style.left) > 0) {
+  //     innerSlider.current.style.left = "0px";
+  //   } else if (inner.right < outer.right) {
+  //     innerSlider.current.style.left = `-${inner.width - outer.width}px`;
+  //   }
+  // }
 
   return (
     <section id="CourseSlidePage">
@@ -235,20 +242,20 @@ export default function CourseSlideHtml() {
         <div
           ref={CourseSlideMainRef}
           className="CourseSlideMain"
-          onMouseDown={(e) => {
-            mouseDown(e);
-          }}
-          onMouseUp={mouseUp}
-          onMouseMove={(e) => {
-            mouseMove(e);
-          }}
+          // onMouseDown={(e) => {
+          //   mouseDown(e);
+          // }}
+          // onMouseUp={mouseUp}
+          // onMouseMove={(e) => {
+          //   mouseMove(e);
+          // }}
         >
           <div
             className="CourseSlideContainers"
             ref={CourseSlideContainersRef}
             style={{ left: leftValue + "px" }}
           >
-            {courseContent.map((Eachcourse, index) => {
+            {upscCourse.map((Eachcourse, index) => {
               return (
                 <div key={index} className="slide">
                   <CourseHtml
@@ -257,11 +264,12 @@ export default function CourseSlideHtml() {
                     courseContent={Eachcourse.content}
                     month={Eachcourse.month}
                     test={Eachcourse.test}
+                    path={Eachcourse.path}
                   />
                 </div>
               );
             })}
-            {optionalCourse.map((Eachcourse, index) => {
+            {upscOptionalCourse.map((Eachcourse, index) => {
               return (
                 <div key={index} className="slide">
                   <OptionalCourse
@@ -270,6 +278,21 @@ export default function CourseSlideHtml() {
                     courseContent={Eachcourse.content}
                     optional1={Eachcourse.optional1}
                     optional2={Eachcourse.optional2}
+                    path={Eachcourse.path}
+                  />
+                </div>
+              );
+            })}
+            {regionalCourse.map((Eachcourse, index) => {
+              return (
+                <div key={index} className="slide">
+                  <CourseHtml
+                    courseImage={Eachcourse.image}
+                    courseTitle={Eachcourse.title}
+                    courseContent={Eachcourse.content}
+                    month={Eachcourse.month}
+                    test={Eachcourse.test}
+                    path={Eachcourse.path}
                   />
                 </div>
               );
@@ -282,6 +305,7 @@ export default function CourseSlideHtml() {
                     courseTitle={Eachcourse.title}
                     courseContent={Eachcourse.content}
                     month={Eachcourse.month}
+                    path={Eachcourse.path}
                   />
                 </div>
               );

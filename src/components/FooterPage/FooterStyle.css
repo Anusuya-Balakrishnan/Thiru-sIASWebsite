@@ -1,198 +1,237 @@
-.FooterPageParent
-{
-    
-    background-color: #380000;
-    color: white;
+.FooterPageParent {
+  background-color: #380000;
+  color: white;
 }
 
-.FooterParent{
-    
-    /* height: 400px; */
-    /* width: 100vh; */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    /* padding: 20px; */
+.FooterParent {
+  /* height: 400px; */
+  /* width: 100vh; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 35px;
+  /* padding: 20px; */
 }
-.FooterContent{
-    
-    margin: 0 60px;
-    max-width: 400px;
-    /* height: 200px; */
-    /* background-color: #380000; */
+.FooterContent {
+  /* margin: 0 60px; */
+  margin-right: 80px;
+  max-width: 400px;
+  /* height: 200px; */
+  /* background-color: #380000; */
 }
-.FooterContent img{
-    max-width: 400px;
-    /* min-width: 250px; */
-    max-height: 50px;
+.FooterContent img {
+  max-width: 400px;
+  /* min-width: 250px; */
+  max-height: 50px;
 }
-.FooterContent p{
-    
-    padding: 30px 0px;
-    text-align: justify;
-    font-size: 15px;
-    font-weight: lighter;
-    line-height: 1.5;
+.FooterContent p {
+  padding: 30px 0px;
+  text-align: left;
+  font-size: 17px;
+  font-weight: lighter;
+  line-height: 1.5;
 }
 
-.FooterSubscribe{
-    display: flex;
-    width: 400px;
-    height: auto;
-    margin: 10px 0;
-    /* background-color: aqua; */
-    /* justify-content: center; */
+.FooterSubscribe {
+  display: flex;
+  width: 400px;
+  height: auto;
+  margin: 10px 0;
+  /* background-color: aqua; */
+  /* justify-content: center; */
 }
-.SubscribeBox{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 10px;
-    text-align: left;
-    font-size: 14px;
-    color: rgb(211, 211, 211);
-    height: 10px;
-    width: 250px;
-    margin: 0;
-    margin-right: 20px ; 
-    padding: 20px 0;
+.SubscribeBox {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: black;
+  height: 10px;
+  width: 250px;
+  margin: 0;
+  margin-right: 20px;
+  padding: 25px 10px;
 }
+input[class="SubscribeBox"] {
+  border: none;
+  outline: none;
+}
+.SubscribeBox::placeholder {
+  color: rgb(68, 68, 68);
+}
+.FooterList {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  /* position: relative; */
+  /* bottom:40px; */
+  /* height: 300px; */
+  width: 100px;
+  margin: 0 100px;
+}
+.FooterList_menu {
+  width: inherit;
+  margin: 15px 0;
+  text-align: center;
+  font-size: large;
+  text-decoration: none;
+  color: white;
+}
+/* .FooterList_menu ::before {
+  transition: 1s;
+  width: 0px;
+}
+.FooterList_menu :hover::before {
+  position: absolute;
+  content: " ";
+  width: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+  height: 3px;
+  background-color: white;
+} */
 
-.FooterList{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    /* position: relative; */
-    /* bottom:40px; */
-    /* height: 300px; */
-    width: 100px;
-    margin:0 100px;
-}
-.FooterList p{
-    width: auto;
-    margin: 15px 0;
-    text-align: center;
-    font-size:large;
-}
-.FooterAddress{
-    /* position: relative; */
-    /* width: 450px; */
-    max-width: 450px;
-    padding: 0 30px;
-    /* margin:0 80px; */
-    
-    /* bottom: 40px; */
+.FooterAddress {
+  /* position: relative; */
+  /* width: 450px; */
+  max-width: 450px;
+  padding: 0 30px;
+  /* margin:0 80px; */
 
+  /* bottom: 40px; */
 }
-    .AddressDiv , .PhoneNumber , .email{
-    display: flex;
-    /* justify-content: space-between; */
+.AddressDiv,
+.PhoneNumber,
+.email {
+  display: flex;
+  /* justify-content: space-between; */
 }
-.AddressDiv p, .PhoneNumber p, .email p{
-    /* display: flex;
+.AddressDiv p,
+.PhoneNumber p,
+.email p {
+  /* display: flex;
     justify-content: space-between;
     align-items: center; */
-    /* width: 600px; */
-    
-    /* width: 350px; */
-    width: 350px;
-    flex-direction: row;
-    margin:20px;
-    margin-right: 0;
-    font-size: 15px;
-    line-height: 1.5;
-    word-spacing: 1.5;
-    padding: 0;
+  /* width: 600px; */
+
+  /* width: 350px; */
+  width: 340px;
+  flex-direction: row;
+  margin: 20px;
+  margin-right: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  word-spacing: 1.5;
+  padding: 0;
 }
-.IconList{
-    padding: 20px 0;
+.IconList {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.EachIcon {
+  /* background-color: rgb(124, 32, 32); */
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  /* border-radius: 50%; */
+  margin: 20px;
+  /* padding: 20px; */
+  transition: 0.5s;
+  /* margin: 20px 0px; */
+}
+.EachIcon:hover {
+  /* color: rgb(0, 132, 184); */
+  cursor: pointer;
+  transform: scale(1.5);
+}
+@media (max-width: 800px) {
+  .FooterContent {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 20px;
+  }
 
-}
-.EachIcon{
-    font-size: 15px;
-    padding: 20px;
-    /* margin: 20px 0px; */
-}
-@media (max-width:800px){
-    .FooterContent{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        margin: 0 20px; 
-    }
-    
-    .FooterContent p{
-        font-size: 80%;
-        line-height: normal;
-    }
-    .FooterParent{
-        flex-direction: column;
-    }
-    .FooterList{
-        margin: 0;
-    }
-    .FooterList p{
-        font-size: 100%;
-        margin: 15px 0;
-        width: 100px;
-    }
-    .AddressDiv p, .PhoneNumber p, .email p  {
-        font-size: 80%;
-        width: auto;
-        margin: 0 5px;
-    }
+  .FooterContent p {
+    font-size: 85%;
+    line-height: 1.5;
+  }
+  .FooterParent {
+    flex-direction: column;
+  }
+  .FooterList {
+    margin: 0;
+  }
+  .FooterList_menu {
+    font-size: 100%;
+    margin: 15px 0;
+    width: 100px;
+  }
+
+  .AddressDiv p,
+  .PhoneNumber p,
+  .email p {
+    font-size: 80%;
+    width: auto;
+    margin: 0 5px;
+  }
 }
 
-@media (max-width:600px) {
-    .FooterContent{
-        padding: 5px;
-    }
-    .FooterAddress{
-        font-size: 90%;
-        padding:0 5px;
-    }
-    .AddressDiv p, .PhoneNumber p, .email p{
-        margin: 8px;
-    }
-    .EachIcon{
-        padding: 8px;
-    }
+@media (max-width: 600px) {
+  .FooterContent {
+    padding: 5px;
+  }
+  .FooterAddress {
+    font-size: 90%;
+    padding: 0 5px;
+  }
+  .AddressDiv p,
+  .PhoneNumber p,
+  .email p {
+    margin: 8px;
+    padding: 20px 0;
+  }
+  .EachIcon {
+    padding: 8px;
+  }
 }
-@media (max-width:375px) {
-    .FooterContent{
-        width: 200%;
-        height: 50%;
-    }
-    .FooterContent img{
-        width: 100%;
-    }
-    .FooterContent{
-        width: 80%; 
-    }
-    
+@media (max-width: 375px) {
+  .FooterContent {
+    width: 200%;
+    height: 50%;
+  }
+  .FooterContent img {
+    width: 100%;
+  }
+  .FooterContent {
+    width: 80%;
+  }
 }
-@media (max-width:450px){
-    .FooterSubscribe{
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .FooterButton{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .SubscribeBox{
-        width: 100%;
-        margin: 10px 0 ;
-    }
+@media (max-width: 450px) {
+  .FooterSubscribe {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .FooterButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .SubscribeBox {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
 }

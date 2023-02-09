@@ -1,11 +1,13 @@
 import React from "react";
 import CourseStyle from "./CourseStyle.css";
 import image from "./image/image.jpeg";
+import { useNavigate } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 import LargeButton from "../Button/LargeButton/LargeButton";
-
 import Button from "../Button/ButtonHtml";
+import syllabusList from "../SyllabusPage/syllabusContent";
 export default function OptionalCourse(props) {
+  const navigate = useNavigate();
   return (
     <section id="CourseHtml">
       <div className="CourseParent">
@@ -25,7 +27,12 @@ export default function OptionalCourse(props) {
               </div>
             </div>
           </div>
-          <div className="ButtonComponent">
+          <div
+            className="ButtonComponent"
+            onClick={function () {
+              navigate(`/syllabus/${props.path}`);
+            }}
+          >
             <LargeButton value="For More" />
           </div>
         </div>

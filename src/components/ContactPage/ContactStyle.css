@@ -1,13 +1,17 @@
 .ContactPageParent{
-    margin-top: 80px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     display: flex; 
     /* justify-content: center; */
     width: auto;
     height: auto;
     align-items: center;
     flex-direction: column;
-    
-
+}
+.ContactPageParent h1{
+    color:#27227A;
+    font-size: 30px;
+    margin: 30px 0;
 }
 .ContactTitle{
     display: flex;
@@ -97,7 +101,7 @@ iframe{
         justify-content: center;
         flex-direction: column;
         margin: 0;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         
     }
     .ContactPageMap{
@@ -105,3 +109,4 @@ iframe{
         margin: 10px;
     }
 }
+

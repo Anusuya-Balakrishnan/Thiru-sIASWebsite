@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Homepage from "./HomePage.css";
 import logoimage from "./images/Logo.svg";
 // import { Link } from "react-router-dom";
@@ -13,14 +13,14 @@ import SideMenu from "./SideMenu";
 export default function HomePage() {
   const [isQuery, setIsQuery] = useState(false);
   const [showCourse, setShowCourse] = useState(false);
-
+  const NavbarMainRef = useRef();
   if (isQuery) {
     setInterval(() => {
       setIsQuery(false);
     }, 20000);
   }
   function showMenu() {
-    setShowCourse(!showCourse);
+    setShowCourse(true);
   }
   let sideMenu = false;
   function displayMenu() {
@@ -32,13 +32,35 @@ export default function HomePage() {
       sideMenu = false;
     }
   }
+  // function mouseOutDropDown() {
+  //   if (showCourse) {
+  //     setShowCourse(false);
+  //   }
+  // }
+  function mouseOverDropDown() {
+    setShowCourse(true);
+  }
+  // NavbarMainRef.current.onMouseOut =
+  // };
+  // .addEventListener("mouseout", () => {
 
+  // });
   window.addEventListener("click", () => {
     if (showCourse) {
       setShowCourse(!showCourse);
     }
   });
 
+  // document
+  //   .getElementByClassName("navCourseList")[0]
+  //   .addEventListener("mouseout", function () {
+  //     document.getElementByClassName("navCourseList")[0].display = "none";
+  //   });
+  // function dropDown() {
+  //   document
+  //     .querySelector(".navCourseListParent")
+  //     .classList.toggle("navCourseListParent");
+  // }
   return (
     <section id="Navbar">
       <div className="NavbarMain">
@@ -53,7 +75,11 @@ export default function HomePage() {
             About us
           </Link>
           <div>
-            <div className="navOption" onMouseOver={showMenu}>
+            <div
+              className="navOption"
+              onMouseOver={showMenu}
+              // onMouseOut={showMenu}
+            >
               <p>Courses</p>
               <BiChevronDown />
             </div>
@@ -65,7 +91,7 @@ export default function HomePage() {
                 height: showCourse ? "130px" : "0px",
               }}
             >
-              <div className="navCourseList">
+              <div className="navCourseList" onMouseOver={mouseOverDropDown}>
                 <Link to="/course/upsc" className="EachNavCourse">
                   UPSC
                 </Link>
@@ -86,17 +112,22 @@ export default function HomePage() {
             Contact
           </Link>
         </div>
-        <div className="MenuIcon" onClick={displayMenu}>
-          <BiDotsVerticalRounded />
+        <div className="MenuIcon">
+          <div className="threeIcon_Menu" onClick={displayMenu}>
+            <BiDotsVerticalRounded />
+          </div>
+
+          <div className="sideMenu__list">
+            <SideMenu />
+          </div>
           {/* side menu list */}
-          <SideMenu />
         </div>
 
         {/* whatsapp and query icon */}
         <div className="WhatsappIcon">
           <a
             className="whatsapp"
-            href="https://wa.me/919715054792"
+            href="https://wa.me/919489645465"
             target="_blank"
           >
             <img src={whatapp} />

@@ -14,6 +14,8 @@ import HomePage from "./HomePage/HomePage";
 import ContactPageHtml from "./ContactPage/ContactPageMain";
 import FooterHtml from "./FooterPage/FooterHtml";
 import PopupPage from "./PopupPage/PopupHtml";
+import SyllabusHTML from "./SyllabusPage/SyllabusHTML";
+import syllabusList from "../../src/components/SyllabusPage/syllabusContent";
 export default function App() {
   return (
     <>
@@ -32,6 +34,8 @@ export default function App() {
               element={<SpokenEnglishPage />}
             />
             <Route path="/contactus" element={<ContactPageHtml />} />
+            <Route path="/syllabus/:id" element={<SyllabusHTML />} />
+            <Route path="/syllabus/:id" element={<SyllabusHTML />} />
           </Routes>
 
           <FooterHtml />

@@ -10,28 +10,25 @@ export default function SpokenEnglishHtml() {
       image: beginner,
       title: "Beginner Level",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        " Basic English pronunciation, simple paragraph writing, Basic English grammar, 25 audio files for listening",
       month: "40",
+      path: "ENGBEG",
     },
     {
       image: intermediate,
       title: "Intermediate Level",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "Advanced English pronunciation, Full English grammar, 35 audio files for listening including short stories",
       month: "60",
+      path: "ENGINT",
     },
     {
       image: groupDiscussion,
       title: "Advance Level",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum" +
-        "rhoncus in eget lectus quis consectetur facilisis. Egestas posuere" +
-        "nunc donec ultricies egestas vitae id in.",
+        "for placement, for stage speaking, for interview, for teaching profesionals",
       month: "80",
+      path: "ENGAND",
     },
   ];
   return (
@@ -47,6 +44,7 @@ export default function SpokenEnglishHtml() {
                   courseTitle={Eachcourse.title}
                   courseContent={Eachcourse.content}
                   month={Eachcourse.month}
+                  path={Eachcourse.path}
                 />
               </div>
             );

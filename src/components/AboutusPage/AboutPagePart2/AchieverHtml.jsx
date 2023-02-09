@@ -16,12 +16,11 @@ export default function AchieverHtml() {
             <div className="AchieverRank">UPSC AIR-326 (2019 Batch)</div>
             <div className="AchieverDescription">Deputy Director in Delhi</div>
             <div className="AchieverCurrentDetails">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-              egestas in tincidunt sed feugiat sagittis, pretium vel. Facilisi
-              ullamcorper facilisi bibendum justo, aliquam ornare quis. Aliquet
-              vulputate turpis donec feugiat erat eu tempor volutpat.Facilisi
-              ullamcorper facilisi bibendum justo, aliquam ornare quis. Aliquet
-              vulputate turpis donec feugiat erat eu tempor volutpat.
+              "Pride of Thiru's IAS Academy". Shri. M. Bharani, deputy director
+              in Delhi, is a role model for all aspirants. Bharani was an
+              engineering background student who had an 8 hours job during his
+              preparation. With all his efforts and proper guidance from our
+              founder, he achieved his dream.
             </div>
           </div>
         </div>

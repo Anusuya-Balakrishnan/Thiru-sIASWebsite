@@ -3,39 +3,57 @@
     margin: 0;
     padding: 0;
 }
+
 /* .JourneyParent{ */
     /* padding: 10px 0; */
     /* background-color: #808080; */
 /* } */
 .JourneyPart1{
-    /* margin: 50px 0; */
-    padding: 0;
+    margin: 50px 150px;
+    /* padding: 0;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     /* background-color: #808080; */
+}
+.JourneyPart1_container{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    /* margin: auto; */
+    /* justify-content: center; */
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .JContent1{
     /* height: 400px; */
-    max-width: 500px; 
+    /* max-width: 500px;  */
     margin: 30px;
 }
 .JContent1 h1{
     color: #27227A;
-    text-align: right;
+    /* text-align: right; */
     font-size: 30px;
-    padding: 30px;
+    padding: 30px 0;
     /* margin: 30px; */
 
 }
 .JContent1 p{
+    font-family: Poppins, sans-serif;
     text-align: justify; 
-    padding: 20px 0;
+    padding: 10px 0;
+    /* padding-right: 20px; */
+    font-size: 18px;
+    line-height: 2;
+}
+/* .JourneyPart1 p{
+    text-align: justify; 
+    padding: 10px 0;
     padding-right: 20px;
     line-height: 1.8;
-    font-size: 14px;
-}
+    font-size: 16px;
+} */
 /* .JourneyContent1 h1{
     display: flex;
     justify-content: center;
@@ -55,25 +73,29 @@
 .JourneyImage{
     margin: 20px;
     margin-top: 50px;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 .JourneyImage img{
-    height: 400px;
-    width: 400px;
+    height: 100%;
+    width: 100%;
  object-fit: cover;
  border-radius: 10px;
 }
 .JourneyPart2{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     background-color:rgb(226, 227, 229) ;
+    
 }
 .JourneyContent2{
-    max-width: 300px;
-    margin: 50px;
+    position: relative;
+    width: 400px;
+    margin: 50px 30px;
+    margin-bottom: 80px;
+    
 }
 .StudentIcon , .GroupIcon{
     width: auto;
@@ -91,13 +113,48 @@
     font-size: 20px;
 }
 .JourneyContent2 p{
+    
     text-align: justify;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 2;
-    font-size: 13px;
+    height: 200px;
+    overflow: hidden;
+    padding: 10px;
+    
+}
+.journey_content_seminar_block p{
+    transition: 2s;
+}
+.increaseHeight{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid #27227A;
+    background-color: #27227A;
+    text-align: center;
+}
+.increaseHeight:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: #27227A;
+}
+@media (max-width:1200px){
+    .JourneyPart1{
+        margin: 50px;
+    }
 }
  @media (max-width:1017px){
-
+    .JourneyPart1{
+        margin: 50px;
+    }
     .JourneyImage img{
         max-width: 400px;
         max-height: 400px;
@@ -109,18 +166,43 @@
         text-align: center;
     }
     .JContent1 p{
+        
         padding: 20px 10px;
+    }
+   
+ }
+ @media (max-width:925px){
+    .JourneyContent2{
+        height: auto;
+        width: auto;
+        margin: 15px 20px;
+    }
+    .JourneyContent2 p{
+        height: auto;
+        width: auto;
+    }
+    .increaseHeight{
+        display: none;
     }
  }
  @media (max-width:500px){
+    .JourneyPart1{
+        margin: 10px 20px;
+    }
     .JContent1 h1{
         padding: 20px;
         font-size: 150%;
         
     }
+    .GroupIcon ,.StudentIcon{
+        font-size: 50px;
+        margin: 0;
+    }
     .JContent1 p{
+        
         font-size: 90%;
-        line-height: 1.6;
+        line-height: 2;
+        padding: 5px 0;
     }
     .JourneyImage {
         width: 90%;
@@ -132,6 +214,16 @@
         height: 100%;
     }
     .JourneyContent2{
-        margin: 15px  30px;
+        margin: 15px 20px;
+        width: auto;
+        height: auto;
+    }
+    .JourneyContent2 p{
+        width: auto;
+        height: auto;
+        font-size: 90%;
+    }
+       .increaseHeight{
+        display: none;
     }
  }

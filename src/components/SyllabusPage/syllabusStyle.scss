@@ -1,0 +1,227 @@
+@mixin paragraph{
+    line-height: 1.8;
+        font-size: 18px;
+        text-align: justify;
+        text-indent:80px;
+}
+$blue:#27227A;
+*{
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+.SyllabusPage{
+    margin-top: 90px;
+}
+.syllabus_container{
+    margin: 0 70px;
+    padding: 0 70px;
+    padding-bottom: 20px;
+    .syllabus_container_heading{
+        padding: 20px 0;
+        .syllabus_container__heading_title{
+            font-size: 30px;
+            padding: 20px 0;
+            color: $blue;
+        }
+        p{
+            @include paragraph();
+        }
+    }
+    .syllabus_container_body{
+        .syllabus_container_body_title{
+            div{
+                color: $blue;
+            font-size: 30px;
+            padding: 10px 0;
+            }
+            margin: 10px 0;
+        }
+        .syllabus_container_body_middle{
+            display: flex;
+            flex-wrap: wrap;
+            // margin: auto;
+            .syllabus_middle_content{
+                // width: 70%;
+                p{
+                    @include paragraph();
+                    margin: 0;
+                    margin:20px 0;
+                    width: 100%;
+                }
+            }
+            .syllabus_container_body_coursebox{
+                float: right;
+                width: auto;
+                height: auto;
+                margin: 0;
+                margin-left: 40px;
+                border-radius: 10px;
+                background-color: #D9D9D9;
+                padding: 20px;
+                .coursebox_title{
+                    font-size: 25px;
+                    margin: 10px;
+                    color:$blue;
+
+                }
+                .coursebox_icons{
+                    margin: 20px;
+                    color: $blue;
+                    font-size: 18px;
+                }
+            }
+        }
+        .syllabus_container_body_end{
+            p{
+            @include paragraph();
+            
+            margin: 20px 0;
+            }
+        }
+    }
+    .syllabus_container_button{
+        margin: 30px 0;
+        margin-right: 70px;
+        display: flex;
+        justify-content: flex-end;
+        
+        .button_previouslink{
+            text-decoration: none;
+            color: rgb(179, 179, 179);
+            font-size: 13px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        a{
+            
+            text-decoration: none;
+        }
+
+    }
+}
+@media (max-width:1455px){
+    .syllabus_container{
+        margin: 30px;
+        padding: 20px;
+        .syllabus_container_body{
+            .syllabus_container_body_middle{
+                flex-direction: column-reverse;
+                width: auto;
+                max-height: auto;
+                justify-content: center;
+                align-items: center;
+                // background-color: aqua;
+                .syllabus_middle_content{
+                    width: 100%;
+                    // background-color: blue;
+                }
+                .syllabus_container_body_coursebox{
+                    margin:20px;
+                    // background-color: rebeccapurple;
+                }
+            } 
+        }
+        
+    }
+    
+    
+}
+@media (max-width:930px){
+    .syllabus_container{
+        .syllabus_container_heading{
+            .syllabus_container__heading_title{
+                font-size: 25px;
+                text-align: center;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        .syllabus_container_body{
+            .syllabus_container_body_title{
+                div{
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+            .syllabus_container_body_middle{
+                
+                .syllabus_middle_content{
+                    
+                    p{
+                       font-size: 16px;
+                    }
+                }
+                .syllabus_container_body_coursebox{
+                    padding: 20px;
+                    .coursebox_title{
+                        font-size: 20px;
+                        
+    
+                    }
+                    .coursebox_icons{
+                        
+                        font-size: 16px;
+                    }
+                }
+            }
+            .syllabus_container_body_end{
+                p{
+                font-size: 16px;
+                line-height: 2;
+                }
+            }
+            .syllabus_container_button{
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0 70px;
+                justify-content: center;
+                flex-direction: column-reverse;
+                a{
+                    display: block;
+                    text-align: center;
+                    text-decoration: none;
+                }
+            }
+        }
+        
+    }
+}
+@media (max-width:650px){
+    .syllabus_container{
+        
+        .syllabus_container_body{
+            .syllabus_container_body_middle{
+               justify-content: center;
+                // .syllabus_middle_content{
+                    
+                // }
+                .syllabus_container_body_coursebox_parent{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .syllabus_container_body_coursebox{
+                        // width: 80%;
+                        margin: auto;
+                        padding: 10px;
+                        clear: left;
+                    }
+                }
+               
+            } 
+        }
+        
+    }
+}
+@media (max-width:500px){
+    .syllabus_container{
+        margin: 30px;
+        padding:0;
+        .syllabus_container_button{
+            padding: 0;
+        }
+    }
+}

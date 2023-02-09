@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import "./HomePage";
 export default function SideMenu() {
   let courseList = false;
   function displaySideCourse() {
@@ -13,6 +14,18 @@ export default function SideMenu() {
       document.querySelector(".NSideBarCourseListParent").style.display =
         "none";
       courseList = false;
+    }
+  }
+  const [closesideMenu, setCloseSideMenu] = useState(false);
+  function displaySideMenu() {
+    if (!closesideMenu) {
+      document.getElementsByClassName("MenuListParent")[0].style.display =
+        "display";
+      setCloseSideMenu(true);
+    } else {
+      document.getElementsByClassName("MenuListParent")[0].style.display =
+        "none";
+      setCloseSideMenu(false);
     }
   }
   return (
@@ -32,16 +45,18 @@ export default function SideMenu() {
           >
             Courses
             <BiChevronDown />
-            <div className="NSideBarCourseList">
-              <Link to="/course/upsc" className="EachNavCourse">
-                UPSC
-              </Link>
-              <Link to="/course/regionalExam" className="EachNavCourse">
-                Regional Exam
-              </Link>
-              <Link to="/course/spokenEnglish" className="EachNavCourse">
-                Spoken English
-              </Link>
+            <div className="NSideBarCourseListParent">
+              <div className="NSideBarCourseList">
+                <Link to="/course/upsc" className="EachNavCourse">
+                  UPSC
+                </Link>
+                <Link to="/course/regionalExam" className="EachNavCourse">
+                  Regional Exam
+                </Link>
+                <Link to="/course/spokenEnglish" className="EachNavCourse">
+                  Spoken English
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -51,7 +66,7 @@ export default function SideMenu() {
           <Link to={"/contactus"} className="navOptionSideBar">
             Contact
           </Link>
-          <div className="closeIcon">
+          <div className="closeIcon" onClick={displaySideMenu}>
             <AiOutlineClose />
           </div>
         </div>

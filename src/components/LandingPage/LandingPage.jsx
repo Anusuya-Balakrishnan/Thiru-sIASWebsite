@@ -8,12 +8,13 @@ import SmallAutoSlide from "../AutoSlide/SmallAutoSlide/SmallAutoSlide.jsx";
 import person1 from "./images/4.jpeg";
 import SmallButton from "../Button/SmallButton/SmallButton";
 import parliament from "./images/parliament.jpg";
+import { useNavigate } from "react-router-dom";
 export default function LandingPage() {
   const [displayWidth, setDisplayWidth] = useState(document.body.clientWidth);
   window.addEventListener("resize", () => {
     setDisplayWidth(document.body.clientWidth);
   });
-
+  var navigate = useNavigate();
   return (
     <section id="LandingPage">
       <div className="LandingPageMain">
@@ -25,17 +26,18 @@ export default function LandingPage() {
             <div className="UpscHeading">
               <h1>Thiru's IAS Academy</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
-                amet, lobortis habitant dolor consequat. Adipiscing a in sociis
-                enim, posuere ac Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Ornare amet, lobortis habitant dolor consequat.
-                Adipiscing a in sociis enim, posuere ac.Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit. Ornare amet, lobortis
-                habitant dolor consequat. Adipiscing a in sociis enim, posuere
-                ac.
+                Only result-oriented IAS Academy in Puducherry. Our candidate
+                Shri. M. Barani, had cleared UPSC civil services exam 2019 by
+                securing All India Rank 326. The Next can be you!! Reach your
+                dream from our hometown.
               </p>
-              <div className="LandingButton">
-                <SmallButton value="Enroll" />
+              <div
+                className="LandingButton"
+                onClick={() => {
+                  navigate("/about");
+                }}
+              >
+                <SmallButton value="For More" />
               </div>
             </div>
             <div className="UpscReview">
