@@ -98,12 +98,12 @@ export default function AutoHtml() {
       SlideContainerRef.current.style.left = slideWidthValue;
     }, 5000);
   }
-  useEffect(() => {
-    timer();
-  }, []);
+  // useEffect(() => {
+  //   timer();
+  // }, []);
 
   return (
-    <section id="AutoHtml">
+    <section id="AutoHtml" onLoad={timer}>
       <div className="SlideFrame">
         <div className="SlideContainer" ref={SlideContainerRef}>
           {reviewContent.map((eachReiview, index) => {

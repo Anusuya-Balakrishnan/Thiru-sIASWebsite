@@ -3,6 +3,7 @@ import JourneyStyle from "./JourneyStyle.css";
 import { FaUserGraduate } from "react-icons/fa";
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import { RiTeamFill } from "react-icons/ri";
+import { SiGoogleclassroom } from "react-icons/si";
 // import {}
 // import { GrWorkshop } from "react-icons/g";
 import image1 from "./image/image1.jpeg";
@@ -115,7 +116,7 @@ export default function JourneyHtml() {
           </div>
           <div className="JourneyContent2">
             <div className="GroupIcon">
-              <RiTeamFill />
+              <SiGoogleclassroom />
             </div>
             <h1>Webinars</h1>
             <p>

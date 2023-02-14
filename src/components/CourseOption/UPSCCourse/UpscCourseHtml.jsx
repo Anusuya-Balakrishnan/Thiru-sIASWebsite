@@ -17,8 +17,8 @@ export default function UpscCourseHtml() {
       title: "Preliminary Exam Course",
       content:
         "Detailed coaching for UPSC preliminary examination from the basics which includes test series",
-      month: "8",
-      test: "80",
+      month: "6",
+      test: "75",
       path: "PREUPSC",
     },
     {
@@ -26,8 +26,8 @@ export default function UpscCourseHtml() {
       title: "Mains Exam Course",
       content:
         "Cleared preliminary level now it's time to explore mains. Need only mains topic then this course is for you.",
-      month: "10",
-      test: "50",
+      month: "6",
+      test: "75",
       path: "MAINS",
     },
     {
@@ -44,8 +44,8 @@ export default function UpscCourseHtml() {
       title: "Preliminary Crash Course",
       content:
         "A 4 month course and 2 months test series to revise your portions and boost your confidence.",
-      month: "6",
-      test: "40",
+      month: "4",
+      test: "50",
       path: "PRECRASH",
     },
     {
@@ -53,8 +53,8 @@ export default function UpscCourseHtml() {
       title: "CSAT",
       content:
         "Clear your qualifying paper like a Pro choose our only CSAT course at the most affordable price",
-      month: "4",
-      test: "60",
+      month: "3",
+      test: "50",
       path: "CSAT",
     },
   ];
@@ -70,14 +70,15 @@ export default function UpscCourseHtml() {
       path: "OPTIONAL",
     },
   ];
+
   return (
     <section id="UpscCoursePage">
       <div className="UpscMainParent">
         <div className="UpscTitle">UPSC Courses:</div>
         <div className="UpscCourseParent">
-          {upscCourse.map((Eachcourse) => {
+          {upscCourse.map((Eachcourse, index) => {
             return (
-              <div key={Eachcourse.id} className="UpscEachCourse">
+              <div key={index} className="UpscEachCourse">
                 <CourseHtml
                   courseImage={Eachcourse.image}
                   courseTitle={Eachcourse.title}
@@ -89,9 +90,9 @@ export default function UpscCourseHtml() {
               </div>
             );
           })}
-          {upscOptionalCourse.map((Eachcourse) => {
+          {upscOptionalCourse.map((Eachcourse, index) => {
             return (
-              <div key={Eachcourse.id} className="UpscEachCourse">
+              <div key={index} className="UpscEachCourse">
                 <OptionalCourse
                   courseImage={Eachcourse.image}
                   courseTitle={Eachcourse.title}

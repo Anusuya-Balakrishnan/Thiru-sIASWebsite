@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import syllabusStyle from "./syllabusStyle.css";
 import LargeButton from "../Button/LargeButton/LargeButton";
 import { IoTime } from "react-icons/io5";
 import { TbReportSearch } from "react-icons/tb";
 import { MdEventNote } from "react-icons/md";
+import { SiGoogleclassroom } from "react-icons/si";
 import syllabusList from "./syllabusContent";
+
 import { useParams } from "react-router-dom";
 
 export default function SyllabusHTML() {
+  const [expansionIndex, setexpansionIndex] = useState(0);
+  const [expansionHeight, setexpansionHeight] = useState(0);
   var syllabusList = {
     PREUPSC: {
       id: 1,
@@ -114,101 +118,132 @@ export default function SyllabusHTML() {
       isDownload: "NO",
     },
   };
-
+  var syllabusContent = [
+    {
+      title: "General Studies Paper – I",
+      content:
+        "Current events of national and international importance.Current events of national and international importanceCurrent events of national and international importanceCurrent events of national and international importance",
+    },
+    {
+      title: "General Studies Paper – I",
+      content: "Current events of national and international importance.",
+    },
+    {
+      title: "General Studies Paper – I",
+      content: "Current events of national and international importance.",
+    },
+    {
+      title: "General Studies Paper – I",
+      content: "Current events of national and international importance.",
+    },
+  ];
   let { id } = useParams();
   console.log("path=" + id);
   var courseObject = syllabusList[id];
   console.log("courseObject" + courseObject.title);
+
   return (
     <section className="SyllabusPage">
       <div className="syllabus_container">
         <div className="syllabus_container_body">
           <div className="syllabus_container_body_title">
-            <div> {courseObject.title} Syllabus:</div>
+            <div> {courseObject.title} Syllabus</div>
           </div>
           <div className="syllabus_container_body_middle">
-            <p className="syllabus_middle_content">
-              <div className="syllabus_container_body_coursebox_parent">
-                <div className="syllabus_container_body_coursebox">
-                  <div className="coursebox_title">{courseObject.title}</div>
+            <div className="syllabus_container_body_extensionPart">
+              {syllabusContent.map((each, index) => {
+                return (
+                  <div key={index} className="extensionPart">
+                    {/* extensionTopic */}
+                    <div
+                      className="extensionPart_topic"
+                      onClick={() => {
+                        setexpansionIndex(index);
+
+                        let expansion_height = document
+                          .getElementById(`ep-content-${index}`)
+                          .getBoundingClientRect().height;
+                        setexpansionHeight(Math.floor(expansion_height));
+                      }}
+                    >
+                      <div className="extensionPart_topic_details">
+                        <p>{each.title}</p>
+                        <p>+</p>
+                      </div>
+                    </div>
+                    {/* extensionContent  */}
+                    <div
+                      style={{
+                        height: index === expansionIndex ? expansionHeight : 0,
+                      }}
+                      className="extensionPart_content"
+                      id="extensionPart_content"
+                    >
+                      <div
+                        id={`ep-content-${index}`}
+                        className="extensionPart-content-box"
+                      >
+                        <div>{each.content}</div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+              {courseObject.isDownload == "YES" && (
+                <div className="syllabus_container_button">
+                  <a
+                    href={() => {
+                      window.history.back();
+                    }}
+                    className="button_previouslink"
+                  >
+                    back
+                  </a>
+                  <a
+                    className="downloadButton"
+                    href="http://192.168.1.22:3000/zoho2.pdf"
+                    download="zoho2.pdf"
+                  >
+                    <LargeButton value="Download" />
+                  </a>
+                </div>
+              )}
+            </div>
+
+            <div className="syllabus_container_body_coursebox_parent">
+              <div className="syllabus_container_body_coursebox">
+                <div className="coursebox_title">{courseObject.title}</div>
+                <div className="coursebox_icons_box">
                   <div className="coursebox_icons">
-                    <IoTime /> {courseObject.duration} Month
+                    <span className="coursebox-each-icons">
+                      <IoTime />
+                    </span>
+                    {courseObject.duration} Month
                   </div>
                   {courseObject.noOfTests != null && (
                     <div className="coursebox_icons">
-                      <TbReportSearch /> {courseObject.noOfTests} Tests
+                      <span className="coursebox-each-icons">
+                        <TbReportSearch />
+                      </span>
+                      {courseObject.noOfTests} Tests
                     </div>
                   )}
-
                   <div className="coursebox_icons">
-                    <MdEventNote /> Weekday Batch
+                    <span className="coursebox-each-icons">
+                      <MdEventNote />
+                    </span>
+                    Weekday/Weekend Batch
+                  </div>
+                  <div className="coursebox_icons">
+                    <span className="coursebox-each-icons">
+                      <SiGoogleclassroom />
+                    </span>
+                    Online/Offline Classes
                   </div>
                 </div>
               </div>
-
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident, doloremque. Iusto, excepturi sed. Repellat
-                consectetur tenetur dolor, harum expedita totam quaerat nam
-                laboriosam! Accusantium praesentium eveniet ex, alias provident
-                veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident, doloremque. Iusto, excepturi sed. Repellat
-                consectetur tenetur dolor, harum expedita totam quaerat nam
-                laboriosam! Accusantium praesentium eveniet ex, alias provident
-                veritatis.
-              </p>
-            </p>
-          </div>
-          <div className="syllabus_container_body_end">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Assumenda perferendis libero, quos, odio doloribus molestiae vero
-              nesciunt velit voluptates repellendus quasi ad earum, enim eius
-              unde ab soluta. Labore, doloribus.
-            </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Assumenda perferendis libero, quos, odio doloribus molestiae vero
-              nesciunt velit voluptates repellendus quasi ad earum, enim eius
-              unde ab soluta. Labore, doloribus.Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Assumenda perferendis libero, quos,
-              odio doloribus molestiae vero nesciunt velit voluptates
-              repellendus quasi ad earum, enim eius unde ab soluta. Labore,
-              doloribus.
-            </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Assumenda perferendis libero, quos, odio doloribus molestiae vero
-              nesciunt velit voluptates repellendus quasi ad earum, enim eius
-              unde ab soluta. Labore, doloribus. Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Assumenda perferendis libero, quos,
-              odio doloribus molestiae vero nesciunt velit voluptates
-              repellendus quasi ad earum, enim eius unde ab soluta. Labore,
-              doloribus.
-            </p>
-          </div>
-          {courseObject.isDownload == "YES" && (
-            <div className="syllabus_container_button">
-              <a
-                href={() => {
-                  window.history.back();
-                }}
-                className="button_previouslink"
-              >
-                back
-              </a>
-              <a
-                className="downloadButton"
-                href="http://192.168.1.22:3000/zoho2.pdf"
-                download="zoho2.pdf"
-              >
-                <LargeButton value="Download" />
-              </a>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>
