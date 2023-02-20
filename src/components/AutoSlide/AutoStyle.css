@@ -2,9 +2,37 @@
     margin: 0;
     padding: 0;
 }
+.AutoHtml{
+    width: 400px;
+    height: 450px;
+}
+.slide_frame_parent{
+    width: 400px;
+        height: 450px;
+        position: relative;  
+}
+.SlideFrame_container{
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    
+    z-index: 10;
+    background-color: rgba(116, 116, 116, 0.229);
+    
+}
+.SlideFrame-container-icons{
+    height: 450px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+        color: rgb(144, 144, 144);
+}
 .SlideFrame{
-    position: relative;
-    width: 430px;
+    background-color: rgb(255, 255, 255);
+    /* z-index: 10; */
+    position: absolute;
+    width: 400px;
     height: 450px;
     /* top: 50px;
     left: 250px; */
@@ -14,6 +42,7 @@
     border-radius: 5px;
 }
 .SlideContainer{
+   
     width: auto;
     height: auto;
     position: absolute;

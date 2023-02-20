@@ -70,17 +70,21 @@
     font-size: 15px;
     line-height: 2;
 } */
-.JourneyImage{
-    margin: 20px;
-    margin-top: 50px;
-    height: 300px;
-    width: 300px;
-}
+
 .JourneyImage img{
-    height: 100%;
-    width: 100%;
+    float: right;
+    margin: 20px;
+    margin-left: 50px;
+        /* margin-top: 50px; */
+    height: 385px;
+    width: 300px;
  object-fit: cover;
  border-radius: 10px;
+/* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+ /* border: #27227A 1px solid; */
+/* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+/* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+box-shadow: 0px -10px 30px #ccc;
 }
 .JourneyPart2{
     display: flex;
@@ -155,10 +159,7 @@
     .JourneyPart1{
         margin: 50px;
     }
-    .JourneyImage img{
-        max-width: 400px;
-        max-height: 400px;
-    }
+    
     .JContent1{
         margin: 20px 10px;
     }
@@ -185,6 +186,21 @@
         display: none;
     }
  }
+ @media(max-width:850px)
+ {
+    .JContent1 p{
+        clear: right;
+    }
+    .JourneyImage{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .JourneyImage img{
+            margin: 10px;
+        }
+
+ }
  @media (max-width:500px){
     .JourneyPart1{
         margin: 10px 20px;
@@ -204,15 +220,17 @@
         line-height: 2;
         padding: 5px 0;
     }
-    .JourneyImage {
+    /* .JourneyImage {
         width: 90%;
-        height: 90%;
+        height: auto;
         margin: 10px;
-    }
+    } */
     .JourneyImage img{
-        width: 100%;
-        height: 100%;
+        width: 90%;
+            height: 90%;
+            margin: 10px;
     }
+    
     .JourneyContent2{
         margin: 15px 20px;
         width: auto;

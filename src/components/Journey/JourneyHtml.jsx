@@ -7,6 +7,7 @@ import { SiGoogleclassroom } from "react-icons/si";
 // import {}
 // import { GrWorkshop } from "react-icons/g";
 import image1 from "./image/image1.jpeg";
+import founder from "./image/founder.jpeg";
 
 export default function JourneyHtml() {
   const [height, setHeight] = useState(false);
@@ -34,6 +35,7 @@ export default function JourneyHtml() {
         <div className="JourneyPart1">
           <div className="JContent1">
             <h1>Our Journey</h1>
+            <div className="JourneyImage"><img  src={founder} alt="founder image" /></div>
             <p>
               THIRU'S IAS ACADEMY, Muthialpet, Puducherry.This Institution,
               Thiru's IAS Academy was founded by Shri. S .Thirumurugan in the
@@ -41,6 +43,7 @@ export default function JourneyHtml() {
               and knowledge to the aspirants about the Civil service
               examination.We provide coaching for UPSC (IAS, IPS, IRS, etc),
               TNPSC, RRB, SSC, UDC, LDC, CUET, and Professional Communication.
+              
             </p>
             <p>
               Our Founder, Shri. S. Thirumurugan is also an alumnus of the

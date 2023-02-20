@@ -8,7 +8,8 @@ import image5 from "./images/5.jpeg";
 import ReviewComponent from "../ReviewComponent/ReviewComponent";
 import SmallReview from "../ReviewComponent/SmallReview.jsx";
 import { RiH1 } from "react-icons/ri";
-
+import { VscDebugStart } from "react-icons/vsc";
+import { RiStopMiniLine } from "react-icons/ri";
 export default function AutoHtml() {
   let reviewContent = [
     {
@@ -80,14 +81,16 @@ export default function AutoHtml() {
       para5: "",
     },
   ];
-
+  const [displayValue, setdisplayValue] = useState("none");
   let count = 0;
   let ReviewSlideImage = useRef(0);
   let SlideContainerRef = useRef(0);
   let slideWidthValue;
-  let interval;
+  var interval = 0;
+  const [stopValue, setStopValue] = useState("false");
   function timer() {
-    interval = setInterval(() => {
+    if (!stopValue) {
+      interval = setInterval(() => {
       let SlideWidth = ReviewSlideImage.current.clientWidth;
       if (count < reviewContent.length - 1) {
         count++;
@@ -97,14 +100,35 @@ export default function AutoHtml() {
       slideWidthValue = -(SlideWidth * count) + "px";
       SlideContainerRef.current.style.left = slideWidthValue;
     }, 5000);
+    }
+    else {
+      clearInterval(interval);
+      console.log(interval);
+  } 
   }
-  // useEffect(() => {
-  //   timer();
-  // }, []);
+ 
+  
+  useEffect(() => {
+    timer();
+  }, []);
+
 
   return (
-    <section id="AutoHtml" onLoad={timer}>
-      <div className="SlideFrame">
+    <section id="AutoHtml">
+      <div className="slide_frame_parent" onMouseOver={() => { setdisplayValue("block") }}
+        onMouseOut={() => { setdisplayValue("none") }}
+        onClick={() => {
+          setStopValue(!stopValue);
+          timer();
+        }}>
+        <div className="SlideFrame_container" style={{ display: displayValue }}>
+          <div className="SlideFrame-container-icons">
+            <VscDebugStart />
+          <RiStopMiniLine/>
+          </div>
+          
+        </div>
+        <div className="SlideFrame">
         <div className="SlideContainer" ref={SlideContainerRef}>
           {reviewContent.map((eachReiview, index) => {
             return (
@@ -127,7 +151,8 @@ export default function AutoHtml() {
             );
           })}
         </div>
-      </div>
+          </div>
+        </div>
     </section>
   );
 }
