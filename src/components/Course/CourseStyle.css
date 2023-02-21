@@ -45,6 +45,7 @@
 }
 .CoursePart2{
     /* background-color: #27227A; */
+    box-sizing: border-box;
     position: absolute;
     display: flex;
     align-items: center;
@@ -87,7 +88,7 @@
     width: 260px;
     height: auto;
     justify-content: center;
-    margin: 30px 5px;
+    margin: 25px 5px;
     flex-wrap: wrap;
 }
 .duration{
@@ -127,6 +128,7 @@
     font-weight: bold;
 }
 .ButtonComponent{
+    box-sizing: border-box;
     width: 80%;
     height: 50px;
     

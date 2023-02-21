@@ -44,21 +44,21 @@ export default function AboutUsHtml() {
                 University for three years from 2017 to 2019.
               </p>
               <div className="AboutIcon">
-                <div className="EachAboutIcon">
+                <a href="https://www.facebook.com/thiru.murugan.10/" className="EachAboutIcon" target="blank">
                   <GrFacebookOption />
-                </div>
+                </a>
 
-                <div className="EachAboutIcon">
+                <a href="" className="EachAboutIcon" target="blank">
                   <AiOutlineTwitter />
-                </div>
+                </a>
 
-                <div className="EachAboutIcon">
+                <a href="" className="EachAboutIcon">
                   <AiFillInstagram />
-                </div>
+                </a>
 
-                <div className="EachAboutIcon">
+                <a href="https://in.linkedin.com/in/thirumurugan-subramani-52a7311aa" className="EachAboutIcon" target="blank">
                   <ImLinkedin2 />
-                </div>
+                </a>
               </div>
             </div>
           </div>

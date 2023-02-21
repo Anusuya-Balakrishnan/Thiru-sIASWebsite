@@ -94,6 +94,7 @@
     }
     .UpscReview{
         width: auto;
+        height: auto;
     }
     .UpscHeading p, .UpscHeading h1{
         line-height: 1.6;
@@ -112,6 +113,9 @@
     .UpscHeading{
         font-size: 90%;
     }
+    .UpscContent{
+        height: auto;
+        padding: 10px;
+    }
 
-    
 }

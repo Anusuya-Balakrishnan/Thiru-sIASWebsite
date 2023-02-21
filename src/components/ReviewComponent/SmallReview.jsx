@@ -8,19 +8,19 @@ import { useEffect } from "react";
 export default function SmallReview(props) {
   let smallReviewContainerRef = useRef(0);
   let smallReviewContentRef = useRef(0);
-  let innerValue = smallReviewContentRef.current.innerHTML;
-  useEffect(() => {
-    if (props.para3 !== "" && props.para4 !== "") {
-      document.getElementsByClassName("SeeMorebtnParent")[0].style.display =
-        "block";
-    }
-  }, []);
-  function showFullReview() {
-    document.getElementsByClassName("SeeMorebtnParent")[0].style.display =
-      "none";
-    smallReviewContainerRef.current.height = "600px";
-    innerValue += props.para3 + props.para4;
-  }
+  // let innerValue = smallReviewContentRef.current.innerHTML;
+  // useEffect(() => {
+  //   if (props.para3 !== "" && props.para4 !== "") {
+  //     document.getElementsByClassName("SeeMorebtnParent")[0].style.display =
+  //       "block";
+  //   }
+  // }, []);
+  // function showFullReview() {
+  //   document.getElementsByClassName("SeeMorebtnParent")[0].style.display =
+  //     "none";
+  //   smallReviewContainerRef.current.height = "600px";
+  //   innerValue += props.para3 + props.para4;
+  // }
   return (
     <section id="SmallReviewStyle">
       <div className="smallReviewContainer" ref={smallReviewContainerRef}>
@@ -44,16 +44,16 @@ export default function SmallReview(props) {
           </div>
         </div>
         <div className="smallReviewContent">
-          <p ref={smallReviewContentRef}>
-            {props.para1}
-            {props.para2}
-          </p>
+          {props.para.map((each, key) => {
+            return (<p id={key}>{each}</p>
+            )
+          })}
         </div>
-        <div className="SeeMorebtnParent" onClick={showFullReview}>
+        {/* <div className="SeeMorebtnParent" onClick={showFullReview}>
           <div className="SeeMorebtn">
             <FiChevronDown />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
