@@ -5,6 +5,7 @@ import { IoTime } from "react-icons/io5";
 import { TbReportSearch } from "react-icons/tb";
 import { MdEventNote } from "react-icons/md";
 import { SiGoogleclassroom } from "react-icons/si";
+import { AiOutlineCaretDown,AiOutlineCaretUp } from "react-icons/ai";
 import syllabusList from "./syllabusContent";
 
 import { useParams } from "react-router-dom";
@@ -168,7 +169,8 @@ export default function SyllabusHTML() {
                     >
                       <div className="extensionPart_topic_details">
                         <p>{each.title}</p>
-                        <p>+</p>
+                        <p>{index === expansionIndex ?<AiOutlineCaretUp/>:<AiOutlineCaretDown/>
+                         }</p>
                       </div>
                     </div>
                     {/* extensionContent  */}
