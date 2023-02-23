@@ -91,7 +91,9 @@ export default function HomePage() {
                 height: showCourse ? "130px" : "0px",
               }}
             >
-              <div className="navCourseList" onMouseOver={mouseOverDropDown}>
+              <div className="navCourseList"
+                onMouseOver={mouseOverDropDown}
+              >
                 <Link to="/course/upsc" className="EachNavCourse">
                   UPSC
                 </Link>

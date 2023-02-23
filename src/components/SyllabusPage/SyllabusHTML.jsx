@@ -11,7 +11,7 @@ import syllabusList from "./syllabusContent";
 import { useParams } from "react-router-dom";
 
 export default function SyllabusHTML() {
-  const [expansionIndex, setexpansionIndex] = useState(0);
+  const [expansionIndex, setexpansionIndex] = useState(-1);
   const [expansionHeight, setexpansionHeight] = useState(0);
   var syllabusList = {
     PREUPSC: {
@@ -20,6 +20,7 @@ export default function SyllabusHTML() {
       duration: 8,
       noOfTests: 80,
       isDownload: "YES",
+      fileName:"upsc.pdf"
     },
     MAINS: {
       id: 2,
@@ -27,6 +28,7 @@ export default function SyllabusHTML() {
       duration: 10,
       noOfTests: 50,
       isDownload: "YES",
+      fileName:"upsc.pdf"
     },
     PREMAINS: {
       id: 3,
@@ -34,6 +36,7 @@ export default function SyllabusHTML() {
       duration: 8,
       noOfTests: 80,
       isDownload: "YES",
+      fileName:"upsc.pdf"
     },
     PRECRASH: {
       id: 4,
@@ -41,6 +44,7 @@ export default function SyllabusHTML() {
       duration: 6,
       noOfTests: 40,
       isDownload: "YES",
+      fileName:"upsc.pdf"
     },
     CSAT: {
       id: 5,
@@ -48,6 +52,7 @@ export default function SyllabusHTML() {
       duration: 4,
       noOfTests: 60,
       isDownload: "YES",
+      fileName:"upsc.pdf"
     },
     OPTIONAL: {
       id: 6,
@@ -57,6 +62,7 @@ export default function SyllabusHTML() {
       option1: "Socialogy",
       option2: "Political Science",
       isDownload: "YES",
+      fileName:"upsc.pdf"
     },
     TNPSCGROUP1: {
       id: 7,
@@ -119,29 +125,87 @@ export default function SyllabusHTML() {
       isDownload: "NO",
     },
   };
-  var syllabusContent = [
+  
+  var syllabus = {
+    PREUPSC:
+      [{
+      title: "General Studies Paper–I",
+    content: ["Current events of national and international importance.",
+      "History of India and Indian National Movement.",
+      "Indian and World Geography-Physical, Social, Economic Geography of India and the World.",
+      "Indian Polity and Governance – Constitution, Political System, Panchayati Raj, Public Policy, Rights Issues, etc.",
+      "Economic and Social Development – Sustainable Development, Poverty, Inclusion, Demographics, Social Sector initiatives, etc.",
+      "General issues on Environmental Ecology, Biodiversity and Climate Change – that do not require subject specialisation",
+      "General Science"]
+        
+      },
+  
     {
-      title: "General Studies Paper – I",
-      content:
-        "Current events of national and international importance.Current events of national and international importanceCurrent events of national and international importanceCurrent events of national and international importance",
-    },
+      title: "CSAT/ General Studies Paper-II",
+      content: ["Comprehension",
+        "Interpersonal skills including communication skills",
+        "Logical reasoning and analytical ability",
+        "Decision-making and problem solving",
+        "General mental ability",
+        "Basic numeracy (numbers and their relations, orders of magnitude, etc.)",
+      "Data interpretation (charts, graphs, tables, data sufficiency etc.)"]
+        }],
+    PREMAINS:[{
+      title: "Preliminary Exam General Studies Paper–I",
+    content: ["Current events of national and international importance.",
+      "History of India and Indian National Movement.",
+      "Indian and World Geography-Physical, Social, Economic Geography of India and the World.",
+      "Indian Polity and Governance – Constitution, Political System, Panchayati Raj, Public Policy, Rights Issues, etc.",
+      "Economic and Social Development – Sustainable Development, Poverty, Inclusion, Demographics, Social Sector initiatives, etc.",
+      "General issues on Environmental Ecology, Biodiversity and Climate Change – that do not require subject specialisation",
+      "General Science"]
+        
+      },
     {
-      title: "General Studies Paper – I",
-      content: "Current events of national and international importance.",
-    },
-    {
-      title: "General Studies Paper – I",
-      content: "Current events of national and international importance.",
-    },
-    {
-      title: "General Studies Paper – I",
-      content: "Current events of national and international importance.",
-    },
-  ];
+      title: "Preliminary Exam CSAT/ General Studies Paper-II",
+      content: ["Comprehension",
+        "Interpersonal skills including communication skills",
+        "Logical reasoning and analytical ability",
+        "Decision-making and problem solving",
+        "General mental ability",
+        "Basic numeracy (numbers and their relations, orders of magnitude, etc.)",
+      "Data interpretation (charts, graphs, tables, data sufficiency etc.)"]
+        },{ title: "Mains Qualifying Paper-A", content: ["One of the Indian languages listed in the Constitution’s Eighth Schedule needs to be selected by the candidate"] },
+      { title: "Mains Qualifying Paper-B", content: ["English"] },
+      {title:"Paper 1",content:["Essay Paper"]},
+      {
+      title: "Paper 2 – General Studies I", content: ["History and Geography of the World and Society",
+      "Indian Heritage and Culture"]
+      }, {
+        title: "Paper 3 – General Studies II", content: ["Polity, Constitution",
+        "Governance","Social Justice and International relations"]
+      }, {
+        title: "Paper 4 – General Studies  III", content: ["Economic Development", "Technology",
+          "Environment", "Biodiversity",
+          "Security and Disaster Management"]
+      }, { title: "Paper 5 – General Studies  IV", content: ["Ethics", "Integrity", "Aptitude"] },
+      {title:"Paper 6",content:["Optional Subject – Paper 1"]},{title:"Paper 7",content:["Optional Subject – Paper 2"]}],
+    MAINS: [{ title: "Qualifying Paper-A", content: ["One of the Indian languages listed in the Constitution’s Eighth Schedule needs to be selected by the candidate"] },
+      { title: "Qualifying Paper-B", content: ["English"] },
+      {title:"Paper 1",content:["Essay Paper"]},
+      {
+      title: "Paper 2 – General Studies I", content: ["History and Geography of the World and Society",
+      "Indian Heritage and Culture"]
+      }, {
+        title: "Paper 3 – General Studies II", content: ["Polity, Constitution",
+        "Governance","Social Justice and International relations"]
+      }, {
+        title: "Paper 4 – General Studies  III", content: ["Economic Development", "Technology",
+          "Environment", "Biodiversity",
+          "Security and Disaster Management"]
+      }, { title: "Paper 5 – General Studies  IV", content: ["Ethics", "Integrity", "Aptitude"] },
+      {title:"Paper 6",content:["Optional Subject – Paper 1"]},{title:"Paper 7",content:["Optional Subject – Paper 2"]}]
+  }
   let { id } = useParams();
   console.log("path=" + id);
   var courseObject = syllabusList[id];
   console.log("courseObject" + courseObject.title);
+  var courseSyllabus = syllabus[id];
 
   return (
     <section className="SyllabusPage">
@@ -152,7 +216,7 @@ export default function SyllabusHTML() {
           </div>
           <div className="syllabus_container_body_middle">
             <div className="syllabus_container_body_extensionPart">
-              {syllabusContent.map((each, index) => {
+              {courseSyllabus.map((each, index) => {
                 return (
                   <div key={index} className="extensionPart">
                     {/* extensionTopic */}
@@ -185,7 +249,8 @@ export default function SyllabusHTML() {
                         id={`ep-content-${index}`}
                         className="extensionPart-content-box"
                       >
-                        <div>{each.content}</div>
+                        {each.content.map((eachContent,key) => {return <div>{eachContent}</div>})}
+                        {/* <div>{each.content}</div> */}
                       </div>
                     </div>
                   </div>
@@ -203,8 +268,8 @@ export default function SyllabusHTML() {
                   </a>
                   <a
                     className="downloadButton"
-                    href="http://192.168.1.22:3000/zoho2.pdf"
-                    download="zoho2.pdf"
+                    href={`http://192.168.1.7:3000/${courseObject.fileName}`}
+                  download={`${courseObject.fileName}`}
                   >
                     <LargeButton value="Download" />
                   </a>

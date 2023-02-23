@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import "./HomePage";
+
+
+
 export default function SideMenu() {
   let courseList = false;
   function displaySideCourse() {
@@ -28,6 +31,9 @@ export default function SideMenu() {
       setCloseSideMenu(false);
     }
   }
+
+
+ 
   return (
     <section id="SideMenu">
       <div className="MenuListParent">
