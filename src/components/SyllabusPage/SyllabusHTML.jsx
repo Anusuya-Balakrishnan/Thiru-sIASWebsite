@@ -128,7 +128,7 @@ export default function SyllabusHTML() {
   
   var syllabus = {
     PREUPSC:
-      [{
+      [{heading:"",
       title: "General Studies Paper–I",
     content: ["Current events of national and international importance.",
       "History of India and Indian National Movement.",
@@ -140,7 +140,7 @@ export default function SyllabusHTML() {
         
       },
   
-    {
+    {heading:"",
       title: "CSAT/ General Studies Paper-II",
       content: ["Comprehension",
         "Interpersonal skills including communication skills",
@@ -150,8 +150,8 @@ export default function SyllabusHTML() {
         "Basic numeracy (numbers and their relations, orders of magnitude, etc.)",
       "Data interpretation (charts, graphs, tables, data sufficiency etc.)"]
         }],
-    PREMAINS:[{
-      title: "Preliminary Exam General Studies Paper–I",
+    PREMAINS:[{heading:"Preliminary Exam",
+      title: "General Studies Paper–I",
     content: ["Current events of national and international importance.",
       "History of India and Indian National Movement.",
       "Indian and World Geography-Physical, Social, Economic Geography of India and the World.",
@@ -161,8 +161,8 @@ export default function SyllabusHTML() {
       "General Science"]
         
       },
-    {
-      title: "Preliminary Exam CSAT/ General Studies Paper-II",
+    {heading:"",
+      title: "CSAT/ General Studies Paper-II",
       content: ["Comprehension",
         "Interpersonal skills including communication skills",
         "Logical reasoning and analytical ability",
@@ -170,36 +170,157 @@ export default function SyllabusHTML() {
         "General mental ability",
         "Basic numeracy (numbers and their relations, orders of magnitude, etc.)",
       "Data interpretation (charts, graphs, tables, data sufficiency etc.)"]
-        },{ title: "Mains Qualifying Paper-A", content: ["One of the Indian languages listed in the Constitution’s Eighth Schedule needs to be selected by the candidate"] },
-      { title: "Mains Qualifying Paper-B", content: ["English"] },
-      {title:"Paper 1",content:["Essay Paper"]},
-      {
+        },{heading:"Mains Exam", title: "Qualifying Paper-A", content: ["One of the Indian languages listed in the Constitution’s Eighth Schedule needs to be selected by the candidate"] },
+      { heading:"",title: "Qualifying Paper-B", content: ["English"] },
+      {heading:"",title:"Paper 1",content:["Essay Paper"]},
+      {heading:"",
       title: "Paper 2 – General Studies I", content: ["History and Geography of the World and Society",
       "Indian Heritage and Culture"]
-      }, {
+      }, {heading:"",
         title: "Paper 3 – General Studies II", content: ["Polity, Constitution",
         "Governance","Social Justice and International relations"]
-      }, {
+      }, {heading:"",
         title: "Paper 4 – General Studies  III", content: ["Economic Development", "Technology",
           "Environment", "Biodiversity",
           "Security and Disaster Management"]
-      }, { title: "Paper 5 – General Studies  IV", content: ["Ethics", "Integrity", "Aptitude"] },
-      {title:"Paper 6",content:["Optional Subject – Paper 1"]},{title:"Paper 7",content:["Optional Subject – Paper 2"]}],
-    MAINS: [{ title: "Qualifying Paper-A", content: ["One of the Indian languages listed in the Constitution’s Eighth Schedule needs to be selected by the candidate"] },
-      { title: "Qualifying Paper-B", content: ["English"] },
-      {title:"Paper 1",content:["Essay Paper"]},
-      {
+      }, { heading:"",title: "Paper 5 – General Studies  IV", content: ["Ethics", "Integrity", "Aptitude"] },
+      {heading:"", title: "Paper 6", content: ["Optional Subject – Paper 1"] },
+      {heading:"",title: "Paper 7", content: ["Optional Subject – Paper 2"] }],
+    MAINS: [{heading:"", title: "Qualifying Paper-A", content: ["One of the Indian languages listed in the Constitution’s Eighth Schedule needs to be selected by the candidate"] },
+      { heading:"",title: "Qualifying Paper-B", content: ["English"] },
+      {heading:"",title:"Paper 1",content:["Essay Paper"]},
+      {heading:"",
       title: "Paper 2 – General Studies I", content: ["History and Geography of the World and Society",
       "Indian Heritage and Culture"]
-      }, {
+      }, {heading:"",
         title: "Paper 3 – General Studies II", content: ["Polity, Constitution",
         "Governance","Social Justice and International relations"]
-      }, {
+      }, {heading:"",
         title: "Paper 4 – General Studies  III", content: ["Economic Development", "Technology",
           "Environment", "Biodiversity",
           "Security and Disaster Management"]
-      }, { title: "Paper 5 – General Studies  IV", content: ["Ethics", "Integrity", "Aptitude"] },
-      {title:"Paper 6",content:["Optional Subject – Paper 1"]},{title:"Paper 7",content:["Optional Subject – Paper 2"]}]
+      }, { heading:"",title: "Paper 5 – General Studies  IV", content: ["Ethics", "Integrity", "Aptitude"] },
+      { heading:"",title: "Paper 6", content: ["Optional Subject – Paper 1"] }, {heading:"", title: "Paper 7", content: ["Optional Subject – Paper 2"] },
+    ],
+    PRECRASH:[{heading:"",
+      title: "General Studies Paper–I",
+    content: ["Current events of national and international importance.",
+      "History of India and Indian National Movement.",
+      "Indian and World Geography-Physical, Social, Economic Geography of India and the World.",
+      "Indian Polity and Governance – Constitution, Political System, Panchayati Raj, Public Policy, Rights Issues, etc.",
+      "Economic and Social Development – Sustainable Development, Poverty, Inclusion, Demographics, Social Sector initiatives, etc.",
+      "General issues on Environmental Ecology, Biodiversity and Climate Change – that do not require subject specialisation",
+      "General Science"]
+        
+      },
+  
+    {heading:"",
+      title: "CSAT/ General Studies Paper-II",
+      content: ["Comprehension",
+        "Interpersonal skills including communication skills",
+        "Logical reasoning and analytical ability",
+        "Decision-making and problem solving",
+        "General mental ability",
+        "Basic numeracy (numbers and their relations, orders of magnitude, etc.)",
+      "Data interpretation (charts, graphs, tables, data sufficiency etc.)"]
+      }],
+    CSAT: [{heading:"",
+      title: "English Comprehension", content: ["Spelling/Detecting Mis- spelt words",
+        "Common Error", "Active/Passive Voice of Verbs", "Comprehension Passage",
+        "Cloze Passage", "Fill in the Blanks", "Cloze Shuffling of Sentence parts", "Conversions",
+        "Sentence Rearrangement", "Grammer", "Shuffling of Sentences in a passage", "Improvement of Sentences", "Synonyms/Homonyms"
+      ,"Antonyms","Vocabulary","Idioms & Phrases"]
+    },
+      {heading:"",
+        title: "Logical reasoning and analytical ability", content: [
+          "Coding-Decoding", "Alphabet Test", "Series Test", "Ranking Test", "Sitting Arrangement"
+          , "Puzzle Test", "Direction Test", "Series", "Inserting the Missing Character", "Mathematical Operation",
+          "Blood Relation", "Logical Venn Diagram", "Syllogism", "Calender", "Clock Test", "Cube and Dice",
+          "Analytical Reasoning", "Sign Conclusion", "Input-Output", "Decision Making", "Data Analysis", "Other Types Questions",
+          "Analogy", "Classification", "Logical Sequence of Words", "Statement Course of Action",
+          "Statement Assumptions","Verification of truth of the statement","Situation Reaction Test"
+      ]},
+      {heading:"",
+        title: "Aptitude", content: ["Average", "Number", "Compound Interest", "Partnership"
+          , "Problem on Ages", "Calendar", "Boats and Streams", "Clocks", "Height and Distance",
+          "Percentage", "Pipes and Cisterns", "Profit and Loss", "Speed and Distance",
+          "Simple Interest", "Problem on Trains", "Time and Work", "Alligation and Mixture",
+          "Surds and Indices", "HCF and LCM","Area","Ratio and Proportion","Races and Games"
+          , "Probability", "Volume and Surface Area","Decimal Fraction","Simplification",
+          "Stocks and Shares","Chain Rule","True and Banker's Discount","Logarithm",
+          "Square Roots and Cube Roots","Problem on Numbers","Odd Man Out and Series",
+          "Algebraic Expressions","Permutation & Combination"]
+      }, {heading:"",
+        title: "Other Topics", content: ["Interpersonal skills including communication skills",
+          "Decision-making and problem-solving","General mental ability"]
+      }],
+    BANKING: [{heading:"",
+      title: "English Comprehension", content: ["Spelling/Detecting Mis- spelt words",
+        "Common Error", "Active/Passive Voice of Verbs", "Comprehension Passage",
+        "Cloze Passage", "Fill in the Blanks", "Cloze Shuffling of Sentence parts", "Conversions",
+        "Sentence Rearrangement", "Grammer", "Shuffling of Sentences in a passage", "Improvement of Sentences", "Synonyms/Homonyms"
+      ,"Antonyms","Vocabulary","Idioms & Phrases"]
+    },
+      {heading:"",
+        title: "Logical Reasoning", content: [
+          "Coding-Decoding", "Alphabet Test", "Series Test", "Ranking Test", "Sitting Arrangement"
+          , "Puzzle Test", "Direction Test", "Series", "Inserting the Missing Character", "Mathematical Operation",
+          "Blood Relation", "Logical Venn Diagram", "Syllogism", "Calender", "Clock Test", "Cube and Dice",
+          "Analytical Reasoning", "Sign Conclusion", "Input-Output", "Decision Making", "Data Analysis", "Other Types Questions",
+          "Analogy", "Classification", "Logical Sequence of Words", "Statement Course of Action",
+          "Statement Assumptions","Verification of truth of the statement","Situation Reaction Test"
+      ]},
+      {heading:"",
+        title: "Aptitude", content: ["Average", "Number", "Compound Interest", "Partnership"
+          , "Problem on Ages", "Calendar", "Boats and Streams", "Clocks", "Height and Distance",
+          "Percentage", "Pipes and Cisterns", "Profit and Loss", "Speed and Distance",
+          "Simple Interest", "Problem on Trains", "Time and Work", "Alligation and Mixture",
+          "Surds and Indices", "HCF and LCM","Area","Ratio and Proportion","Races and Games"
+          , "Probability", "Volume and Surface Area","Decimal Fraction","Simplification",
+          "Stocks and Shares","Chain Rule","True and Banker's Discount","Logarithm",
+          "Square Roots and Cube Roots","Problem on Numbers","Odd Man Out and Series",
+          "Algebraic Expressions","Permutation & Combination"]
+      }],
+    TNPSCGROUP1: [
+      {
+        heading: "",
+      title: "TNPSC Group I Preliminary Syllabus", content: ["General Science",
+        "Current events", "Geography", "History and Culture of India",
+        "Indian Polity", "Indian Economy", "Indian National Movement", "Aptitude and Mental Ability",
+        "Language: General Tamil (or) General English (Only for Group II, Group II A)"]
+    },
+      {
+        heading: "TNPSC Group I Mains Syllabus", title: "PAPER – I / Unit I",
+        content: ["Modern History of India and Indian Culture", "General Mental Ability",
+          "Role and Impact of Science and Technology in the development of India and Tamil Nadu"]
+      },
+      {
+        heading: "", title: "PAPER – II / Unit II and III",
+        content: ["Indian Polity and emerging political trends across the world affecting India and Geography of India",
+          "Tamil language, Tamil society–its culture and heritage / English language,English language skills", "Administration of Union and States with special reference to Tamil Nadu"],
+        
+      }, {
+        heading: "", title: "PAPER – III / Unit IV and V", content: [
+        "Current events of national and international importance","Current economic trends; Indian economy and impact of global economy on India","Socio-economic issues in India and Tamil Nadu"
+      ]}],TNPSCGROUP2:[{
+        heading: "",
+      title: "TNPSC Group II Preliminary Syllabus", content: ["General Science",
+        "Current events", "Geography", "History and Culture of India",
+        "Indian Polity", "Indian Economy", "Indian National Movement", "Aptitude and Mental Ability",
+        "Language: General Tamil (or) General English (Only for Group II, Group II A)"]
+    },
+      {
+        heading: "TNPSC Group II Mains Syllabus", title: "PAPER – I / Unit I",
+        content: ["Role and Impact of Science and Technology in the development of India and Tamil Nadu"]
+      },
+      {
+        heading: "", title: "PAPER – II / Unit II and III",
+        content: ["Administration of Union and States with special reference to Tamil Nadu","Socio-economic issues in India and Tamil Nadu"],
+        
+      }, {
+        heading: "", title: "PAPER – III / Unit IV and V", content: [
+        "Current Issues at National Level","Current Issues at State Level"
+      ]}]
   }
   let { id } = useParams();
   console.log("path=" + id);
@@ -219,6 +340,9 @@ export default function SyllabusHTML() {
               {courseSyllabus.map((each, index) => {
                 return (
                   <div key={index} className="extensionPart">
+
+                    {/* extension Heading */}
+                    { each.heading!=="" && <div className="extension-heading">{each.heading}: </div>}
                     {/* extensionTopic */}
                     <div
                       className="extensionPart_topic"
@@ -258,14 +382,14 @@ export default function SyllabusHTML() {
               })}
               {courseObject.isDownload == "YES" && (
                 <div className="syllabus_container_button">
-                  <a
+                  {/* <a
                     href={() => {
                       window.history.back();
                     }}
                     className="button_previouslink"
                   >
                     back
-                  </a>
+                  </a> */}
                   <a
                     className="downloadButton"
                     href={`http://192.168.1.7:3000/${courseObject.fileName}`}

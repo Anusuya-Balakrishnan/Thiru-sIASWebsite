@@ -59,6 +59,11 @@ $blue:#27227A;
                 .extensionPart{
                     width: 100%;
                     transition: 2s;
+                    .extension-heading{
+                        padding: 10px 20px;
+                        color: $blue;
+                        font-size: larger;
+                    }
                     .extensionPart_topic{
                     margin: 10px 0;
                     width: 100%;
@@ -79,7 +84,7 @@ $blue:#27227A;
                             justify-content: space-between;
                             align-items: center;
                            p{
-                            font-size: 20px;
+                            font-size: 18px;
                             color:#27227A;
                            }
                         }
@@ -105,6 +110,7 @@ $blue:#27227A;
                             div{
                                 width: 100%;
                                 margin: 15px 0;
+                                font-size: 15px;
                             }
                             div::before{
                                 content: "\2022";
@@ -284,6 +290,9 @@ $blue:#27227A;
                 .syllabus_container_body_extensionPart{
                     width: 100%;
                     .extensionPart{
+                        .extension-heading{
+                            font-size: 95%;
+                        }
                         .extensionPart_topic{
                             .extensionPart_topic_details{
                                 p{
