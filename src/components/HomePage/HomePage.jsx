@@ -129,7 +129,7 @@ export default function HomePage() {
         <div className="WhatsappIcon">
           <a
             className="whatsapp"
-            href="https://wa.me/919489645465"
+            href="https://wa.me/918637670992"
             target="_blank"
           >
             <img src={whatapp} />
