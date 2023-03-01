@@ -13,6 +13,7 @@ import { useParams } from "react-router-dom";
 export default function SyllabusHTML() {
   const [expansionIndex, setexpansionIndex] = useState(-1);
   const [expansionHeight, setexpansionHeight] = useState(0);
+  const [expandable, setexpandable] = useState(false);
   var syllabusList = {
     PREUPSC: {
       id: 1,
@@ -116,10 +117,11 @@ export default function SyllabusHTML() {
     },
     CUETCAT: {
       id: 10,
-      title: "CUET & CAT",
+      title: "CUET Exam",
       duration: 6,
       noOfTests: 50,
-      isDownload: "YES",syllabuscontent:1,
+      isDownload: "YES", syllabuscontent: 1,
+      fileName:"cuet.pdf"
     },
     BANKING: {
       id: 11,
@@ -306,7 +308,9 @@ export default function SyllabusHTML() {
       }, {
         heading: "", title: "PAPER – III / Unit IV and V", content: [
         "Current events of national and international importance","Current economic trends; Indian economy and impact of global economy on India","Socio-economic issues in India and Tamil Nadu"
-      ]}],TNPSCGROUP2:[{
+        ]
+      }],
+    TNPSCGROUP2: [{
         heading: "",
       title: "TNPSC Group II Preliminary Syllabus", content: ["General Science",
         "Current events", "Geography", "History and Culture of India",
@@ -377,7 +381,11 @@ export default function SyllabusHTML() {
         heading: "", title: "Combined Graduate Level (Tier-II)", content: ["Mathematical Abilities",
           "Reasoning and General Intelligence", "English Language and Comprehension",
           "General Awareness"]
-        }]]
+        }]],
+    CUETCAT: [{ heading: "", title: "Economics", content: [] },
+      { heading: "", title: "History", content: [] },
+      { heading: "", title: "Geography", content: [] },
+      { heading: "", title: "Political Science", content: [] }, {heading:"", title:"Sociology",content:[]}]
     
   }
   let { id } = useParams();
@@ -408,6 +416,7 @@ export default function SyllabusHTML() {
                       className="extensionPart_topic"
                       onClick={() => {
                         setexpansionIndex(index);
+                        setexpandable(!expandable);
 
                         let expansion_height = document
                           .getElementById(`ep-content-${index}`)
@@ -417,14 +426,14 @@ export default function SyllabusHTML() {
                     >
                       <div className="extensionPart_topic_details">
                         <p>{each.title}</p>
-                        <p>{index === expansionIndex ?<AiOutlineCaretUp/>:<AiOutlineCaretDown/>
+                        <p>{index === expansionIndex && expandable?<AiOutlineCaretUp/>:<AiOutlineCaretDown/>
                          }</p>
                       </div>
                     </div>
                     {/* extensionContent  */}
                     <div
                       style={{
-                        height: index === expansionIndex ? expansionHeight : 0,
+                        height: index === expansionIndex && expandable ? expansionHeight : 0,
                       }}
                       className="extensionPart_content"
                       id="extensionPart_content"
@@ -509,15 +518,7 @@ export default function SyllabusHTML() {
               })}
               {courseObject.isDownload == "YES" && (
                 <div className="syllabus_container_button">
-                  {/* <a
-                    href={() => {
-                      window.history.back();
-                    }}
-                    className="button_previouslink"
-                  >
-                    back
-                  </a> */}
-                  <a
+                   <a
                     className="downloadButton"
                     href={`http://192.168.1.7:3000/${courseObject.fileName}`} 
                   download={`${courseObject.fileName}`} target="blank"

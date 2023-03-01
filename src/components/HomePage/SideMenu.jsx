@@ -7,36 +7,23 @@ import "./HomePage";
 
 
 export default function SideMenu() {
-  let courseList = false;
+  const [sideCourse, setSideCourse] = useState(false);
+  const [sideMenu, setSideMenu] = useState(false);
   function displaySideCourse() {
-    if (!courseList) {
-      document.querySelector(".NSideBarCourseListParent").style.display =
-        "block";
-      courseList = true;
-    } else {
-      document.querySelector(".NSideBarCourseListParent").style.display =
-        "none";
-      courseList = false;
-    }
+    setSideCourse(!sideCourse);
+    console.log(sideCourse);
   }
-  const [closesideMenu, setCloseSideMenu] = useState(false);
   function displaySideMenu() {
-    if (!closesideMenu) {
-      document.getElementsByClassName("MenuListParent")[0].style.display =
-        "display";
-      setCloseSideMenu(true);
-    } else {
-      document.getElementsByClassName("MenuListParent")[0].style.display =
-        "none";
-      setCloseSideMenu(false);
-    }
+    setSideMenu(!sideMenu);
+   
+    console.log(sideMenu);
   }
 
-
- 
   return (
     <section id="SideMenu">
-      <div className="MenuListParent">
+      <div className="MenuListParent" style={{
+        display: sideMenu ?"block":"none" 
+      }} >
         <div className="MenuList">
           <Link to={"/"} className="navOptionSideBar">
             Home
@@ -51,7 +38,7 @@ export default function SideMenu() {
           >
             Courses
             <BiChevronDown />
-            <div className="NSideBarCourseListParent">
+            <div className="NSideBarCourseListParent" style={ {display:sideCourse ? "block" : "none"}}>
               <div className="NSideBarCourseList">
                 <Link to="/course/upsc" className="EachNavCourse">
                   UPSC
@@ -69,7 +56,7 @@ export default function SideMenu() {
           <Link to={"/achievement"} className="navOptionSideBar">
             Achievement
           </Link>
-          <Link to={"/contactus"} className="navOptionSideBar">
+          <Link to={"/contactus"} className="navOptionSideBar" >
             Contact
           </Link>
           <div className="closeIcon" onClick={displaySideMenu}>
