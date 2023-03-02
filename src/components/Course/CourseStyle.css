@@ -12,7 +12,7 @@
     /* padding: 20px; */
 /* } */
 .CourseParent{
-    height: 590px;
+    height: 560px;
     /* height: 450px; */
     width: 350px;
     border-radius: 10px;
@@ -67,7 +67,7 @@
     color: #27227A;
     width: auto;
     font-size: 15px;
-    margin: 10px 30px;
+    margin: 10px 20px;
     background-color: #ECECEC;
     display: flex;
     justify-content: center;
@@ -148,7 +148,8 @@
         height: 50%;
     } */
     .CourseParent{
-        height: 500px;
+        /* height: auto; */
+        height: 420px;
         width: 80vw;
         padding: 0;
 
@@ -173,11 +174,12 @@
         /* margin: 0 10px; */
     }
     .CoursePart2{
-        
+        box-sizing: border-box;
         font-size: 90%;
-        width: 80%;
+        /* width: 100%; */
+        width: auto;
         padding: 10px;
-        margin: 10px;
+        margin: 0 10px;
         height: auto;
         /* height: 90%; */
     }
@@ -196,9 +198,9 @@
     .duration p{
         font-size: 100%;
     }
-    .CourseParent{
+    /* .CourseParent{
         height: 530px;
-    }
+    } */
     .ButtonComponent{
         height: 30px;
         margin: 15px 5px;

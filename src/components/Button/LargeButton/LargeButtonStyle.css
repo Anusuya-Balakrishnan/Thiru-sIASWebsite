@@ -28,6 +28,6 @@
     .LargeButtonParent {
         height: 45px;
         font-size: 90%;
-        width: 90%;
+        /* width: 90%; */
     }
 }

@@ -10,8 +10,13 @@ export default function SeminarHtml(props) {
             <img src={props.image} />
           </div>
           <div className="SeminarContent">
-            <div className="SeminarTitle">Title: {props.title}</div>
-            <div className="SeminarDetail">{props.details}</div>
+            <div className="SeminarTitle"
+             
+            >Title: {props.title}</div>
+            <div className="SeminarDetail"
+             style={{
+                display:props.details=="" && "none"
+              }}>{props.details}</div>
             <div className="SeminarDate">
               Place: {props.place}
               <br />

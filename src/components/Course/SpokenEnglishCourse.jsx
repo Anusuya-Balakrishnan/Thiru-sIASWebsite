@@ -20,7 +20,7 @@ export default function SpokenEnglishCourse(props) {
             <div className="courseDuration">
               <div className="duration">
                 <IoTime />
-                <p>{props.month} Hours</p>
+                <p>{props.month} Month</p>
               </div>
             </div>
           </div>

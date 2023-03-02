@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FirstPageHtml from "./FirstPage/FirstPageHtml";
 import SecondPageHtml from "./SecondPage/SecondPageHtml";
@@ -16,12 +16,20 @@ import FooterHtml from "./FooterPage/FooterHtml";
 import PopupPage from "./PopupPage/PopupHtml";
 import SyllabusHTML from "./SyllabusPage/SyllabusHTML";
 import syllabusList from "../../src/components/SyllabusPage/syllabusContent";
+import { useEffect } from "react";
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
+// import { ScrollRestoration } from "react-router-dom";
+// import ScrollToTop from "react-scroll-to-top";
 export default function App() {
+
+
   return (
+    
     <>
       <BrowserRouter>
         <main>
           <HomePage />
+          <ScrollToTop />
           {/* <PopupPage /> */}
           <Routes>
             <Route path="/" element={<FirstPageHtml />} />
@@ -37,7 +45,7 @@ export default function App() {
             <Route path="/syllabus/:id" element={<SyllabusHTML />} />
             <Route path="/syllabus/:id" element={<SyllabusHTML />} />
           </Routes>
-
+          
           <FooterHtml />
         </main>
       </BrowserRouter>

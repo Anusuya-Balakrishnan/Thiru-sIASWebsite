@@ -47,11 +47,11 @@ export default function HomePage() {
   // .addEventListener("mouseout", () => {
 
   // });
-  window.addEventListener("click", () => {
-    if (showCourse) {
-      setShowCourse(!showCourse);
-    }
-  });
+  // window.addEventListener("click", () => {
+  //   if (showCourse) {
+  //     setShowCourse(!showCourse);
+  //   }
+  // });
 
   // document
   //   .getElementByClassName("navCourseList")[0]

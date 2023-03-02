@@ -33,11 +33,13 @@ export default function LandingPage() {
               </p>
               <div
                 className="LandingButton"
-                onClick={() => {
-                  navigate("/about");
-                }}
+                
               >
-                <SmallButton value="For More" />
+                <div onClick={() => {
+                  navigate("/about");
+                }}>
+                  <SmallButton value="For More" />
+                  </div>
               </div>
             </div>
             <div className="UpscReview">

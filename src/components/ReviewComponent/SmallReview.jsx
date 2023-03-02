@@ -25,7 +25,11 @@ export default function SmallReview(props) {
     <section id="SmallReviewStyle">
       <div className="smallReviewContainer" ref={smallReviewContainerRef}>
         <div className="smallReviewTitle">
-          <div className="smallPersonImage">
+          <div className="smallPersonImage"
+          style={{
+              display: props.image==""&& "none"
+            }}
+          >
             <img src={props.image} alt="person image" />
           </div>
           <div className="smallPersonName">

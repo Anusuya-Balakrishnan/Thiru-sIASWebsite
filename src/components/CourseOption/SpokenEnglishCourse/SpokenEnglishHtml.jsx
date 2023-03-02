@@ -10,24 +10,24 @@ export default function SpokenEnglishHtml() {
       image: beginner,
       title: "Beginner Level",
       content:
-        " Basic English pronunciation, simple paragraph writing, Basic English grammar, 25 audio files for listening",
-      month: "40",
+        "Features - Basic learning skills, Basic grammar,Group discussion, sentence formation.",
+      month: "3",
       path: "ENGBEG",
     },
     {
       image: intermediate,
       title: "Intermediate Level",
       content:
-        "Advanced English pronunciation, Full English grammar, 35 audio files for listening including short stories",
-      month: "60",
+        "Features - Advanced speaking skills, vocabulary, and advanced grammar to boost up your confidence",
+      month: "4",
       path: "ENGINT",
     },
     {
       image: groupDiscussion,
       title: "Advance Level",
       content:
-        "for placement, for stage speaking, for interview, for teaching profesionals",
-      month: "80",
+        "Features - for stage speaking, placement interview, public speaking, management purposes also",
+      month: "2",
       path: "ENGAND",
     },
   ];

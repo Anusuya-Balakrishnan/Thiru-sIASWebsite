@@ -8,7 +8,10 @@ export default function ReviewComponent(props) {
     <section id="ReviewComponent">
       <div className="ReviewParent">
         <div className="ReviewTitle">
-          <div className="PersonImage">
+          <div className="PersonImage"
+            style={{
+              display: props.image==""&& "none"
+            }}>
             <img src={props.image} alt="person image" />
           </div>
           <div className="PersonName">

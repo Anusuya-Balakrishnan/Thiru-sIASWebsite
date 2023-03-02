@@ -13,13 +13,13 @@ import { useParams } from "react-router-dom";
 export default function SyllabusHTML() {
   const [expansionIndex, setexpansionIndex] = useState(-1);
   const [expansionHeight, setexpansionHeight] = useState(0);
-  const [expandable, setexpandable] = useState(false);
+  const [lastIndex, setlastIndex] = useState(-1);
   var syllabusList = {
     PREUPSC: {
       id: 1,
       title: "Preliminary Exam",
-      duration: 8,
-      noOfTests: 80,
+      duration: 6,
+      noOfTests: 75,
       isDownload: "YES",
       fileName: "upsc.pdf",
       syllabuscontent:1,
@@ -27,8 +27,8 @@ export default function SyllabusHTML() {
     MAINS: {
       id: 2,
       title: "Mains Exam",
-      duration: 10,
-      noOfTests: 50,
+      duration: 6,
+      noOfTests: 75,
       isDownload: "YES",
       fileName: "upsc.pdf",
       syllabuscontent:1,
@@ -44,24 +44,24 @@ export default function SyllabusHTML() {
     PRECRASH: {
       id: 4,
       title: "Preliminary Crash",
-      duration: 6,
-      noOfTests: 40,
+      duration: 4,
+      noOfTests: 50,
       isDownload: "YES",
       fileName:"upsc.pdf",syllabuscontent:1,
     },
     CSAT: {
       id: 5,
       title: "CSAT",
-      duration: 4,
-      noOfTests: 60,
+      duration: 3,
+      noOfTests: 50,
       isDownload: "YES",
       fileName:"upsc.pdf",syllabuscontent:1,
     },
     OPTIONAL: {
       id: 6,
       title: "Optional",
-      duration: 4,
-      noOfTests: 60,
+      duration: 3,
+      noOfTests: 25,
       option1: "Socialogy",
       option2: "Political Science",
       isDownload: "YES",
@@ -70,49 +70,49 @@ export default function SyllabusHTML() {
     TNPSCGROUP1: {
       id: 7,
       title: "TNPSC Group 1",
-      duration: 8,
-      noOfTests: 50,
+      duration: 6,
+      noOfTests: 75,
       isDownload: "YES",
       fileName:"tnpscGroup1.pdf",syllabuscontent:1,
     },
     TNPSCGROUP2: {
       id: 8,
       title: "TNPSC Group 2",
-      duration: 8,
-      noOfTests: 80,
+      duration: 6,
+      noOfTests: 75,
       isDownload: "YES",
       fileName:"tnpscGroup2.pdf",syllabuscontent:1,
     },
     RRB_SSC: {
       id: 9,
       title: "RRB/SSC",
-      duration: 8,
-      noOfTests: 40,
+      duration: 6,
+      noOfTests: 75,
       isDownload: "YES",syllabuscontent:2,
     },
     UDC_LDC: {
       id: 10,
       title: "UDC & LDC",
       duration: 6,
-      noOfTests: 25,
+      noOfTests: 75,
       isDownload: "YES",fileName:"udc-ldc.pdf",syllabuscontent:1,
     },
     ENGBEG: {
       id: 11,
       title: "Spoken English Beginner Level",
-      duration: 40,
+      duration: 3,
       isDownload: "NO",syllabuscontent:0,
     },
     ENGINT: {
       id: 12,
       title: "Spoken English Intermediate Level",
-      duration: 60,
+      duration: 4,
       isDownload: "NO",syllabuscontent:0,
     },
     ENGAND: {
       id: 10,
       title: "Spoken English Advance Level",
-      duration: 80,
+      duration: 2,
       isDownload: "NO",syllabuscontent:0,
     },
     CUETCAT: {
@@ -382,10 +382,51 @@ export default function SyllabusHTML() {
           "Reasoning and General Intelligence", "English Language and Comprehension",
           "General Awareness"]
         }]],
-    CUETCAT: [{ heading: "", title: "Economics", content: [] },
-      { heading: "", title: "History", content: [] },
-      { heading: "", title: "Geography", content: [] },
-      { heading: "", title: "Political Science", content: [] }, {heading:"", title:"Sociology",content:[]}]
+    CUETCAT: [{
+      heading: "", title: "Economics",
+      content: ["Introduction to Microeconomics",
+        "Consumer Behaviour and Demand",
+        "National Income and Related Aggregates — Basic Concepts and Measurement",
+        "Determination of Income and Employment",
+        "Money and Banking",
+        "Government Budget and the Economy",
+        "Balance of Payments",
+      "Indian Economic Development"]
+    },
+      {
+        heading: "", title: "History", content: [
+          "The Story of the First Cities Harappan Archaeology",
+          "Political and Economic History: How Inscriptions tell a story",
+          "Social Histories using the Mahabharata",
+          "A History of Buddhism: Sanchi Stupa",
+          "Medieval society through Travellers’ Accounts",
+          "Religious Histories: The Bhakti-Sufi Tradition",
+          "New Architecture: Hampi",
+          "Agrarian Relations :The Ain-i- Akbari",
+          "The Mughal Court: Reconstructing Histories through Chronicles",
+          "Colonialism and Rural Society: Evidence from Official Reports",
+          "Representations of 1857",
+          "Colonialism and Indian Towns: Town Plans and Municipal Reports",
+          "Mahatma Gandhi through Contemporary Eyes",
+          "Partition through Oral Sources",
+          "The Making of the Constitution"
+      ] },
+      { heading: "", title: "Geography", content: ["Fundamentals of Human Geography","India: People and Economy"] },
+      {
+        heading: "", title: "Political Science", content: [
+        "Politics in India Since Independence","Contemporary World Politics"
+        ]
+      }, {
+        heading: "", title: "Sociology", content: [
+          "Structure of Indian Society", "Social Institutions: Continuity and Change",
+          "Social Inequality and Exclusion",
+          "The Challenges of Unity in Diversity",
+          "Process of Social Change in India",
+          "Social Change and the Polity",
+          "Social Change and the Economy",
+          "Arenas of Social Change", "New Arenas of Social Change",
+        "Social Movements"]
+      }]
     
   }
   let { id } = useParams();
@@ -401,10 +442,13 @@ export default function SyllabusHTML() {
           <div className="syllabus_container_body_title">
             <div> {courseObject.title} Syllabus</div>
           </div>
-          <div className="syllabus_container_body_middle">
+          <div className="syllabus_container_body_middle"
+            
+          >
 
             {/* syllabus content */}
-            <div className="syllabus_container_body_extensionPart" >
+            <div className="syllabus_container_body_extensionPart"
+              style={{display:courseObject.syllabuscontent==0 && "none"}}>
             {(courseObject.syllabuscontent==1)&& <div>{courseSyllabus.map((each, index) => {
                 return (
                   <div key={index} className="extensionPart">
@@ -416,24 +460,25 @@ export default function SyllabusHTML() {
                       className="extensionPart_topic"
                       onClick={() => {
                         setexpansionIndex(index);
-                        setexpandable(!expandable);
+                        
 
                         let expansion_height = document
                           .getElementById(`ep-content-${index}`)
                           .getBoundingClientRect().height;
                         setexpansionHeight(Math.floor(expansion_height));
                       }}
+                     
                     >
                       <div className="extensionPart_topic_details">
                         <p>{each.title}</p>
-                        <p>{index === expansionIndex && expandable?<AiOutlineCaretUp/>:<AiOutlineCaretDown/>
+                        <p>{index === expansionIndex  ?<AiOutlineCaretUp/>:<AiOutlineCaretDown/>
                          }</p>
                       </div>
                     </div>
                     {/* extensionContent  */}
                     <div
                       style={{
-                        height: index === expansionIndex && expandable ? expansionHeight : 0,
+                        height: index === expansionIndex  ? expansionHeight : 0,
                       }}
                       className="extensionPart_content"
                       id="extensionPart_content"
@@ -538,7 +583,10 @@ export default function SyllabusHTML() {
             
 
             {/* course box */}
-            <div className="syllabus_container_body_coursebox_parent">
+            {/* style={{ marginLeft: courseObject.syllabuscontent == 0 && "0px" }} */}
+            <div className="syllabus_container_body_coursebox_parent"
+            style={{ marginLeft: courseObject.syllabuscontent == 0 && "0px" }}
+            >
               <div className="syllabus_container_body_coursebox">
                 <div className="coursebox_title">{courseObject.title}</div>
                 <div className="coursebox_icons_box">

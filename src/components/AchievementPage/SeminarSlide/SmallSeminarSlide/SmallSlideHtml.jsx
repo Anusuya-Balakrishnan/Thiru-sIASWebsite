@@ -8,46 +8,81 @@ import image5 from "../image/5.jpg";
 import { useRef, useEffect } from "react";
 
 export default function SmallSlideHtml() {
+  // let webinarDetails = [
+  //   {
+  //     image: image1,
+  //     title: "Equal Opportunity Cell",
+  //     details:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
+  //     place: "Pondicherry University",
+  //     time: "12/8/2022, Friday",
+  //   },
+  //   {
+  //     image: image2,
+  //     title: "Equal Opportunity Cell",
+  //     details:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
+  //     place: "Pondicherry University",
+  //     time: "12/8/2022, Friday",
+  //   },
+  //   {
+  //     image: image3,
+  //     title: "Equal Opportunity Cell",
+  //     details:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
+  //     place: "Pondicherry University",
+  //     time: "12/8/2022, Friday",
+  //   },
+  //   {
+  //     image: image4,
+  //     title: "Equal Opportunity Cell",
+  //     details:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
+  //     place: "Pondicherry University",
+  //     time: "12/8/2022, Friday",
+  //   },
+  //   {
+  //     image: image5,
+  //     title: "Equal Opportunity Cell",
+  //     details:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
+  //     place: "Pondicherry University",
+  //     time: "12/8/2022, Friday",
+  //   },
+  // ];
   let webinarDetails = [
     {
       image: image1,
-      title: "Equal Opportunity Cell",
+      title: "Special classes for UPSC 2017, 2018, 2019",
       details:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
+        "",
       place: "Pondicherry University",
       time: "12/8/2022, Friday",
     },
     {
       image: image2,
-      title: "Equal Opportunity Cell",
+      title: "Demo Session for Competitive Examination Cuddalore St. Joseph arts and science college",
       details:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
-      place: "Pondicherry University",
+        "",
+      place: "St. Joseph Arts and Science College",
       time: "12/8/2022, Friday",
     },
     {
       image: image3,
-      title: "Equal Opportunity Cell",
+      title: "IAS examination preparation and strategies",
       details:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
-      place: "Pondicherry University",
-      time: "12/8/2022, Friday",
+        "",
+      place: "Sri Ram college of technology, Chennai",
+      time: "July 2021",
     },
-    {
-      image: image4,
-      title: "Equal Opportunity Cell",
-      details:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
-      place: "Pondicherry University",
-      time: "12/8/2022, Friday",
-    },
+    
     {
       image: image5,
-      title: "Equal Opportunity Cell",
+      title: "UPSC clarification and preparation",
       details:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quam nunc tellus interdum sed id aliquam tincidunt nec. Dictum pulvinar magna risus, orci nisl pellentesque fermentum quam senectus.",
-      place: "Pondicherry University",
-      time: "12/8/2022, Friday",
+        "",
+      place: "Christ institute of technology Puducherry",
+      time: "Feb 2020",
     },
   ];
   let count = 1;

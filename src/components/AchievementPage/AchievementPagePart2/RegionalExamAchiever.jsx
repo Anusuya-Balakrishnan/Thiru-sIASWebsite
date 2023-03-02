@@ -1,8 +1,6 @@
 import React from "react";
 import RegionalExamStyle from "./RegionalExamStyle.css";
-import shiva from "./image/shiva.jpeg";
-import navaneethan from "./image/navaneethan.jpeg";
-import muthunagai from "./image/muthunagai.jpeg";
+
 export default function RegionalExamAchiever(props) {
   return (
     <section id="RegionalExamPage">
