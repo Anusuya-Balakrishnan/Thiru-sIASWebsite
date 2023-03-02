@@ -30,7 +30,7 @@ export default function App() {
         <main>
           <HomePage />
           <ScrollToTop />
-          <PopupPage />
+          {/* <PopupPage /> */}
           <Routes>
             <Route path="/" element={<FirstPageHtml />} />
             <Route path="/about" element={<SecondPageHtml />} />
