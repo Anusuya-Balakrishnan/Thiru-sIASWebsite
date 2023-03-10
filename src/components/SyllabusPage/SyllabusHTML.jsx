@@ -496,17 +496,10 @@ export default function SyllabusHTML() {
               })}
               {courseObject.isDownload == "YES" && (
                 <div className="syllabus_container_button">
-                  {/* <a
-                    href={() => {
-                      window.history.back();
-                    }}
-                    className="button_previouslink"
-                  >
-                    back
-                  </a> */}
+                  
                   <a
                     className="downloadButton"
-                    href={`http://192.168.1.7:3000/${courseObject.fileName}`} 
+                    href={`https://thirusiasacademy.com/${courseObject.fileName}`} 
                   download={`${courseObject.fileName}`} target="blank"
                   >
                     <LargeButton value="Download" />
@@ -565,7 +558,7 @@ export default function SyllabusHTML() {
                 <div className="syllabus_container_button">
                    <a
                     className="downloadButton"
-                    href={`http://192.168.1.7:3000/${courseObject.fileName}`} 
+                    href={`https://thirusiasacademy.com/${courseObject.fileName}`} 
                   download={`${courseObject.fileName}`} target="blank"
                   >
                     <LargeButton value="Download" />
